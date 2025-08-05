@@ -1,0 +1,17 @@
+For Mobile IDE Font Reference:
+
+Common Web Safe Fonts:
+Arial: (sans-serif)
+Verdana: (sans-serif)
+Tahoma: (sans-serif)
+Trebuchet MS: (sans-serif)
+Times New Roman: (serif)
+Georgia: (serif)
+Garamond: (serif)
+Courier New: (monospace)
+Brush Script MT: (cursive)
+Helvetica: (sans-serif) according to HubSpot Blog
+Impact: (sans-serif) according to W3Schools
+Palatino: (serif)
+Baskerville: (serif)
+Andale Mono: (monospace)
