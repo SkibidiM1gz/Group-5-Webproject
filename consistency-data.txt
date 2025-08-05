@@ -1,5 +1,6 @@
 
-text.color=white
-background.color=crimson
+shop.name=Papa Dough's
+text.color=black
+background.color=white
 price.textfont=
 product.name.textfont=
