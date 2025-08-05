@@ -1,4 +1,5 @@
 
-
+text.color=white
+background.color=crimson
 price.textfont=
 product.name.textfont=
