@@ -1,0 +1,3 @@
+- included shop name to titles faq.html, login.html, signup.html, index.html, aboutus.html, cart.html, beverages.html, pizzas.html
+- added content pizza1.html, pizza2.html
+- added content pizzas.html, beverages.html
