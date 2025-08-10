@@ -1,0 +1,34 @@
+Desserts:
+CUPCAKE
+Moist chocolate cupcake topped with creamy vanilla frosting and a cherry on top.
+
+TIRAMISU
+Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.
+
+STRAWBERRY SHAKE
+Fresh strawberries blended with creamy milk and topped with whipped cream.
+
+CHOCOLATE SHAKE
+Rich chocolate ice cream blended with milk, topped with whipped cream and chocolate drizzle.
+
+CHEESECAKE
+Smooth and creamy cheesecake with a buttery graham cracker crust.
+
+BROWNIE
+Fudgy chocolate brownie with a rich, chewy texture.
+
+Pizzas:
+SUPER SUPREME
+Tomato Sauce, Mozzarella Cheese, Pepperoni, Ham, Onions, Bell Peppers, Mushrooms, Olives
+
+HAM AND CHEESE
+Tomato Sauce, Mozzarella Cheese, Ham
+
+PEPPERONI
+Tomato Sauce, Mozzarella Cheese, Pepperoni
+
+PROSCIUTTO
+Tomato Sauce, Mozzarella Cheese, Italian Prosciutto Ham
+
+MUSHROOM
+Tomato Sauce, Mozzarella Cheese, Fresh Mushrooms
