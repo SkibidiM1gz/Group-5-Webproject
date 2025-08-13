@@ -5,11 +5,12 @@
 [] Add back button each product page
 [] Link navbar cart page
 [] Link navbar account page
+[] Remove add to cart button link product pages
 [/] finish account page
 [/] signup page signup btn to account page
 [/] login page login btn to account page
 [/] relocate old images
-[] Fix image links
+[/] Fix image links
 [/] Add content cart
 
 Navbar order:
@@ -17,6 +18,5 @@ home
 about us
 faq
 login
-signup
 cart
 account
