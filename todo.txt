@@ -2,11 +2,21 @@
 [=] About us Credit pizzas images
 [=] About us Credit desserts images
 [=] About us Credit logo
+[] Add back button each product page
 [] Link navbar cart page
 [] Link navbar account page
-[] finish account page
+[/] finish account page
 [/] signup page signup btn to account page
 [/] login page login btn to account page
 [/] relocate old images
 [] Fix image links
-[] Add content cart
+[/] Add content cart
+
+Navbar order:
+home
+about us
+faq
+login
+signup
+cart
+account
