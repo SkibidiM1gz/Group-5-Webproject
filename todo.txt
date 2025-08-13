@@ -1,0 +1,11 @@
+[] About us Credit beverages images
+[] About us Credit pizzas images
+[] About us Credit desserts images
+[] About us Credit logo
+[] Link navbar cart page
+[] Link navbar account page
+[] finish account page
+[] signup page signup btn to account page
+[] login page login btn to account page
+[] relocate old images
+[] Fix image links
