@@ -5,7 +5,8 @@
 [] Link navbar cart page
 [] Link navbar account page
 [] finish account page
-[] signup page signup btn to account page
-[] login page login btn to account page
+[/] signup page signup btn to account page
+[/] login page login btn to account page
 [/] relocate old images
 [] Fix image links
+[] Add content cart
