@@ -12,10 +12,9 @@
 [/] relocate old images
 [/] Fix image links
 [/] Add content cart
-[] Replace Titles with Golby's Pizzeria
-[] Replace text with Golby's Pizzeria
-[] Replace contact with golbyspizzeria@gmail.com
-[] 
+[/] Replace Titles with Golby's Pizzeria
+[/] Replace text with Golby's Pizzeria
+[/] Replace contact with golbyspizzeria@gmail.com
 
 Navbar order:
 home
