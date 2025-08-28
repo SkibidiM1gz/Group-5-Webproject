@@ -23,3 +23,8 @@ faq
 login
 cart
 account
+
+[] add Montserrat font
+[] update navbars
+[] update content code
+[] add active page link indicator

@@ -2,6 +2,7 @@
     --color-background: #301A1A;
     --color-navbar: #B2524B;
     --color-text: #FFCCA2;
+    --color-button-hover: ;
     --navbar-size: 10vmax;
 }
 
@@ -12,6 +13,7 @@
 
 * {
     font-family: "Montserrat";
+    font-size: 1.1em;
 }
 
 body {
@@ -59,7 +61,7 @@ body {
 
 div.main-content {
     margin-top: var(--navbar-size); /* bottom of navbar */
-    padding: 5vmin;
+    padding: 2vmin;
 }
 
 
@@ -73,23 +75,23 @@ div.main-content {
     /*float: right;*/
 }
 
-div.flexbox {
+/*div.flexbox {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
     align-content: space-around;
     flex-wrap: wrap;
-    /*background-color: #00FF00;*/
-}
+    background-color: #00FF00;
+}*/
 
-div.flexbox-item {
+/*div.flexbox-item {
     background-color: var(--color-navbar);
     min-width: 10vmax;
     min-height: 10vmax;
-    /*min-width: 100px;
-    min-height: 100px;*/
-}
+    min-width: 100px;
+    min-height: 100px;
+}*/
 
 
 div.product-box-container {
@@ -99,6 +101,7 @@ div.product-box-container {
     align-items: center;
     align-content: space-around;
     flex-wrap: wrap;
+    margin-top: 2vmin;
     /*background-color: var(--color-navbar);*/
 }
 
@@ -108,16 +111,20 @@ div.product-box {
     /*min-width: auto;
     min-height: auto;*/
     border: solid 1vmin var(--color-navbar);
+    margin-top: 5vmin;
 }
 
 div.product-image-container {
-    max-width: 50vw;
+    width: inherit;
+    height: auto;
+    /*max-width: 50vw;*/
     margin: auto;
+    margin-top: 2vmin;
 }
 
 div.product-image-container > img {
     display: block;
-    width: 20vmin;
+    width: 65%;/*20vmin;*/
     height: auto;
     margin: auto;
     /*align-self: center;*/
@@ -125,18 +132,26 @@ div.product-image-container > img {
 
 div.product-description-container {
     color: var(--color-background);
-    padding-left: 2vmin;
-    padding-right: 2vmin;
-    padding-top: 3vmin;
+    padding-left: 3vmin;
+    padding-right: 3vmin;
+    padding-top: 2vmin;
     padding-bottom: 3vmin;
 }
 
+span.product-description-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 h1.product-title {
+    margin-top: 0px;
     text-align: center;
+    font-size: 1.4em;
 }
 
 p.product-description {
     text-align: justify;
+    text-align-last: left;
 }
 
 p.product-price-container {
@@ -154,4 +169,12 @@ button.add-to-cart {
     background-color: var(--color-navbar);
     border: none;
     padding: 5%;
+}
+
+button.add-to-cart:hover {
+    background-color: var();
+}
+
+span.product-price-text {
+    font-weight: bold;
 }
