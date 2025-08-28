@@ -107,7 +107,7 @@ div.product-box-container {
 
 div.product-box {
     background-color: var(--color-text);
-    max-width: 75%;/*20vmax;*/
+    max-width: 30vmax;
     /*min-width: auto;
     min-height: auto;*/
     border: solid 1vmin var(--color-navbar);
