@@ -5,6 +5,15 @@
     --navbar-size: 10vmax;
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: "Montserrat";
+}
+
 body {
     background-color: var(--color-background);
     color: var(--color-text);
