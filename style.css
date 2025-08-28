@@ -1,6 +1,7 @@
 :root {
     --color-background: #301A1A;
     --color-navbar: #B2524B;
+    --navbar-size: 10vmax;
 }
 
 body {
@@ -12,7 +13,8 @@ body {
     background-color: var(--color-navbar);
     width: 100%;
     height: auto;
-    min-height: 5vmax;
+    min-height: var(--navbar-size);
+    max-height: var(--navbar-size);
     position: fixed;
     left: 0px;
     top: 0px;
@@ -20,6 +22,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    user-select: none;
+  -webkit-user-select: none; /* Safari, Chrome */
+  -ms-user-select: none;    /* Internet Explorer/Edge */
+  /* -moz-user-select: none;  Firefox (older versions) */
     
     
     /*text-align: right;*/
@@ -34,8 +41,8 @@ body {
     /*source: url("./images/logo.png");*/
     /*background-image: url("./images/logo.png");*/
     display: block;
-    width: 150px;
-    height: 150px;
+    width: var(--navbar-size);
+    height: auto;
     /*float: left;*/
 }
 
@@ -52,9 +59,10 @@ body {
 }
 
 div.main-content {
-    margin-top: 5vmax;
-    //position: absolute;
-    //top: 5vh;
+    /* bottom of navbar */
+    margin-top: var(--navbar-size); 
+    /* position: absolute; */
+    /* top: 5vh; */
 }
 
 
