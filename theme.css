@@ -1,0 +1,40 @@
+/*
+ * theme.css contains color schemes, fonts and styling, etc.
+ */
+:root {
+    /* Add here the colors to be used 
+    */
+    
+    --theme-color-terracota: #B2524B;
+    --theme-color-paleApricot: #FFCCA2;
+    --theme-color-brown: #301A1A;
+    
+    --theme-color-accent: var(--theme-color-terracota);
+    --theme-color-background: var(--theme-color-brown);
+    --theme-color-text-ondark: var(--theme-color-paleApricot);
+    --theme-color-text-onlight: var(--theme-color-brown);
+    
+    /*--color-navbar: */
+    /*--color-button-hover: ;*/
+    /**/
+}
+
+body {
+    background-color: var(--theme-color-background);
+    /*color: var(--theme-color-text);*/
+}
+
+/* -- Fonts -- */
+@font-face {
+    font-family: "Montserrat";
+    src: url('./fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: "Montserrat";
+    /*font-size: 1.1em;*/
+}
+
+.centertext {
+    text-align: center;
+}

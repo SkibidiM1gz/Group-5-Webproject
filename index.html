@@ -2,9 +2,52 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1600, height=1000, initial-scale=1">
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>Home | Golby's Pizzeria</title>
+    <link rel="stylesheet" href="./theme.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <style type="text/css">
+        .menu {
+            background-color: var(--theme-color-terracota);
+            display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            height: 40%;
+            margin: auto;
+        }
+        
+        .menu .menu-item {
+            /*background-color: var(--theme-color-paleApricot);*/
+            width: 20vw; /*320px;*/
+            height: auto; /*320px;*/
+        }
+        
+        .menu .menu-item img {
+            background-color: var(--theme-color-paleApricot);
+            width: 100%;
+            height: auto;
+        }
+        
+        .menu .menu-item a {
+            text-decoration: none;
+        }
+        
+        .menu .menu-item .menu-item-description {
+            /*background-color: var(--theme-color-accent);*/
+            color: var(--theme-color-text-ondark);
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 3em;
+        }
+        
+        .home-title {
+            color: var(--theme-color-text-ondark);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -20,22 +63,31 @@
         </div>
     </div>
     <div class="main-content">
-        <h1 class="centertext">Welcome to Golby's Pizzeria!</h1>
+        <h1 class="home-title">Welcome to Golby's Pizzeria!</h1>
         <div class="menu">
             <div class="menu-item">
                 <a href="./products/beverages.html">
                     <img src="./images/beverage3_fanta.png" />
                 </a>
+                <p class="menu-item-description">
+                    Beverages
+                </p>
             </div>
             <div class="menu-item">
                 <a href="./products/pizzas.html">
                     <img src="./images/pizza1_supersupreme.png" />
                 </a>
+                <p class="menu-item-description">
+                    Pizzas
+                </p>
             </div>
             <div class="menu-item">
                 <a href="./products/desserts.html">
                     <img src="./images/dessert1_cheesecake.png" />
                 </a>
+                <p class="menu-item-description">
+                    Desserts
+                </p>
             </div>
         </div>
         <!--<h1 align="center">Welcome!</h1>

@@ -1,0 +1,58 @@
+/*
+ * layout.css contains styling for main content and navigation 
+ * bar, and necessary spacing values, including media queries 
+ * for screen sizes. All things layout.
+ */
+:root {
+    --layout-navbar-color: var(--theme-color-accent);
+    --layout-navbar-size: 10vmax;
+}
+
+/* - Navigation - */
+.navbar {
+    background-color: var(--layout-navbar-color); /* var(--color-navbar); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    min-height: var(--layout-navbar-size);
+    max-height: var(--layout-navbar-size);
+    user-select: none;
+    -webkit-user-select: none; /* Safari, Chrome */
+    -ms-user-select: none;    /* Internet Explorer/Edge *//
+}
+
+.navbar img.logo {
+    display: block;
+    width: var(--layout-navbar-size);
+    height: auto;
+}
+    
+.navbar div.logo-container {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
+    
+.navbar div.link-container {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+}
+    
+.navbar a {
+    color: var(--theme-color-text-ondark);
+    font-size: 2em;
+    text-decoration: none;
+    margin-right: 2em;
+}
+
+/* - Main Content - */
+div.main-content {
+    padding: 2vmin;
+    margin-top: var(--layout-navbar-size); /* Position it at bottom of navbar */
+}

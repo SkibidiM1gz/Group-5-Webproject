@@ -1,0 +1,14 @@
+CSS variable naming convention:
+
+--<css_filename>-<varname>
+
+ex. In layout.css file would look like this:
+
+--layout-navbar-size
+--layout-margin-wide
+--layout-padding
+
+ex. In product_list.css file would look like this:
+
+--product_list-list-size
+--product_list-list-items-margin
