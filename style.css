@@ -2,7 +2,7 @@
     --color-background: #301A1A;
     --color-navbar: #B2524B;
     --color-text: #FFCCA2;
-    --color-button-hover: ;
+    /*--color-button-hover: ;*/
     --navbar-size: 10vmax;
 }
 
@@ -10,6 +10,7 @@
     font-family: "Montserrat";
     src: url('./fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
 }
+
 
 * {
     font-family: "Montserrat";
@@ -21,6 +22,9 @@ body {
     color: var(--color-text);
 }
 
+/* -- Layout Components -- */
+
+/* - Navigation - */
 .navbar {
     background-color: var(--color-navbar);
     width: 100%;
@@ -40,7 +44,6 @@ body {
     -ms-user-select: none;    /* Internet Explorer/Edge *//
 }
 
-
 .navbar img.logo {
     display: block;
     width: var(--navbar-size);
@@ -59,40 +62,23 @@ body {
     justify-content: center;
 }
 
+.navbar a {
+    color: var(--color-text);
+    margin-right: 2em;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+/* - Main Content - */
 div.main-content {
     margin-top: var(--navbar-size); /* bottom of navbar */
     padding: 2vmin;
 }
 
+/* -- Design -- */
 
-/* Navbar link */
-.navbar a {
-    /*display: inline-block;*/
-    color: var(--color-text);
-    margin-right: 2em;
-    text-decoration: none;
-    font-size: 2em;
-    /*float: right;*/
-}
 
-/*div.flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
-    align-content: space-around;
-    flex-wrap: wrap;
-    background-color: #00FF00;
-}*/
-
-/*div.flexbox-item {
-    background-color: var(--color-navbar);
-    min-width: 10vmax;
-    min-height: 10vmax;
-    min-width: 100px;
-    min-height: 100px;
-}*/
-
+/* - Product listing design - */
 
 div.product-box-container {
     display: flex;
@@ -102,14 +88,11 @@ div.product-box-container {
     align-content: space-around;
     flex-wrap: wrap;
     margin-top: 2vmin;
-    /*background-color: var(--color-navbar);*/
 }
 
 div.product-box {
     background-color: var(--color-text);
     max-width: 30vmax;
-    /*min-width: auto;
-    min-height: auto;*/
     border: solid 1vmin var(--color-navbar);
     margin-top: 5vmin;
 }
@@ -117,17 +100,15 @@ div.product-box {
 div.product-image-container {
     width: inherit;
     height: auto;
-    /*max-width: 50vw;*/
     margin: auto;
     margin-top: 2vmin;
 }
 
 div.product-image-container > img {
     display: block;
-    width: 65%;/*20vmin;*/
+    width: 65%;
     height: auto;
     margin: auto;
-    /*align-self: center;*/
 }
 
 div.product-description-container {
@@ -177,4 +158,10 @@ button.add-to-cart:hover {
 
 span.product-price-text {
     font-weight: bold;
+}
+
+/* Misc */
+
+.centertext {
+    text-align: center;
 }
