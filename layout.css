@@ -48,6 +48,7 @@
     color: var(--theme-color-text-ondark);
     font-size: 2em;
     text-decoration: none;
+    text-shadow: 1px 1px black;
     margin-right: 2em;
 }
 
