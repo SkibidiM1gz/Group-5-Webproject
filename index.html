@@ -26,12 +26,33 @@
             width: 20vw; /*320px;*/
             height: auto; /*320px;*/
             padding: 2vw;
+            transition: 0.5s;
         }
         
+        /* .menu .menu-item {
+            width: 20.5vw;
+        } */
+        
         .menu .menu-item img {
-            background-color: var(--theme-color-text-ondark);
+            /* background-color: var(--theme-color-text-ondark); */
             width: 100%;
             height: auto;
+            transition: 0.5s;
+        }
+        
+        .menu .menu-item:hover,
+        .menu .menu-item img:hover {
+            background-color: #FFE5D1;
+        }
+        
+        .menu .menu-item:hover {
+            --scale: 2vw;
+            
+            /* position: relative; */
+            width: calc(20vw + var(--scale));
+            /* left: -calc(var(--scale) / 2); */
+            /* top: -calc(var(--scale) / 2); */
+            margin: auto;
         }
         
         .menu a {
@@ -76,7 +97,7 @@
             <h1 class="home-title">Welcome to Golby's Pizzeria!</h1>
         <!--</div>-->
         <div class="menu">
-            <a href="./products/beverages.html">
+            <a href="">         <!-- ./products/beverages.html"> -->
                 <div class="menu-item">
                     <img src="./images/beverage3_fanta.png" />
                     <p class="menu-item-description">
@@ -84,7 +105,7 @@
                     </p>
                 </div>
             </a>
-            <a href="./products/pizzas.html">
+            <a href="">            <!-- ./products/pizzas.html"> -->
                 <div class="menu-item">
                     <img src="./images/pizza1_supersupreme.png" />
                     <p class="menu-item-description">
@@ -92,7 +113,7 @@
                     </p>
                 </div>
             </a>
-            <a href="./products/desserts.html">
+            <a href=""> <!-- ./products/desserts.html"> -->
                 <div class="menu-item">
                     <img src="./images/dessert1_cheesecake.png" />
                     <p class="menu-item-description">
