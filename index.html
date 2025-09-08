@@ -26,12 +26,33 @@
             width: 20vw; /*320px;*/
             height: auto; /*320px;*/
             padding: 2vw;
+            transition: 0.5s;
         }
         
+        /* .menu .menu-item {
+            width: 20.5vw;
+        } */
+        
         .menu .menu-item img {
-            background-color: var(--theme-color-text-ondark);
+            /* background-color: var(--theme-color-text-ondark); */
             width: 100%;
             height: auto;
+            transition: 0.5s;
+        }
+        
+        .menu .menu-item:hover,
+        .menu .menu-item img:hover {
+            background-color: #FFE5D1;
+        }
+        
+        .menu .menu-item:hover {
+            --scale: 2vw;
+            
+            /* position: relative; */
+            width: calc(20vw + var(--scale));
+            /* left: -calc(var(--scale) / 2); */
+            /* top: -calc(var(--scale) / 2); */
+            margin: auto;
         }
         
         .menu a {
