@@ -5,10 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us | Golby's Pizzeria</title>
     <style>
+        nav a[href="aboutus.html"] {
+            visibility: hidden;
+        }
         body {
             border:10px solid salmon;
             margin:0;
             padding:20px;
+        }
+        h3 {
+            transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
+        }
+        h3:hover {
+            color: #CB4333;
+            cursor:default;
+            transform: scale(1.1);
+            letter-spacing:2px;
+        }
+        p {
+            border: 2px solid salmon;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #fff8f6;
+            box-shadow: 0 2px 5px #888;
+        }
+        .about-box {
+            border: 2px solid salmon;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            background-color: #fff8f6;
+            box-shadow: 0 2px 5px #888;
+        }
+        .about-box p {
+            border: none;
+            box-shadow: none;
+            margin: 10px;
+        }
+        .authors-box {
+            border: 2px solid salmon;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 10px;
+            background-color: #fff8f6;
+            box-shadow: 0 2px 5px #888;
+            width: 80%;
+        }
+        .authors-box p {
+            border: none;
+            box-shadow: none;
+            margin:5px 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -51,12 +99,14 @@
                 <table width="75%" align="center">
                     <tr>
                         <td colspan="2">
+                            <div class="about-box">
                             <p>
                                 At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
                             </p>
                             <p>
                                 Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.
                             </p>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -123,6 +173,7 @@
         <tr>
             <td align="center">
                 <h2>Authors</h2>
+                <div class="authors-box">
                 <h3>Development Team</h3>
                 <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
                 <table>
@@ -143,6 +194,7 @@
                         <td><p><font face="Fantasy"><b>- Asset Research/Content</b></font></p></td>
                     </tr>
                 </table>
+                </div>
             </td>
         </tr>
         <!--<tr>
