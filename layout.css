@@ -7,6 +7,7 @@
     --layout-navbar-color: var(--theme-color-accent);
     --layout-header-color: var(--theme-color-accent);
     --layout-footer-color: var(--theme-color-accent);
+    --layout-color-link-hover: var(--theme-color-text-onlight);
     --layout-navbar-size: 10vmax;
 }
 
@@ -84,11 +85,13 @@ body {
 
 header {
     width: 100vw;
-    height: 10vmin;
+    height: 12vmin;
     display: flex;
     background-color: var(--theme-color-accent);
     align-items: center;
     align-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* For Logo */
@@ -112,6 +115,11 @@ nav ul li a {
     text-decoration: none;
     font-size: 2rem;
     color: var(--theme-color-text-ondark);
+    transition: 0.1s ease-in;
+}
+
+nav ul li a:hover {
+    color: var(--theme-color-link-hover);
 }
 
 nav ul li {
@@ -126,8 +134,9 @@ main {
 }
 
 footer {
-    height: 10vmin;
+    height: max-content; /*min(5vmin, auto);*/
     background-color: var(--theme-color-foreground);
+    font-size: 2rem;
 }
 
 .footer-content {
