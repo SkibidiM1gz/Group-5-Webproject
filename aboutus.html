@@ -1,66 +1,149 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us | Golby's Pizzeria</title>
+        <link rel="stylesheet" href="./theme.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <style type="text/css">
     <style>
-        nav a[href="aboutus.html"] {
-            visibility: hidden;
-        }
-        body {
-            border:10px solid salmon;
-            margin:0;
-            padding:20px;
-        }
-        h3 {
-            transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
-        }
-        h3:hover {
-            color: #CB4333;
-            cursor:default;
-            transform: scale(1.1);
-            letter-spacing:2px;
-        }
-        p {
-            border: 2px solid salmon;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 8px;
-            background-color: #fff8f6;
-            box-shadow: 0 2px 5px #888;
-        }
-        .about-box {
-            border: 2px solid salmon;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 10px;
-            background-color: #fff8f6;
-            box-shadow: 0 2px 5px #888;
-        }
-        .about-box p {
-            border: none;
-            box-shadow: none;
-            margin: 10px;
-        }
-        .authors-box {
-            border: 2px solid salmon;
-            padding: 15px;
-            margin: 15px auto;
-            border-radius: 10px;
-            background-color: #fff8f6;
-            box-shadow: 0 2px 5px #888;
-            width: 80%;
-        }
-        .authors-box p {
-            border: none;
-            box-shadow: none;
-            margin:5px 0;
-            padding: 0;
-        }
+    body {
+        border: 10px solid #b04a44;
+        margin: 0;
+        padding: 20px;
+        background-color: #3b1c1a;
+    }
+
+    h2, h3 {
+        margin-bottom: 2px;
+        color: #f4d4a0;
+    }
+
+    h1 {
+    color: #f4d4a0;
+    font-size: 46px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: 0.3s;
+    }
+   
+   h1:hover{
+       transform: scale(1.1);
+   }
+
+    h3 {
+        transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
+    }
+
+    h3:hover {
+        color: #ffb19a; /* warm peach hover */
+        cursor: default;
+        transform: scale(1.1);
+        letter-spacing: 2px;
+    }
+
+    p {
+        border: 2px solid #b04a44;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #ffe0d4; /* softer peach background, not white */
+        box-shadow: 0 4px 8px rgba(59, 28, 26, 0.3);
+        color: #2b1b18;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    p:hover {
+        box-shadow: 0 0 20px 4px rgba(255, 140, 100, 0.6);
+        transform: scale(1.02);
+    }
+
+    .about-box {
+        border: 2px solid #b04a44;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 12px;
+        background-color: #ffe0d4;
+        box-shadow: 0 4px 10px rgba(176, 74, 68, 0.4);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .about-box:hover {
+        box-shadow: 0 0 25px 6px rgba(255, 140, 100, 0.6);
+        transform: scale(1.02);
+    }
+
+    .about-box p {
+        border: none;
+        box-shadow: none;
+        margin: 10px;
+        color: #2b1b18;
+    }
+
+    .authors-box {
+        border: 2px solid #b04a44;
+        padding: 15px;
+        margin: 20px auto;
+        border-radius: 12px;
+        background-color: #ffe0d4;
+        box-shadow: 0 4px 10px rgba(176, 74, 68, 0.4);
+        width: 80%;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .authors-box:hover {
+        box-shadow: 0 0 25px 6px rgba(255, 140, 100, 0.6);
+        transform: scale(1.02);
+    }
+
+    .authors-box p {
+        border: none;
+        box-shadow: none;
+        margin: 5px 0;
+        padding: 0;
+        color: #2b1b18;
+    }
+
+    .navbar {
+        background-color: #b04a44;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .navbar a {
+        color: #f4d4a0;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: #fff8f6;
+    }
+</style>
+
     </style>
 </head>
 <body>
+      <div class="navbar">
+        <div class="logo-container">
+            <img class="logo" src="./images/logo.png">
+        </div>
+        <div class="link-container">
+            <a href="aboutus.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+            <a href="user_account.html">Account</a>
+        </div>
+    </div>
     <table width="100%" height="100%">
         <tr>
             <td>
@@ -70,32 +153,9 @@
                 </div>
             </td>
         </tr>
-        <tr bgcolor="salmon">
-            <td>
-                <div bgcolor="center">
-                    <nav align="center">
-                        <a href="index.html">Home</a>
-                        <font size="5" face="Courier New">|</font>
-                        <span>About Us</span>
-                        <!--<a href="aboutus.html"><font size="3">About Us</font></a>-->
-                        <font size="5" face="Courier New">|</font>
-                        <a href="faq.html"><font size="3">FAQ</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="login.html"><font size="3">Login</font></a>
-                        <!--<font size="5" face="Courier New">|</font>
-                        <a href="signup.html"><font size="3">Sign Up</font></a>-->
-                        <font size="5" face="Courier New">|</font>
-                        <a href="cart.html"><font size="3">Cart</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="user_account.html"><font size="3">Account</font></a>
-                        
-                    </nav>
-                </div>
-            </td>
-        </tr>
         <tr>
             <td>
-                <h1 align="center">About Us</h1>
+                <h2 align="center">About Us</h2>
                 <table width="75%" align="center">
                     <tr>
                         <td colspan="2">
@@ -143,7 +203,7 @@
         <tr>
             <!--<td width="40%" align="center">
                 <h2>Message Us</h2>
-                
+               
                 <table width="40%">
                     <tr>
                         <td>
@@ -163,7 +223,7 @@
                     </tr>
                 </table>-->
                 <!--<div align="center">-->
-                
+               
                 <!--<form width="40%">
                     <input type="email" placeholder="Your email"
                     <br>
@@ -174,7 +234,6 @@
             <td align="center">
                 <h2>Authors</h2>
                 <div class="authors-box">
-                <h3>Development Team</h3>
                 <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
                 <table>
                     <tr>
@@ -205,7 +264,7 @@
                             <h2 align="center">Credits</h2>
                             <h3 align="center">Images</h3>
                             <figure>
-                                <img width="100" height="100" src="images/pizza2_ham_cheese.png" /> 
+                                <img width="100" height="100" src="images/pizza2_ham_cheese.png" />
                                 <figcaption>
                                     Ham and Cheese Pizza - https://www.dreamstime.com/pizza-ham-cheese-pineapple-isolated-white-top-view-pizza-ham-cheese-pineapple-isolated-white-image125164895
                                 </figcaption>
@@ -213,7 +272,7 @@
                             <figure>
                                 <img width="100" height="100" src="images/pizza3_pepperoni.png" />
                                 <figcaption>
-                                    Pepperoni Pizza - 
+                                    Pepperoni Pizza -
                                     <a href="https://www.pngkey.com/maxpic/u2e6r5e6q8e6w7t4/#google_vignette">
                                         https://www.pngkey.com/maxpic/u2e6r5e6q8e6w7t4/#google_vignette
                                     </a>
@@ -222,14 +281,14 @@
                             <figure>
                                 <img width="100" height="100" src="images/pizza2_ham_cheese.png" />
                                 <figcaption>
-                                    Pepperoni Pizza - 
+                                    Pepperoni Pizza -
                                     <a href="https://www.dreamstime.com/pizza-ham-cheese-pineapple-isolated-white-top-view-pizza-ham-cheese-pineapple-isolated-white-image125164895" target="_blank">
                                         https://www.dreamstime.com/pizza-ham-cheese-pineapple-isolated-white-top-view-pizza-ham-cheese-pineapple-isolated-white-image125164895
                                     </a>
                                 </figcaption>
                             </figure>
                             <p>
-                                
+                               
                             </p>
                             <p>
                                 super supreme - https://www.freepik.com/premium-photo/isolated-pizza-with-mushrooms-olives_18865512.htm
