@@ -5,10 +5,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cart | Golby's Pizzeria</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <style type="text/css">
+/* --theme-color-accent: var(--theme-color-terracota);
+    --theme-color-background: var(--theme-color-brown);
+    --theme-color-text-ondark: var(--theme-color-paleApricot);
+    --theme-color-text-onlight: var(--theme-color-brown); */
+
+        .a {
+            background-color: var(--theme-color-text-ondark);
+            width: 80vw;
+            height: auto;
+            margin: auto;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+            user-select: none;
+            box-shadow: 10px 10px 10px 10px #000000;
+        }
+
+
+        .row1 {
+            display: flex;
+            background-color: var(--theme-color-text-ondark);
+            width: auto;
+            height: auto;
+            margin: 50px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+             
+        }
+
+        .row1 div {
+            background-color: var(--theme-color-text-ondark);
+            width: 30vw;
+            height: 10vh;
+            border-style: solid;
+            text-align: center;
+            display: block;
+
+        }
+
+       .row2 {
+            display: flex;
+            background-color: var(--theme-color-text-ondark);
+            width: auto;
+            height: auto;
+            margin: 50px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+           
+        }
+
+        .row2 div {
+            background-color: var(--theme-color-text-ondark);
+            width: 30vw;
+            height: 40vh;
+            border-style: solid;
+            text-align: center;
+        }
+
+        .row2 div img {
+            display: block;
+            width: 70%;
+            height: 70%;
+            margin: auto;
+        }
+
+        .row3 {
+            display: flex;
+            background-color: var(--theme-color-text-ondark);
+            width: auto;
+            height: auto;
+            margin: 50px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+           
+        }
+
+        .row3 div {
+            background-color: var(--theme-color-text-ondark);   
+            border-style: dashed;
+        }
+        .row4 {
+            display: flex;
+            background-color: var(--theme-color-text-ondark);
+            width: auto;
+            height: auto;
+            margin: 50px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+           
+        }
+
+        .row4 div {
+            background-color: var(--theme-color-text-ondark);   
+            width: 100%;
+        }
+        .total-label  {
+             width: 66%;
+             text-align: right;
+        }
+        .total-amount {
+            width: 33%;
+        }
+        .title {
+            color: var(--theme-color-text-ondark);
+            text-align: center;
+            font-size: 3em;
+            text-shadow: 2px 2px black;
+        }
+
+        .description {
+            color: var(--theme-color-text-ondark);
+            text-align: center;
+            font-size: 1em;
+            text-shadow: 2px 2px black;
+        }
+
+        .checkout {
+            background-color: var(--theme-color-text-ondark);
+            /* margin: 50px;
+            margin-top: 0px;
+            margin-bottom: 0px; */
+            /* padding: 14px 40px; */
+         }
+
+         .checkout-button {
+            background-color: var(--theme-color-accent);
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            transition: 0.3s;
+         }
+        .text-color{
+            text-align: center;
+        }
+ 
+        .checkout-button:hover {
+            background-color: var(--theme-color-text-ondark);
+        }
+        
+
+    </style>
 </head>
 
 <body>
-    <table width="100%" height="100%">
+    <div class="navbar">
+        <div class="logo-container">
+            <img class="logo" src="./images/logo.png">
+        </div>
+        <div class="link-container">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="login.html">Login</a>
+            <a href="user_account.html">Account</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1 class="title">
+            YOUR CART
+        </h1>
+        <p class="description">
+            The cart is where your orders are collected.<br>
+Item Cart System will be improved in the future.
+        </p>
+    </div>
+        <div class="a">
+            <div class="row1">
+                <div class="ab">
+                    <h1>Product</h1>
+                </div>
+                <div class="ab">
+                    <h1>Details</h1>
+                </div>
+                <div class="ab">
+                    <h1>Amount</h1>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="products">
+                    <img src="./images/beverage1_water.png" />
+                </div>
+                <div class="details">
+                    <p>
+                        Bottled Water 25Php x 1pc
+                    </p>
+                </div>
+                <div class="amount">
+                    <p>
+                        25Php
+                    </p>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="total-label">
+                    <h1> Total:</h1>
+                </div>
+                <div class="total-amount">
+                    <h3 align="center"> 25php </h3>
+                </div>
+            </div>
+            <div class="row4">
+                <div class="checkout">
+                    <button class="checkout-button"><span class="text-color">Checkout</span></button>
+                </div>
+            </div>
+    </div>
+    
+    <!-- <table width="100%" height="100%">
         <tr>
             <td>
                 <div align="center">
@@ -27,12 +238,11 @@
                         <font size="5" face="Courier New">|</font>
                         <a href="faq.html"><font size="3">FAQ</font></a>
                         <font size="5" face="Courier New">|</font>
-                        <a href="login.html"><font size="3">Login</font></a>
-                        <!--<font size="5" face="Courier New">|</font>
-                        <a href="signup.html"><font size="3">Sign Up</font></a>-->
-                        <font size="5" face="Courier New">|</font>
+                        <a href="login.html"><font size="3">Login</font></a> -->
+                        
+                        <!-- <font size="5" face="Courier New">|</font>
                         <span>Cart</span>
-                        <!--<a href="cart.html"><font size="3">Cart</font></a>-->
+                        
                         <font size="5" face="Courier New">|</font>
                         <a href="user_account.html"><font size="3">Account</font></a>
                     </nav>
@@ -45,9 +255,9 @@
                 <p>The cart is where your orders are collected.</p>
                 <p>Item Cart System will be improved in the future.</p>
                 <table bgcolor="lightYellow" width="75%">
-                    <tr>
+                    <tr> -->
                         <!--<td bgcolor="lightSalmon"><img width="150" height="150" src="images/beverage1_water.png" /></td>-->
-                        <th><font face="Courier New" size="5">Product</font></th>
+                        <!-- <th><font face="Courier New" size="5">Product</font></th>
                         <th><font face="Courier New" size="5">Name</font></th>
                         <th><font face="Courier New" size="5">Amount</font></th>
                         <th><font face="Courier New" size="5">Price</font></th>
@@ -58,15 +268,15 @@
                         <td align="center"><font face="Courier New" size="5">1 pc</font></td>
                         <td align="center"><font face="Courier New" size="5">25.00 Php</font></td>
                     </tr>
-                    <tr>
+                    <tr> -->
                         <!--<td><img width="150" height="150" src="images/beverage1_water.png" /></td>-->
-                        <td bgcolor="blanchedAlmond" colspan="3" align="right"><font  face="Courier New" size="5">Total:</font></td>
+                        <!-- <td bgcolor="blanchedAlmond" colspan="3" align="right"><font  face="Courier New" size="5">Total:</font></td>
                         <td bgcolor="blanchedAlmond" align="center"><font face="Courier New" size="5">25.00 Php</font></td>
                     </tr>
                     <tr>
                         <td colspan="4" align="center"><button>Checkout</button></td>
                     </tr>
-                </table>
+                </table> -->
                 <!--<h1 align="center">Welcome!</h1>
                 <h3 align="center">Papa Dough's Menu</h3>
                 <table width="75%" align="center">
@@ -81,9 +291,9 @@
                         <td><font size="5" face="Courier New">Desserts</font></td>
                     </tr>
                 </table>-->
-            </td>
+            <!-- </td>
         </tr>
-    </table>
+    </table> -->
 </body>
 
 </html>
