@@ -5,136 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us | Golby's Pizzeria</title>
-        <link rel="stylesheet" href="./theme.css" />
+
+    <link rel="stylesheet" href="./theme.css" />
     <link rel="stylesheet" href="./layout.css" />
     <link rel="stylesheet" href="./components.css" />
-    <style type="text/css">
+
     <style>
-    body {
-        border: 10px solid #b04a44;
-        margin: 0;
-        padding: 20px;
-        background-color: #3b1c1a;
-    }
+        body {
+            border: 10px solid #b04a44;
+            margin: 0;
+            padding: 20px;
+            background-color: #3b1c1a;
+            font-family: Arial, sans-serif;
+        }
 
-    h2, h3 {
-        margin-bottom: 2px;
-        color: #f4d4a0;
-    }
+        h1, h2, h3 {
+            color: #f4d4a0;
+            text-align: center;
+        }
 
-    h1 {
-    color: #f4d4a0;
-    font-size: 46px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-top: 60px;
-    margin-bottom: 10px;
-    text-align: center;
-    transition: 0.3s;
-    }
-   
-   h1:hover{
-       transform: scale(1.1);
-   }
+        h1 {
+            font-size: 46px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-top: 60px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
 
-    h3 {
-        transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
-    }
+        h1:hover {
+            transform: scale(1.1);
+        }
 
-    h3:hover {
-        color: #ffb19a; /* warm peach hover */
-        cursor: default;
-        transform: scale(1.1);
-        letter-spacing: 2px;
-    }
+        h3 {
+            transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
+        }
 
-    p {
-        border: 2px solid #b04a44;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 10px;
-        background-color: #ffe0d4; /* softer peach background, not white */
-        box-shadow: 0 4px 8px rgba(59, 28, 26, 0.3);
-        color: #2b1b18;
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
+        h3:hover {
+            color: #ffb19a;
+            cursor: default;
+            transform: scale(1.1);
+            letter-spacing: 2px;
+        }
 
-    p:hover {
-        box-shadow: 0 0 20px 4px rgba(255, 140, 100, 0.6);
-        transform: scale(1.02);
-    }
+        p {
+            text-align: center;
+            border: 2px solid #b04a44;
+            padding: 10px;
+            margin: 30px;
+            border-radius: 10px;
+            background-color: #ffe0d4;
+            box-shadow: 0 4px 8px rgba(59, 28, 26, 0.3);
+            color: #2b1b18;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
 
-    .about-box {
-        border: 2px solid #b04a44;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 12px;
-        background-color: #ffe0d4;
-        box-shadow: 0 4px 10px rgba(176, 74, 68, 0.4);
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
+        p:hover {
+            box-shadow: 0 0 20px 4px rgba(255, 140, 100, 0.6);
+            transform: scale(1.02);
+        }
 
-    .about-box:hover {
-        box-shadow: 0 0 25px 6px rgba(255, 140, 100, 0.6);
-        transform: scale(1.02);
-    }
+        .authors-box {
+            border: 2px solid #b04a44;
+            border-radius: 12px;
+            background-color: #ffe0d4;
+            box-shadow: 0 4px 10px rgba(176, 74, 68, 0.4);
+            padding: 20px;
+            margin: 20px auto;
+            width: 75%;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
 
-    .about-box p {
-        border: none;
-        box-shadow: none;
-        margin: 10px;
-        color: #2b1b18;
-    }
+        .authors-box:hover {
+            box-shadow: 0 0 25px 6px rgba(255, 140, 100, 0.6);
+            transform: scale(1.02);
+        }
 
-    .authors-box {
-        border: 2px solid #b04a44;
-        padding: 15px;
-        margin: 20px auto;
-        border-radius: 12px;
-        background-color: #ffe0d4;
-        box-shadow: 0 4px 10px rgba(176, 74, 68, 0.4);
-        width: 80%;
-        transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
+        .authors-box p {
+            border: none;
+            box-shadow: none;
+            margin: 5px 0;
+        }
 
-    .authors-box:hover {
-        box-shadow: 0 0 25px 6px rgba(255, 140, 100, 0.6);
-        transform: scale(1.02);
-    }
+        .navbar {
+            background-color: #b04a44;
+            padding: 10px 0;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+        }
 
-    .authors-box p {
-        border: none;
-        box-shadow: none;
-        margin: 5px 0;
-        padding: 0;
-        color: #2b1b18;
-    }
+        .navbar a {
+            color: #f4d4a0;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
 
-    .navbar {
-        background-color: #b04a44;
-        padding: 10px 0;
-        border-radius: 0 0 10px 10px;
-    }
+        .navbar a:hover {
+            color: #fff8f6;
+        }
 
-    .navbar a {
-        color: #f4d4a0;
-        font-weight: bold;
-        text-decoration: none;
-        margin: 0 15px;
-        transition: color 0.3s ease;
-    }
+        .logo-container img {
+            width: 100px;
+            height: 100px;
+        }
 
-    .navbar a:hover {
-        color: #fff8f6;
-    }
-</style>
+        .contact-section {
+            width: 75%;
+            margin: 0 auto;
+            text-align: center;
+        }
 
+        .authors-list {
+            width: 60%;
+            margin: 10px auto;
+            border-collapse: collapse;
+        }
+
+        .authors-list td {
+            padding: 5px 10px;
+            color: #2b1b18;
+        }
     </style>
 </head>
+
 <body>
-      <div class="navbar">
+    <!-- Navbar -->
+    <div class="navbar">
         <div class="logo-container">
-            <img class="logo" src="./images/logo.png">
+            <img src="./images/logo.png">
         </div>
         <div class="link-container">
             <a href="aboutus.html">About Us</a>
@@ -144,166 +144,56 @@
             <a href="user_account.html">Account</a>
         </div>
     </div>
-    <table width="100%" height="100%">
-        <tr>
-            <td>
-                <div align="center">
-                    <img align="center" width="100" height="100" src="images/logo.png" />
-                    <h1>Golby's Pizzeria</h1>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h2 align="center">About Us</h2>
-                <table width="75%" align="center">
-                    <tr>
-                        <td colspan="2">
-                            <div class="about-box">
-                            <p>
-                                At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
-                            </p>
-                            <p>
-                                Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.
-                            </p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td height="100%">
-                            <table align="center">
-                                <tr>
-                                    <td align="center">
-                                        <h3>Business Days</h3>
-                                        <p>We open only from Monday to Friday 7am to 5pm.</p>
-                                        <h3>Location</h3>
-                                        <p>You could find us near Misamis Street Bago Bantay, Quezon City, Philippines.</p>
-                                        <h3>Contact</h3>
-                                        <p>You could email us at <b>golbyspizzeria@gmail.com</b><br>Or call us: <b>+639618250366</b></p>
-                                    </td>
-                                    <!--<td>
-                                        <iframe width="250" height="250" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d302.1800690234766!2d121.02899107746444!3d14.657281762257806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1754561717302!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </td>-->
-                                </tr>
-                            </table>
-                            <!--<h3>Business Days</h3>
-                            <p>We open only from Monday to Friday 12pm to 8pm.</p>
-                            <h3>Location</h3>
-                            <p>You could find us near Misamis Street Bago Bantay, Quezon City, Philippines.</p>
-                            <h3>Contact</h3>
-                            <p>You could email us at <b>papadoughs@gmail.com</b><br>Or call us: <b>+639618250366</b></p>-->
-                        </td>
-                        <!--<td width="50%" height="100%" align="center">
-                            <iframe width="250" height="250" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d302.1800690234766!2d121.02899107746444!3d14.657281762257806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1754561717302!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </td>-->
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <!--<td width="40%" align="center">
-                <h2>Message Us</h2>
-               
-                <table width="40%">
-                    <tr>
-                        <td>
-                            <form align="left" action="cart.html">
-                                <label for="user_message">Send Us A Message!</label>
-                                <br>
-                                <textarea id="user_message" cols="55" rows="7" placeholder="Type your message here..."></textarea>
-                                <br>
-                                <br>
-                                <label for="user_email">E-mail:</label>
-                                <input type="email" placeholder="Enter your valid email"/>
-                                <br>
-                                <br>
-                                <input type="submit" value="send" />
-                            </form>
-                        </td>
-                    </tr>
-                </table>-->
-                <!--<div align="center">-->
-               
-                <!--<form width="40%">
-                    <input type="email" placeholder="Your email"
-                    <br>
-                </form>-->
-            </td>
-        </tr>
+
+    <!-- header -->
+    <table width="100%">
         <tr>
             <td align="center">
-                <h2>Authors</h2>
-                <div class="authors-box">
-                <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
-                <table>
-                    <tr>
-                        <td><p><font face="Fantasy"><b>Shiela Mae M. Alcantara</b></font></p></td>
-                        <td><p><font face="Fantasy"><b>- Asset Research/Content</b></font></p></td>
-                    </tr>
-                    <tr>
-                        <td><p><font face="Fantasy"><b>Daniel Derrick M. Calisura</b></font></p></td>
-                        <td><p><font face="Fantasy"><b>- Programming/Content</b></font></p></td>
-                    </tr>
-                    <tr>
-                        <td><p><font face="Fantasy"><b>Franco Miguel Dorato</b></font></p></td>
-                        <td><p><font face="Fantasy"><b>- Programming</b></font></p></td>
-                    </tr>
-                    <tr>
-                        <td><p><font face="Fantasy"><b>John Gabriel Geraldizo</b></font></p></td>
-                        <td><p><font face="Fantasy"><b>- Asset Research/Content</b></font></p></td>
-                    </tr>
-                </table>
-                </div>
+                <img src="images/logo.png" width="100" height="100" />
+                <h1>Golby's Pizzeria</h1>
             </td>
         </tr>
-        <!--<tr>
-            <td align="center">
-                <table width="50%">
-                    <tr>
-                        <td>
-                            <h2 align="center">Credits</h2>
-                            <h3 align="center">Images</h3>
-                            <figure>
-                                <img width="100" height="100" src="images/pizza2_ham_cheese.png" />
-                                <figcaption>
-                                    Ham and Cheese Pizza - https://www.dreamstime.com/pizza-ham-cheese-pineapple-isolated-white-top-view-pizza-ham-cheese-pineapple-isolated-white-image125164895
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img width="100" height="100" src="images/pizza3_pepperoni.png" />
-                                <figcaption>
-                                    Pepperoni Pizza -
-                                    <a href="https://www.pngkey.com/maxpic/u2e6r5e6q8e6w7t4/#google_vignette">
-                                        https://www.pngkey.com/maxpic/u2e6r5e6q8e6w7t4/#google_vignette
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img width="100" height="100" src="images/pizza2_ham_cheese.png" />
-                                <figcaption>
-                                    Pepperoni Pizza -
-                                    <a href="https://www.dreamstime.com/pizza-ham-cheese-pineapple-isolated-white-top-view-pizza-ham-cheese-pineapple-isolated-white-image125164895" target="_blank">
-                                        https://www.dreamstime.com/pizza-ham-cheese-pineapple-isolated-white-top-view-pizza-ham-cheese-pineapple-isolated-white-image125164895
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <p>
-                               
-                            </p>
-                            <p>
-                                super supreme - https://www.freepik.com/premium-photo/isolated-pizza-with-mushrooms-olives_18865512.htm
-                            </p>
-                            <p>
-                                prosciutto - https://www.123rf.com/photo_116561666_round-italian-pizza-with-prosciutto-mascarpone-and-arugula-isolated-on-white-background-top-view.html
-                            </p>
-                            <p>
-                                mushroom - https://www.pngkit.com/view/u2w7t4i1i1y3y3q8_mushroom-pizza-chicken-mushroom-pizza-png/
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>-->
     </table>
-</body>
-</html>
+
+    <!-- about us -->
+    <h2 align="center">About Us</h2>
+        <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
+     Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p>
+
+    <!-- contact Info -->
+    <div class="contact-section">
+        <h3>Business Days</h3>
+        <p>We open only from Monday to Friday, 7am to 5pm.</p>
+
+        <h3>Location</h3>
+        <p>You can find us near Misamis Street, Bago Bantay, Quezon City, Philippines.</p>
+
+        <h3>Contact</h3>
+        <p>Email: <b>golbyspizzeria@gmail.com</b><br>Phone: <b>+63 961 825 0366</b></p>
+    </div>
+
+    <!-- authors -->
+    <h2 align="center">Authors</h2>
+    <div class="authors-box">
+        <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
+
+        <table class="authors-list">
+            <tr>
+                <td><b>Shiela Mae M. Alcantara</b></td>
+                <td>- Asset Research/Content</td>
+            </tr>
+            <tr>
+                <td><b>Daniel Derrick M. Calisura</b></td>
+                <td>- Programming/Content</td>
+            </tr>
+            <tr>
+                <td><b>Franco Miguel Dorato</b></td>
+                <td>- Programming</td>
+            </tr>
+            <tr>
+                <td><b>John Gabriel Geraldizo</b></td>
+                <td>- Asset Research/Content</td>
+            </tr>
+        </table>
+    </div
+
