@@ -5,12 +5,15 @@
  */
 :root {
     --layout-navbar-color: var(--theme-color-accent);
+    --layout-header-color: var(--theme-color-accent);
+    --layout-footer-color: var(--theme-color-accent);
     --layout-navbar-size: 10vmax;
 }
 
 /* - Navigation - */
-.navbar {
-    background-color: var(--layout-navbar-color); /* var(--color-navbar); */
+/* OLD CODE DO NOT UNCOMMENT */
+/* .navbar {
+    background-color: var(--layout-navbar-color); var(--color-navbar);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,38 +25,112 @@
     min-height: var(--layout-navbar-size);
     max-height: var(--layout-navbar-size);
     user-select: none;
-    -webkit-user-select: none; /* Safari, Chrome */
-    -ms-user-select: none;    /* Internet Explorer/Edge *//
-}
+    -webkit-user-select: none; Safari, Chrome
+    -ms-user-select: none;    Internet Explorer/Edge/
+} */
 
-.navbar img.logo {
+/* .navbar img.logo {
     display: block;
     width: var(--layout-navbar-size);
     height: auto;
-}
+} */
     
-.navbar div.logo-container {
+/* .navbar div.logo-container {
     display: flex;
     width: 30%;
     justify-content: center;
-}
+} */
     
-.navbar div.link-container {
+/* .navbar div.link-container {
     display: flex;
     width: 70%;
     justify-content: center;
-}
+} */
     
-.navbar a {
+/* .navbar a {
     color: var(--theme-color-text-ondark);
     font-size: 2em;
     text-decoration: none;
     text-shadow: 1px 1px black;
     margin-right: 2em;
-}
+} */
 
 /* - Main Content - */
-div.main-content {
+/* div.main-content {
     padding: 2vmin;
-    margin-top: var(--layout-navbar-size); /* Position it at bottom of navbar */
+    margin-top: var(--layout-navbar-size); Position it at bottom of navbar
+} */
+
+/* div.logo-container {
+    width: 30%;
+    display: flex;
+    align-content: center;
+} */
+
+/* .grid-layout {
+    display: grid;
+    grid-template-rows: 10vmin 80vmin 10vmin;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+} */
+
+/* STRUCTURE AND LAYOUT */
+body {
+    margin: 0px;
+}
+
+header {
+    width: 100vw;
+    height: 10vmin;
+    display: flex;
+    background-color: var(--theme-color-accent);
+    align-items: center;
+    align-content: center;
+}
+
+/* For Logo */
+header>img {
+    width: auto;
+    height: 80%;
+    margin-left: 2rem;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    float: right;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--theme-color-text-ondark);
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer {
+    height: 10vmin;
+    background-color: var(--theme-color-foreground);
+}
+
+.footer-content {
+    color: var(--theme-color-text-onlight);
+    text-align: center;
 }
