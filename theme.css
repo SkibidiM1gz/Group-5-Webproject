@@ -11,6 +11,7 @@
     
     --theme-color-accent: var(--theme-color-terracota);
     --theme-color-background: var(--theme-color-brown);
+    --theme-color-foreground: var(--theme-color-paleApricot);
     --theme-color-text-ondark: var(--theme-color-paleApricot);
     --theme-color-text-onlight: var(--theme-color-brown);
     
