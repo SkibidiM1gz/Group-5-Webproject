@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>Cart | Golby's Pizzeria</title>
     <link rel="stylesheet" href="./theme.css">
     <link rel="stylesheet" href="./layout.css">
@@ -20,7 +20,6 @@
             box-shadow: 10px 10px 10px 10px #000000;
         }
         
-        
         .row1 {
             display: flex;
             background-color: var(--theme-color-text-ondark);
@@ -29,18 +28,15 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-            
-            
         }
         
         .row1 div {
             background-color: var(--theme-color-text-ondark);
             width: 30vw;
-            height: 10vh;
+            height: auto;
             border-style: solid;
             text-align: center;
             display: block;
-            
         }
         
         .row2 {
@@ -51,8 +47,6 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-            
-            
         }
         
         .row2 div {
@@ -66,7 +60,7 @@
         .row2 div img {
             display: block;
             width: 70%;
-            height: 70%;
+            height: auto;
             margin: auto;
         }
         
@@ -78,8 +72,6 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-            
-            
         }
         
         .row3 div {
@@ -95,8 +87,6 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-            
-            
         }
         
         .row4 div {
@@ -150,21 +140,93 @@
         .checkout-button:hover {
             background-color: var(--theme-color-text-ondark);
         }
+        
+        /*.products img {
+            width: 100px;
+            height: auto;
+        }*/
     </style>
 </head>
 
 <body>
-    <div class="navbar">
+    <header>
+        <img class="logo" src="./images/logo.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="active-page"><a href="cart.html">Cart</a></li>
+                <!--<li><a href="login.html">Login</a></li>-->
+                <!--<li><a href="user_account.html">Account</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title">
+            YOUR CART
+        </h1>
+        <p class="description">
+            The cart is where your orders are collected.<br>
+            Item Cart System will be improved in the future.
+        </p>
+        <div class="a">
+            <div class="row1">
+                <div class="ab">
+                    <h1>Product</h1>
+                </div>
+                <div class="ab">
+                    <h1>Details</h1>
+                </div>
+                <div class="ab">
+                    <h1>Amount</h1>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="products">
+                    <img src="./images/beverage1_water.png" />
+                </div>
+                <div class="details">
+                    <p>
+                        Bottled Water 25Php x 1pc
+                    </p>
+                </div>
+                <div class="amount">
+                    <p>
+                        25Php
+                    </p>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="total-label">
+                    <h1> Total:</h1>
+                </div>
+                <div class="total-amount">
+                    <h3 align="center"> 25php </h3>
+                </div>
+            </div>
+            <div class="row4">
+                <div class="checkout">
+                    <button class="checkout-button"><span class="text-color">Checkout</span></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
+        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+    </footer>
+    <!--<div class="navbar">
         <div class="logo-container">
             <img class="logo" src="./images/logo.png">
         </div>
         <div class="link-container">
             <a href="index.html">Home</a>
             <a href="aboutus.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <!--<a href="login.html">Login</a>-->
-            <!--<a href="user_account.html">Account</a>-->
-        </div>
+            <a href="faq.html">FAQ</a>-->
+    <!--<a href="login.html">Login</a>-->
+    <!--<a href="user_account.html">Account</a>-->
+    <!--</div>
     </div>
     <div class="main-content">
         <h1 class="title">
@@ -215,7 +277,7 @@
                 <button class="checkout-button"><span class="text-color">Checkout</span></button>
             </div>
         </div>
-    </div>
+    </div>-->
     
     <!-- <table width="100%" height="100%">
         <tr>
