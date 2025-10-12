@@ -10,12 +10,19 @@
     --theme-color-paleApricot: #FFCCA2;
     --theme-color-brown: #301A1A;
     
+    --theme-color-sand: #f4d4a0;
+    --theme-color-peach: #ffb19a;
+    --theme-color-brick: #b04a44;
+    --theme-color-light: #ffe0d4;
+    --theme-color-cocoa: #2b1b18;
+    
     --theme-color-accent: var(--theme-color-terracota);
     --theme-color-background: var(--theme-color-brown);
     --theme-color-foreground: var(--theme-color-paleApricot);
     --theme-color-text-ondark: var(--theme-color-paleApricot);
     --theme-color-text-onlight: var(--theme-color-brown);
     --theme-color-hover-onlight: var(--theme-color-darkTerracota);
+    --theme-color-hover-ondark: var(--theme-color-light);
     
     /*--color-navbar: */
     /*--color-button-hover: ;*/
