@@ -11,15 +11,18 @@ div.product-card-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    align-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
     flex-wrap: wrap;
     margin-top: 2vmin;
 }
 
 div.product-card {
     background-color: var(--product_list-card-background);
-    max-width: 30vmax;
+    /*max-width: 30vw;*/
+    flex-basis: 10vw;
+    flex-grow: 30vw;
+    flex-shrink: 10vw;
     border: solid 1vmin var(--theme-color-accent); /*var(--theme-color-navbar);*/
     margin-top: 5vmin;
 }
