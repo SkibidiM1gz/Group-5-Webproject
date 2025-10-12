@@ -17,15 +17,30 @@
             font-family: Arial, sans-serif;
         } */
         
+        :root {
+            --theme-color-c1: #f4d4a0;
+            --theme-color-c2: #ffb19a;
+            --theme-color-c3: #b04a44;
+            --theme-color-c4: #ffe0d4;
+            --theme-color-c5: rgba(59, 28, 26, 0.3);
+            --theme-color-c6: #2b1b18;
+            --theme-color-c7: rgba(255, 140, 100, 0.6);
+            --theme-color-c8: #b04a44;
+            --theme-color-c9: rgba(176, 74, 68, 0.4);
+            --theme-color-c10: #ffe0d4;
+            --theme-color-c11: rgba(255, 140, 100, 0.6);
+            --theme-color-c12: #2b1b18;
+        }
+        
         h1,
         h2,
         h3 {
-            color: #f4d4a0;
+            color: var(--theme-color-c1);
             text-align: center;
         }
         
         h1 {
-            /*font-size: 46px;*/
+            font-size: 46px;
             font-weight: bold;
             letter-spacing: 3px;
             margin-top: 60px;
@@ -42,7 +57,7 @@
         }
         
         h3:hover {
-            color: #ffb19a;
+            color: var(--theme-color-c2);
             cursor: default;
             transform: scale(1.1);
             letter-spacing: 2px;
@@ -56,18 +71,18 @@
         
         main p {
             text-align: center;
-            border: 2px solid #b04a44;
+            border: 2px solid var(--theme-color-c3);
             padding: 10px;
             margin: 30px;
             border-radius: 10px;
-            background-color: #ffe0d4;
-            box-shadow: 0 4px 8px rgba(59, 28, 26, 0.3);
-            color: #2b1b18;
+            background-color: var(--theme-color-c4);
+            box-shadow: 0 4px 8px var(--theme-color-c5);
+            color: var(--theme-color-c6);
             transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
         
         main p:hover {
-            box-shadow: 0 0 20px 4px rgba(255, 140, 100, 0.6);
+            box-shadow: 0 0 20px 4px var(--theme-color-c7);
             transform: scale(1.02);
         }
         
@@ -77,18 +92,18 @@
         }
         
         .authors-box {
-            border: 2px solid #b04a44;
+            border: 2px solid var(--theme-color-c8);
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(176, 74, 68, 0.4);
-            width: 75%;
-            background-color: #ffe0d4;
+            box-shadow: 0 4px 10px var(--theme-color-c9);
+            width: 75vw;
+            background-color: var(--theme-color-c10);
             padding: 20px;
             margin: 20px auto;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
         
         .authors-box:hover {
-            box-shadow: 0 0 25px 6px rgba(255, 140, 100, 0.6);
+            box-shadow: 0 0 25px 6px var(--theme-color-c11);
             transform: scale(1.02);
         }
         
@@ -130,13 +145,14 @@
         
         .authors-list {
             /*width: 60%;*/
+            width: 100%;
             margin: 10px auto;
             border-collapse: collapse;
         }
         
         .authors-list td {
             padding: 5px 10px;
-            color: #2b1b18;
+            color: var(--theme-color-c12);
         }
         
         img.content-logo {
@@ -144,6 +160,15 @@
             width: 20vmin;
             height: auto;
             margin: auto;
+        }
+        
+        section {
+            width: 75vw;
+            margin: auto;
+        }
+        
+        section.lore p {
+            text-align: justify;
         }
     </style>
 </head>
@@ -212,6 +237,17 @@
                 <!--</div>-->
             </section>
         </article>
+        <article class="resources">
+            <h2>Resources and References</h2>
+            <section>
+                <h3>Images</h3>
+                <p>All images taken from pinterest.com</p>
+            </section>
+            <section>
+                <h3>Font</h3>
+                <p>Montserrat : <a href="./fonts/montserrat/OFL.txt">license</a></p>
+            </section>
+        </article>
         
         <!-- </td>
                             </tr>
@@ -230,7 +266,7 @@
     </main>
     <footer>
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
-        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+        <!-- <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p> -->
     </footer>
     
     
