@@ -6,6 +6,7 @@
     */
     
     --theme-color-terracota: #B2524B;
+    --theme-color-darkTerracota: rgb(120, 74, 68);
     --theme-color-paleApricot: #FFCCA2;
     --theme-color-brown: #301A1A;
     
@@ -14,6 +15,7 @@
     --theme-color-foreground: var(--theme-color-paleApricot);
     --theme-color-text-ondark: var(--theme-color-paleApricot);
     --theme-color-text-onlight: var(--theme-color-brown);
+    --theme-color-hover-onlight: var(--theme-color-darkTerracota);
     
     /*--color-navbar: */
     /*--color-button-hover: ;*/
