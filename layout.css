@@ -131,10 +131,13 @@ nav ul li {
 main {
     padding-top: 30px;
     padding-bottom: 30px;
+    min-height: 80vh;
 }
 
 footer {
-    height: max-content; /*min(5vmin, auto);*/
+    height: auto;
+    min-height: 150px; /*min(5vmin, auto);*/
+    max-height: 20vh;
     background-color: var(--theme-color-foreground);
     font-size: 2rem;
 }
