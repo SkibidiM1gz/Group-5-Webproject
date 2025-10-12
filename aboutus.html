@@ -1,29 +1,29 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>About Us | Golby's Pizzeria</title>
-
     <link rel="stylesheet" href="./theme.css" />
     <link rel="stylesheet" href="./layout.css" />
     <link rel="stylesheet" href="./components.css" />
-
     <style>
-        body {
+        /* body {
             border: 10px solid #b04a44;
             margin: 0;
             padding: 20px;
             background-color: #3b1c1a;
             font-family: Arial, sans-serif;
-        }
-
-        h1, h2, h3 {
+        } */
+        
+        h1,
+        h2,
+        h3 {
             color: #f4d4a0;
             text-align: center;
         }
-
+        
         h1 {
             font-size: 46px;
             font-weight: bold;
@@ -32,23 +32,29 @@
             margin-bottom: 10px;
             transition: 0.3s;
         }
-
+        
         h1:hover {
             transform: scale(1.1);
         }
-
+        
         h3 {
             transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
         }
-
+        
         h3:hover {
             color: #ffb19a;
             cursor: default;
             transform: scale(1.1);
             letter-spacing: 2px;
         }
-
+        
+        main th,
+        main td,
         p {
+            font-size: 1rem;
+        }
+        
+        main p {
             text-align: center;
             border: 2px solid #b04a44;
             padding: 10px;
@@ -59,80 +65,172 @@
             color: #2b1b18;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
-
-        p:hover {
+        
+        main p:hover {
             box-shadow: 0 0 20px 4px rgba(255, 140, 100, 0.6);
             transform: scale(1.02);
         }
-
+        
         .authors-box {
             border: 2px solid #b04a44;
             border-radius: 12px;
-            background-color: #ffe0d4;
             box-shadow: 0 4px 10px rgba(176, 74, 68, 0.4);
+            width: 75%;
+            background-color: #ffe0d4;
             padding: 20px;
             margin: 20px auto;
-            width: 75%;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
-
+        
         .authors-box:hover {
             box-shadow: 0 0 25px 6px rgba(255, 140, 100, 0.6);
             transform: scale(1.02);
         }
-
+        
         .authors-box p {
             border: none;
             box-shadow: none;
             margin: 5px 0;
         }
-
-        .navbar {
+        
+        /* .navbar {
             background-color: #b04a44;
             padding: 10px 0;
             border-radius: 0 0 10px 10px;
             text-align: center;
-        }
-
-        .navbar a {
+        } */
+        
+        /* .navbar a {
             color: #f4d4a0;
             font-weight: bold;
             text-decoration: none;
             margin: 0 15px;
             transition: color 0.3s ease;
-        }
-
-        .navbar a:hover {
+        } */
+        
+        /* .navbar a:hover {
             color: #fff8f6;
-        }
-
-        .logo-container img {
+        } */
+        
+        /* .logo-container img {
             width: 100px;
             height: 100px;
-        }
-
+        } */
+        
         .contact-section {
             width: 75%;
             margin: 0 auto;
             text-align: center;
         }
-
+        
         .authors-list {
-            width: 60%;
+            /*width: 60%;*/
             margin: 10px auto;
             border-collapse: collapse;
         }
-
+        
         .authors-list td {
             padding: 5px 10px;
             color: #2b1b18;
+        }
+        
+        img.content-logo {
+            display: block;
+            width: 20vmin;
+            height: auto;
+            margin: auto;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <img class="logo" src="./images/logo.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active-page"><a href="aboutus.html">About Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="user_account.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- header -->
+        <!-- <table width="100%">
+            <tr>
+                <td align="center"> -->
+        <img class="content-logo" src="./images/logo.png" />
+        <h1>Golby's Pizzeria</h1>
+        
+        <article>
+            <section class="lore">
+                <h2 align="center">About Us</h2>
+                <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
+                    Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p>
+            </section>
+            <section class="contacts">
+                <h3>Business Days</h3>
+                <p>We open only from Monday to Friday, 7am to 5pm.</p>
+                
+                <h3>Location</h3>
+                <p>You can find us near Misamis Street, Bago Bantay, Quezon City, Philippines.</p>
+                
+                <h3>Contact</h3>
+                <p>Email: <b>golbyspizzeria@gmail.com</b><br>Phone: <b>+63 961 825 0366</b></p>
+            </section>
+            <section class="authors">
+                <h2 align="center">Authors</h2>
+                <div class="authors-box">
+                    <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
+                    
+                    <table class="authors-list">
+                        <tr>
+                            <th>Shiela Mae M. Alcantara</th>
+                            <td>- Asset Research/Content</td>
+                        </tr>
+                        <tr>
+                            <th>Daniel Derrick M. Calisura</th>
+                            <td>- Programming/Content</td>
+                        </tr>
+                        <tr>
+                            <th>Franco Miguel Dorato</th>
+                            <td>- Programming</td>
+                        </tr>
+                        <tr>
+                            <th>John Gabriel Geraldizo</th>
+                            <td>- Asset Research/Content</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </article>
+        
+        <!-- </td>
+                            </tr>
+                        </table> -->
+        
+        <!-- about us -->
+        
+        
+        <!-- contact Info -->
+        <!-- <div class="contact-section">
+            
+        </div> -->
+        
+        <!-- authors -->
+        
+    </main>
+    <footer>
+        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
+        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+    </footer>
+    
+    
     <!-- Navbar -->
-    <div class="navbar">
+    <!-- <div class="navbar">
         <div class="logo-container">
             <img src="./images/logo.png">
         </div>
@@ -143,57 +241,59 @@
             <a href="login.html">Login</a>
             <a href="user_account.html">Account</a>
         </div>
-    </div>
-
+    </div> -->
+    
     <!-- header -->
-    <table width="100%">
+    <!-- <table width="100%">
         <tr>
             <td align="center">
                 <img src="images/logo.png" width="100" height="100" />
                 <h1>Golby's Pizzeria</h1>
             </td>
         </tr>
-    </table>
-
+    </table> -->
+    
     <!-- about us -->
-    <h2 align="center">About Us</h2>
-        <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
-     Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p>
-
+    <!-- <h2 align="center">About Us</h2>
+    <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
+        Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p> -->
+    
     <!-- contact Info -->
-    <div class="contact-section">
+    <!-- <div class="contact-section">
         <h3>Business Days</h3>
         <p>We open only from Monday to Friday, 7am to 5pm.</p>
-
+        
         <h3>Location</h3>
         <p>You can find us near Misamis Street, Bago Bantay, Quezon City, Philippines.</p>
-
+        
         <h3>Contact</h3>
         <p>Email: <b>golbyspizzeria@gmail.com</b><br>Phone: <b>+63 961 825 0366</b></p>
-    </div>
-
+    </div> -->
+    
     <!-- authors -->
-    <h2 align="center">Authors</h2>
-    <div class="authors-box">
-        <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
+    <!--     <h2 align="center">Authors</h2>
+<div class="authors-box">
+    <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
+    
+    <table class="authors-list">
+        <tr>
+            <td><b>Shiela Mae M. Alcantara</b></td>
+            <td>- Asset Research/Content</td>
+        </tr>
+        <tr>
+            <td><b>Daniel Derrick M. Calisura</b></td>
+            <td>- Programming/Content</td>
+        </tr>
+        <tr>
+            <td><b>Franco Miguel Dorato</b></td>
+            <td>- Programming</td>
+        </tr>
+        <tr>
+            <td><b>John Gabriel Geraldizo</b></td>
+            <td>- Asset Research/Content</td>
+        </tr>
+    </table>
+</div> -->
+</body>
 
-        <table class="authors-list">
-            <tr>
-                <td><b>Shiela Mae M. Alcantara</b></td>
-                <td>- Asset Research/Content</td>
-            </tr>
-            <tr>
-                <td><b>Daniel Derrick M. Calisura</b></td>
-                <td>- Programming/Content</td>
-            </tr>
-            <tr>
-                <td><b>Franco Miguel Dorato</b></td>
-                <td>- Programming</td>
-            </tr>
-            <tr>
-                <td><b>John Gabriel Geraldizo</b></td>
-                <td>- Asset Research/Content</td>
-            </tr>
-        </table>
-    </div
-
+</html>
