@@ -29,11 +29,21 @@
             background-color: var(--products-color-card);
             border: 3px solid var(--theme-color-brick);
             border-radius: 15px;
+            transition: transform 0.3s ease-in-out
+            /*,
+                background-color 0.1s linear;*/
+        }
+        
+        .product-card:hover {
+            transform: scale(1.03);
+            /*background-color: var(--theme-color-peach);*/
         }
         
         .product-card img {
-            width: 100%;
+            width: 75%;
             height: auto;
+            display: block;
+            margin: auto;
         }
         
         h2,
