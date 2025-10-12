@@ -3,28 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>FAQ | Golby's Pizzeria</title>
     <link rel="stylesheet" href="./layout.css">
     <link rel="stylesheet" href="./theme.css">
     <style>
         .dropdown-content {
             display: none;
-            visibility: hidden;
-            transition: 1s ease-in;
+            margin: 0px;
+            padding: 1rem;
+            font-size: 2rem;
         }
         
-        .dropdown-button:hover + .dropdown-content {
+        .dropdown:hover .dropdown-content {
             display: block;
-            visibility: visible;
         }
         
-        li {
+        .dropdown-list {
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            user-select: none;
+        }
+        
+        .dropdown {
+            position: relative;
             list-style-type: none;
+            background-color: var(--theme-color-foreground);
+            padding: 0px;
+            margin: 0px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        
+        .dropdown-button:hover {
+            background-color: var(--theme-color-hover-onlight);
+        }
+        
+        .dropdown-button {
+            width: 100%;
+            text-align: left;
+            font-size: 2rem;
+            padding: 0.5rem;
+            border: none;
+            color: var(--theme-color-text-ondark);
+            background-color: var(--theme-color-accent);
         }
         
         .contentbox {
-            
+            width: 80vw;
+            margin: auto;
+        }
+        
+        .contentbox h1 {
+            text-align: center;
+            color: var(--theme-color-text-ondark);
         }
     </style>
 </head>
@@ -45,14 +78,31 @@
     </header>
     <main>
         <div class="contentbox">
-            <ul>
+            <h1>Frequently Asked Questions</h1>
+            <ul class="dropdown-list">
                 <li class="dropdown">
                     <button class="dropdown-button">Do you deliver?</button>
                     <p class="dropdown-content">Yes, we deliver! Estimated times pop up during checkout based on your location, rush hour or weather may slow things a bit.</p>
                 </li>
                 <li class="dropdown">
-                    <button class="dropdown-button">Do you deliver?</button>
-                    <p class="dropdown-content">Yes, we deliver! Estimated times pop up during checkout based on your location, rush hour or weather may slow things a bit.</p>
+                    <button class="dropdown-button">How will I know if the restaurant received my online order?</button>
+                    <p class="dropdown-content">You'll see order confirmation details on the screen and receive an email. If needed, you can call the restaurant directly.</p>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdown-button">What payment options are accepted?</button>
+                    <p class="dropdown-content">Generally, Golby's Pizzeria accepts cash and all major credit cards.</p>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdown-button">Can I add special instructions (e.g., extra cheese, specific slicing)?</button>
+                    <p class="dropdown-content">Of course! We try to accommodate preferences whenever possible. Just let us know at the time of ordering.</p>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdown-button">What should I do if there’s an issue with my order?</button>
+                    <p class="dropdown-content">Contact us right away. We'll do our best to make it right, whether it's a refund or replacement.</p>
+                </li>
+                <li class="dropdown">
+                    <button class="dropdown-button">Can I pick a specific delivery time?</button>
+                    <p class="dropdown-content">Absolutely, schedule delivery for later today. Just choose your preferred time when you order.</p>
                 </li>
             </ul>
         </div>
