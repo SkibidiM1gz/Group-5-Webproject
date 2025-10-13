@@ -1,21 +1,23 @@
 Desserts:
-CUPCAKE
-Moist chocolate cupcake topped with creamy vanilla frosting and a cherry on top.
-
-TIRAMISU
-Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.
-
-STRAWBERRY SHAKE
-Fresh strawberries blended with creamy milk and topped with whipped cream.
-
-CHOCOLATE SHAKE
-Rich chocolate ice cream blended with milk, topped with whipped cream and chocolate drizzle.
-
 CHEESECAKE
 Smooth and creamy cheesecake with a buttery graham cracker crust.
 
 BROWNIE
 Fudgy chocolate brownie with a rich, chewy texture.
+
+TIRAMISU
+Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.
+
+CUPCAKE
+Moist chocolate cupcake topped with creamy vanilla frosting and a cherry on top.
+
+CHOCOLATE SHAKE
+Rich chocolate ice cream blended with milk, topped with whipped cream and chocolate drizzle.
+
+STRAWBERRY SHAKE
+Fresh strawberries blended with creamy milk and topped with whipped cream.
+
+
 
 Pizzas:
 SUPER SUPREME
