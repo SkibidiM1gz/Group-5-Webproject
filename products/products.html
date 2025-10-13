@@ -22,13 +22,14 @@
             align-items: stretch;
             width: 80vw;
             margin: auto;
+            margin-bottom: 10vh;
             gap: 20px;
         }
         
         .product-card-container a {
             /* Layout */
             flex-basis: 20vw;
-            flex-grow: 10vw;
+            flex-grow: 25vw;
             flex-shrink: 10vw;
             display: block;
             
@@ -40,6 +41,9 @@
         }
         
         .product-card {
+            /* Layout */
+            height: 100%;
+            
             /* Visuals */
             background-color: var(--products-color-card);
             border: 3px solid var(--theme-color-brick);
@@ -49,24 +53,29 @@
             transition: 0.1s linear;
         }
         
+        .product-card img {
+            /* Layout */
+            width: 75%;
+            height: auto;
+            aspect-ratio: 1;
+            display: block;
+            margin: auto;
+        }
+        
         .product-card:hover {
             /* Visuals */
             background-color: var(--theme-color-peach);
             border-color: var(--theme-color-darkTerracota);
         }
         
-        .product-card:hover * {
-            /* Effects */
-            /* Resize container items */
-            transform: scale(1.03);
+        /* Resize container items */
+        .product-card:hover img {
+            transform: scale(0.97);
         }
         
-        .product-card img {
-            /* Layout */
-            width: 75%;
-            height: auto;
-            display: block;
-            margin: auto;
+        .product-price {
+            background-color: var(--theme-color-brick);
+            color: var(--theme-color-light);
         }
         
         /* -- Headings -- */
@@ -75,12 +84,7 @@
         .product-title,
         .product-price {
             text-align: center;
-        }
-        
-        .product-price {
             font-size: 2rem;
-            background-color: var(--theme-color-brick);
-            color: var(--theme-color-light);
         }
         
         h1,
@@ -88,6 +92,7 @@
             color: var(--theme-color-light);
         }
         
+        /* -- Content Templates -- */
         p.product-price::before {
             content: "Php ";
         }
@@ -119,12 +124,39 @@
         <section id="section-pizzas">
             <h2>Pizzas</h2>
             <div class="product-card-container">
-                <!-- Super Supreme -->
                 <a href="./pizza/pizza1.html">
                     <div id="pizza-super-supreme" class="product-card">
                         <img src="./../images/pizza1_supersupreme.png">
-                        <h3 class="product-title">Super Supreme</h3>
                         <p class="product-price">299</p>
+                        <h3 class="product-title">Super Supreme Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza2.html">
+                    <div id="pizza-ham-cheese" class="product-card">
+                        <img src="./../images/pizza2_ham_cheese.png">
+                        <p class="product-price">399</p>
+                        <h3 class="product-title">Ham and Cheese Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza3.html">
+                    <div id="pizza-pepperoni" class="product-card">
+                        <img src="../images/pizza3_pepperoni.png">
+                        <p class="product-price">399</p>
+                        <h3 class="product-title">Pepperoni Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza4.html">
+                    <div id="pizza-prosciutto" class="product-card">
+                        <img src="../images/pizza4_prosciutto.png">
+                        <p class="product-price">599</p>
+                        <h3 class="product-title">Prosicutto Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza5.html">
+                    <div id="pizza-mushroom" class="product-card">
+                        <img src="../images/pizza5_mushroom.png">
+                        <p class="product-price">199</p>
+                        <h3 class="product-title">Mushroom Pizza</h3>
                     </div>
                 </a>
             </div>
@@ -132,121 +164,89 @@
         <section id="section-beverages">
             <h2>Beverages</h2>
             <div class="product-card-container">
-                <a href="#asd">
+                <a href="./../beverage/beverage1.html">
                     <div class="product-card">
                         <img src="./../images/beverage1_water.png">
+                        <p class="product-price">20</p>
                         <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
                     </div>
                 </a>
-                <a href="#asd">
+                <a href="./../beverage/beverage2.html">
                     <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
+                        <img src="./../images/beverage2_coke.png">
+                        <p class="product-price">50</p>
+                        <h3 class="product-title">Coke in Can</h3>
                     </div>
                 </a>
-                <a href="#asd">
+                <a href="./../beverage/beverage3.html">
                     <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
+                        <img src="./../images/beverage3_fanta.png">
+                        <p class="product-price">50</p>
+                        <h3 class="product-title">Fanta in Can</h3>
                     </div>
                 </a>
-                <a href="#asd">
+                <a href="./../beverage/beverage4.html">
                     <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
+                        <img src="./../images/beverage4_mountain_dew.png">
+                        <p class="product-price">40</p>
+                        <h3 class="product-title">Mountain Dew in Can</h3>
                     </div>
                 </a>
-                <a href="#asd">
+                <a href="./../beverage/beverage5.html">
                     <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a>
-                <a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a>
-                <a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a>
-                <a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a>
-                <a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
-                    </div>
-                </a><a href="#asd">
-                    <div class="product-card">
-                        <img src="./../images/beverage1_water.png">
-                        <h3 class="product-title">Bottled Water</h3>
-                        <p class="product-price">Php 20.00</p>
+                        <img src="./../images/beverage5_pepsi.png">
+                        <p class="product-price">30</p>
+                        <h3 class="product-title">Pepsi in Can</h3>
                     </div>
                 </a>
             </div>
         </section>
         <section id="section-desserts">
-            
+            <h2>Desserts</h2>
+            <div class="product-card-container">
+                <a href="./../dessert/dessert1.html">
+                    <div class="product-card">
+                        <img src="../images/dessert1_cheesecake.png">
+                        <p class="product-price">99</p>
+                        <h3 class="product-title">Cheese Cake</h3>
+                    </div>
+                </a>
+                <a href="./../dessert/dessert2.html">
+                    <div class="product-card">
+                        <img src="../images/dessert2_brownies.png">
+                        <p class="product-price">80</p>
+                        <h3 class="product-title">Brownies</h3>
+                    </div>
+                </a>
+                <a href="./../dessert/dessert3.html">
+                    <div class="product-card">
+                        <img src="../images/dessert3_tiramisu.png">
+                        <p class="product-price">99</p>
+                        <h3 class="product-title">Tiramisu</h3>
+                    </div>
+                </a>
+                <a href="./../dessert/dessert4.html">
+                    <div class="product-card">
+                        <img src="../images/dessert4_cupcake.png">
+                        <p class="product-price">70</p>
+                        <h3 class="product-title">Cupcake</h3>
+                    </div>
+                </a>
+                <a href="./../dessert/dessert5.html">
+                    <div class="product-card">
+                        <img src="../images/dessert5_chocolate_milkshake.png">
+                        <p class="product-price">120</p>
+                        <h3 class="product-title">Chocolate Milkshake</h3>
+                    </div>
+                </a>
+                <a href="./../dessert/dessert6.html">
+                    <div class="product-card">
+                        <img src="../images/dessert6_strawberry_milkshake.png">
+                        <p class="product-price">120</p>
+                        <h3 class="product-title">Strawberry Milkshake</h3>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
     <footer>
