@@ -116,6 +116,7 @@ nav ul li a {
     font-size: 2rem;
     color: var(--theme-color-text-ondark);
     transition: 0.1s ease-in;
+    text-shadow: 1px 1px var(--theme-color-cocoa);
 }
 
 nav ul li a:hover {
