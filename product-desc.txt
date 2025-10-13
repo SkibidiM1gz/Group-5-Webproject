@@ -17,8 +17,6 @@ Rich chocolate ice cream blended with milk, topped with whipped cream and chocol
 STRAWBERRY SHAKE
 Fresh strawberries blended with creamy milk and topped with whipped cream.
 
-
-
 Pizzas:
 SUPER SUPREME
 Tomato Sauce, Mozzarella Cheese, Pepperoni, Ham, Onions, Bell Peppers, Mushrooms, Olives
@@ -34,3 +32,22 @@ Tomato Sauce, Mozzarella Cheese, Italian Prosciutto Ham
 
 MUSHROOM
 Tomato Sauce, Mozzarella Cheese, Fresh Mushrooms
+
+
+
+Beverages:
+EVIAN NATURAL SPRING WATER (500 mL / 16.9 fl oz)
+Evian Natural Spring Water 500mL. Premium natural spring water sourced from the French Alps, known for its purity, balanced minerals, and smooth, crisp taste.
+
+COKE IN A CAN (355 mL / 12 fl oz)
+Coke in a can 12 fl oz. A classic and refreshing carbonated soft drink with a bold cola flavor, perfect for quenching your thirst anytime.
+
+MOUNTAIN DEW IN A CAN (330 mL / 11.15 fl oz)
+Mountain Dew in a can 11.15 fl oz. An energizing citrus-flavored soda with a tangy and sweet taste, ideal for those who love a burst of flavor and excitement.
+
+FANTA IN A CAN (330 mL / 11.15 fl oz)
+Fanta in a can 11.15 fl oz. A fruity and bubbly orange-flavored soda that delivers a sweet, refreshing taste in every sip.
+
+
+Pepsi in Can (330 mL / 11.15 fl oz)
+Pepsi in a can 11.15 fl oz. A smooth and crisp cola drink with a slightly sweet flavor, offering a refreshing taste that everyone enjoys.
