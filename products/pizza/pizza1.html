@@ -3,12 +3,150 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>Pizzas | Golby's Pizzeria</title>
+    <link rel="stylesheet" href="./../../theme.css">
+    <link rel="stylesheet" href="./../../layout.css">
+    <style>
+        a.back-link {
+            display: block;
+            text-decoration: none;
+            color: var(--theme-color-text-onlight);
+            padding: 2vh 1vw;
+        }
+        
+        button.back-button {
+            display: block;
+            width: 20%;
+            background-color: var(--theme-color-foreground);
+            border: 3px solid var(--theme-color-brick);
+            border-radius: 6px;
+            font-size: 2rem;
+            margin: auto;
+            margin-bottom: 3vh;
+        }
+        
+        .product {
+            display: flex;
+            width: 80vw;
+            margin: auto;
+            padding: 1.5vmin;
+            justify-content: stretch;
+            align-content: stretch;
+            
+            background-color: var(--theme-color-peach);
+            border: 3px solid var(--theme-color-brick);
+        }
+        
+        .product .image {
+            display: inline-block;
+        }
+        
+        .product .image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+        
+        .details {
+            display: inline-block;
+        }
+        
+        .add-to-cart,
+        .price {
+            display: block;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            background-color: var(--theme-color-brick);
+            color: var(--theme-color-text-ondark);
+            border: none;
+            border-radius: 3px;
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+        }
+        
+        .add-to-cart a {
+            display: block;
+            text-decoration: none;
+            color: var(--theme-color-text-ondark);
+            padding: 2vh 1vw;
+        }
+        
+        .title {
+            margin-bottom: 3.5rem;
+        }
+        
+        p {
+            font-size: 2rem;
+        }
+        
+        .description-label {
+            font-size: 1.5rem;
+            margin-bottom: 0px;
+        }
+        
+        .description {
+            margin-top: 0.5rem;
+            /* Put large margin to separate price */
+            margin-bottom: 4.5rem;
+        }
+        
+        /* -- Content Templates -- */
+        p.description-label::before {
+            content: "Description: ";
+        }
+        
+        p.price::before {
+            content: "Php ";
+        }
+        
+        p.price::after {
+            content: ".00";
+        }
+    </style>
 </head>
 
 <body>
-    <table width="100%" height="100%">
+    <header>
+        <img class="logo" src="./../images/logo.png">
+        <nav>
+            <ul>
+                <li><a href="./../../index.html">Home</a></li>
+                <li><a href="./../../aboutus.html">About Us</a></li>
+                <li><a href="./../../faq.html">FAQ</a></li>
+                <li><a href="./../../cart.html">Cart</a></li>
+                <li class="active-page"><a href="products.html">Products</a></li>
+                
+                <!--<li><a href="login.html">Login</a></li>-->
+                <!--<li><a href="user_account.html">Account</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button class="back-button">
+            <a class="back-link" href="./../products.html#pizza-super-supreme">Back</a>
+        </button>
+        <div class="product">
+            <div class="image">
+                <img src="./../../images/pizza1_supersupreme.png">
+            </div>
+            <div class="details">
+                <h1 class="title">Pizza Super Supreme</h1>
+                <p class="description-label"></p>
+                <p class="description">Tomato Sauce, Mozzarella Cheese, Pepperoni, Ham, Onions, Bell Peppers, Mushrooms, and Olives.</p>
+                <p class="price">299</p>
+                <button class="add-to-cart"><a href="./../../cart.html">Add To Cart</a></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
+        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+    </footer>
+    <!--<table width="100%" height="100%">
         <tr>
             <td>
                 <div align="center">
@@ -27,10 +165,10 @@
                         <font size="5" face="Courier New">|</font>
                         <a href="../../faq.html"><font size="3">FAQ</font></a>
                         <font size="5" face="Courier New">|</font>
-                        <a href="../../login.html"><font size="3">Login</font></a>
-                        <!--<font size="5" face="Courier New">|</font>
+                        <a href="../../login.html"><font size="3">Login</font></a>-->
+    <!--<font size="5" face="Courier New">|</font>
                         <a href="../../signup.html"><font size="3">Sign Up</font></a>-->
-                        <font size="5" face="Courier New">|</font>
+    <!--<font size="5" face="Courier New">|</font>
                         <a href="../../cart.html"><font size="3">Cart</font></a>
                         <font size="5" face="Courier New">|</font>
                         <a href="../../user_account.html"><font size="3">Account</font></a>
@@ -64,13 +202,13 @@
                         </td>
                         <td align="right" >
                             <button><font size="4">Add To Cart</font></button>
-                            <!--<button width="120" height="80"><a href="../../cart.html">Add To Cart</a></button>-->
+                            <button width="120" height="80"><a href="../../cart.html">Add To Cart</a></button>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-    </table>
+    </table>-->
 </body>
 
 </html>
