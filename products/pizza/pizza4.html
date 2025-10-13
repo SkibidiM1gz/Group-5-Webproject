@@ -5,117 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pizzas | Golby's Pizzeria</title>
+    <link rel="stylesheet" href="./../../theme.css">
+    <link rel="stylesheet" href="./../../layout.css">
+    <link rel="stylesheet" href="./../product_page.css">
 </head>
 
 <body>
-    <table width="100%" height="100%">
-        <tr>
-            <td>
-                <div align="center">
-                    <img align="center" width="100" height="100" src="../../images/logo.png" />
-                    <h1>Golby's Pizzeria</h1>
-                </div>
-            </td>
-        </tr>
-        <tr bgcolor="salmon">
-            <td>
-                <div bgcolor="center">
-                    <nav align="center">
-                        <a href="../../index.html">Home</a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="../../aboutus.html"><font size="3">About Us</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="../../faq.html"><font size="3">FAQ</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="../../login.html"><font size="3">Login</font></a>
-                        <!--<font size="5" face="Courier New">|</font>
-                        <a href="../../signup.html"><font size="3">Sign Up</font></a>-->
-                        <font size="5" face="Courier New">|</font>
-                        <a href="../../cart.html"><font size="3">Cart</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="../../user_account.html"><font size="3">Account</font></a>
-                    </nav>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <br>
-                <div align="center">
-                    <button><font size="5"><a href="../pizzas.html">Back</a></font></button>
-                </div>
-                <br>
-                <div align="center">
-                    <img width="200" height="200" src="../../images/pizza4_prosciutto.png" />
-                    <div>
-                        <font face="Courier New" size="100">Prosciutto Pizza</font>
-                    </div>
-                </div>
-                <table align="center" width="40%" cellpadding="5%">
-                    <tr>
-                        <td colspan="2" width="80%" bgcolor="cornsilk">
-                            <p> Tomato Sauce, Mozzarella Cheese, and Italian Prosciutto Ham.
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <font align="left" face="Courier New" size="5">Only Php 599.00</font>
-                        </td>
-                        <td align="right" >
-                            <button><font size="4">Add To Cart</font></button>
-                            <!--<button width="120" height="80"><a href="../../cart.html">Add To Cart</a></button>-->
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    
-    <!--<table width="100%" height="100%">
-        <tr>
-            <td>
-                <div align="center">
-                    <img align="center" width="100" height="100" src="../../images/logo.jpg" />
-                    <h1>Papa Dough's</h1>
-                </div>
-            </td>
-        </tr>
-        <tr bgcolor="salmon">
-            <td>
-                <div bgcolor="center">
-                    <nav align="center">
-                        <a href="index.html">Home</a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="aboutus.html"><font size="3">About Us</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="faq.html"><font size="3">FAQ</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="login.html"><font size="3">Login</font></a>
-                        <font size="5" face="Courier New">|</font>
-                        <a href="signup.html"><font size="3">Sign Up</font></a>
-                    </nav>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div align="center">
-                    <img width="400" height="400" src="../../images/pizza1_supersupreme.png" />
-                    <div>
-                        <font face="Courier New" size="100">Pizza 1</font>
-                    </div>
-                    <div></div>
-                    <p> Topped with the finest ingredients, fresh from the oven.
-                    </p>
-                    <div align="center">
-                        <font face="Courier New" size="5">Only Php 299.00</font>
-                    </div>
-                    <button width="120" height="80"><a href="../../cart.html">Add To Cart</a></button>
-                </div>
-            </td>
-        </tr>
-    </table>-->
+    <header>
+        <img class="logo" src="./../../images/logo.png">
+        <nav>
+            <ul>
+                <li><a href="./../../index.html">Home</a></li>
+                <li><a href="./../../aboutus.html">About Us</a></li>
+                <li><a href="./../../faq.html">FAQ</a></li>
+                <li><a href="./../../cart.html">Cart</a></li>
+                <li class="active-page"><a href="products.html">Products</a></li>
+                
+                <!--<li><a href="login.html">Login</a></li>-->
+                <!--<li><a href="user_account.html">Account</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product">
+            <div class="image">
+                <img src="./../../images/pizza4_prosciutto.png">
+            </div>
+            <div class="details">
+                <h1 class="title">Prosciutto Pizza</h1>
+                <p class="description-label"></p>
+                <p class="description">Tomato Sauce, Mozzarella Cheese, Italian Prosciutto Ham</p>
+                <p class="price">599</p>
+                <button class="add-to-cart"><a href="./../../cart.html">Add To Cart</a></button>
+            </div>
+        </div>
+        <button class="back-button">
+            <a class="back-link" href="./../products.html#pizza-prosciutto">Back</a>
+        </button>
+    </main>
+    <footer>
+        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
+        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+    </footer>
 </body>
 
 </html>
