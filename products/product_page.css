@@ -1,0 +1,124 @@
+a.back-link {
+    /* Layout */
+    display: block;
+    padding: 2vh 1vw;
+    
+    /* Visuals */
+    color: var(--theme-color-text-onlight);
+    text-decoration: none;
+    
+}
+
+button.back-button {
+    /* Layout */
+    display: block;
+    width: 20%;
+    margin: auto;
+    
+    /* Viusals */
+    background-color: var(--theme-color-foreground);
+    border: 3px solid var(--theme-color-brick);
+    border-radius: 6px;
+    
+    /* Typography */
+    font-size: 2rem;
+}
+
+.product {
+    /* Layout */
+    display: flex;
+    justify-content: stretch;
+    align-content: stretch;
+    width: 80vw;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding: 1.5vmin;
+    
+    /* Visuals */
+    background-color: var(--theme-color-peach);
+    border: 3px solid var(--theme-color-brick);
+    border-radius: 15px;
+}
+
+.product .image {
+    display: inline-block;
+}
+
+.product .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.details {
+    display: inline-block;
+}
+
+.add-to-cart {
+    /* Layout */
+    width: 100%;
+    display: block;
+    
+    /* Visuals */
+    background-color: var(--theme-color-brick);
+    color: var(--theme-color-text-ondark);
+    border: none;
+    border-radius: 13px;
+    
+    /* Typography */
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+}
+
+.add-to-cart a {
+    /* Layout */
+    display: block;
+    padding: 2vh 1vw;
+    
+    /* Visuals */
+    color: var(--theme-color-text-ondark);
+    text-shadow: 1px 1px var(--theme-color-cocoa);
+    text-decoration: none;
+}
+
+.title {
+    margin-bottom: 3.5rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.price {
+    display: block;
+    font-size: 2.5rem;
+}
+
+.description-label {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.description {
+    margin-top: 0.5rem;
+    /*Put large margin to separate price*/
+    margin-bottom: 4.5rem;
+}
+
+/* -- Hover Effects */
+button.back-button:hover {}
+
+/* -- Content Templates -- */
+p.description-label::before {
+    content: "Description: ";
+}
+
+p.price::before {
+    content: "Php ";
+}
+
+p.price::after {
+    content: ".00";
+}
