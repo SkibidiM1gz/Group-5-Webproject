@@ -14,32 +14,38 @@
         }
         
         .product-card-container {
+            /* Layout */
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-content: stretch;
             align-items: stretch;
-            /*background-color: var(--theme-color-foreground);*/
             width: 80vw;
             margin: auto;
             gap: 20px;
         }
         
         .product-card {
+            /* Visuals */
             background-color: var(--products-color-card);
             border: 3px solid var(--theme-color-brick);
             border-radius: 15px;
-            transition: transform 0.3s ease-in-out
-            /*,
-                background-color 0.1s linear;*/
+            
+            /* Effects */
+            transition: 0.1s linear;
         }
         
         .product-card:hover {
+            /* Visuals */
+            background-color: var(--theme-color-peach);
+            border-color: var(--theme-color-cocoa);
+            
+            /* Effects */
             transform: scale(1.03);
-            /*background-color: var(--theme-color-peach);*/
         }
         
         .product-card img {
+            /* Layout */
             width: 75%;
             height: auto;
             display: block;
@@ -57,11 +63,16 @@
         }
         
         .product-card-container a {
+            /* Layout */
             flex-basis: 20vw;
             flex-grow: 10vw;
             flex-shrink: 10vw;
             display: block;
+            
+            /* Typography */
             text-decoration: none;
+            
+            /* VIsuals */
             color: var(--theme-color-text-onlight);
         }
     </style>
@@ -89,7 +100,7 @@
             <div class="product-card-container">
                 <!-- Super Supreme -->
                 <a href="#asd">
-                    <div class="product-card">
+                    <div id="pizza-super-supreme" class="product-card">
                         <img src="./../images/pizza1_supersupreme.png">
                         <h3 class="product-title">Super Supreme</h3>
                         <p class="product-price">Php 20.00</p>
