@@ -131,6 +131,10 @@ header>img {
     margin-left: 2rem;
 }
 
+header > img:hover {
+    transform: scale(1.05);
+}
+
 nav {
     width: 100%;
 }
