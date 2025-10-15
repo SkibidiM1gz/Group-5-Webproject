@@ -4,11 +4,12 @@
  * for screen sizes. All things layout.
  */
 :root {
-    --layout-navbar-color: var(--theme-color-accent);
-    --layout-header-color: var(--theme-color-accent);
-    --layout-footer-color: var(--theme-color-accent);
-    --layout-color-link-hover: var(--theme-color-text-onlight);
-    --layout-navbar-size: 10vmax;
+    /* OLD VARS */
+  /*  --layout-navbar-color: var(--theme-color-brown); var(--theme-color-accent);*/
+  /*  --layout-header-color: var(--theme-color-brown); var(--theme-color-accent);*/
+  /*  --layout-footer-color: var(--theme-color-brown); var(--theme-color-accent);*/
+    /*--layout-color-link-hover: var(--theme-color-text-onlight);
+    --layout-navbar-size: 10vmax;*/
 }
 
 /* - Navigation - */
@@ -78,6 +79,29 @@
         "footer";
 } */
 
+:root {
+    --layout-header-background: var(--terracota);
+    --layout-footer-background: var(--terracota);
+    --layout-footer-color: var(--paleApricot);
+    --layout-link-color: var(--paleApricot);
+    --layout-link-shadow-color: var(--cocoa);
+    --layout-link-hover-color: var(--cocoa);
+    --layout-link-shadow-hover-color: white;
+    --layout-footer-text-shadow: var(--cocoa);
+    --layout-navbar-height: 12vmin;
+    --layout-navbar-margin-botom: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 /* STRUCTURE AND LAYOUT */
 body {
     margin: 0px;
@@ -85,13 +109,19 @@ body {
 
 header {
     width: 100vw;
-    height: 12vmin;
+    height: var(--layout-navbar-height);
     display: flex;
-    background-color: var(--theme-color-accent);
+    background-color: var(--layout-header-background);
     align-items: center;
     align-content: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-bottom: var(--layout-navbar-margin-bottom);
+    
+    position: sticky;
+    /* Make navbar go up when scrolled down */
+    top: -var(--layout-navbar-height);
+    z-index: 999;
 }
 
 /* For Logo */
@@ -114,13 +144,14 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     font-size: 2rem;
-    color: var(--theme-color-text-ondark);
+    color: var(--layout-link-color);
     transition: 0.1s ease-in;
-    text-shadow: 1px 1px var(--theme-color-cocoa);
+    text-shadow: 1px 1px var(--layout-link-shadow-color);
 }
 
 nav ul li a:hover {
-    color: var(--theme-color-link-hover);
+    color: var(--layout-link-hover-color);
+    text-shadow: -1px -1px var(--layout-link-shadow-hover-color);
 }
 
 nav ul li {
@@ -130,7 +161,7 @@ nav ul li {
 }
 
 main {
-    padding-top: 30px;
+    padding-top: 0px;
     padding-bottom: 30px;
     min-height: 80vh;
 }
@@ -139,15 +170,21 @@ footer {
     height: auto;
     min-height: 150px; /*min(5vmin, auto);*/
     max-height: 20vh;
-    background-color: var(--theme-color-foreground);
+    background-color: var(--layout-footer-background);
     font-size: 2rem;
 }
 
 .footer-content {
-    color: var(--theme-color-text-onlight);
+    color: var(--layout-footer-color);
+    text-shadow: 1px 1px var(--layout-footer-text-shadow);
     text-align: center;
 }
 
 .active-page {
     display: none;
+}
+
+/* || UTILITIES */
+.no-margin-bottom {
+    margin-bottom: 0px;
 }
