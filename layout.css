@@ -114,8 +114,8 @@ header {
     background-color: var(--layout-header-background);
     align-items: center;
     align-content: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /*border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;*/
     margin-bottom: var(--layout-navbar-margin-bottom);
     
     position: sticky;
