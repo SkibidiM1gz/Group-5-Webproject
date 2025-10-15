@@ -5,17 +5,50 @@
     /* Add here the colors to be used 
     */
     
-    --theme-color-terracota: #B2524B;
-    --theme-color-darkTerracota: rgb(120, 74, 68);
-    --theme-color-paleApricot: #FFCCA2;
-    --theme-color-brown: #301A1A;
     
-    --theme-color-sand: #f4d4a0;
-    --theme-color-peach: #ffb19a;
-    --theme-color-brick: #b04a44;
+    /* Light Colors*/
+    --theme-color-paleApricot: #FFCCA2;
+    /* TO BE REMOVED --theme-color-sand: #f4d4a0;*/ 
     --theme-color-light: #ffe0d4;
+    --theme-color-peach: #ffb19a;
+    
+    /* Dark Colors*/
+    --theme-color-terracota: #B2524B;
+    --theme-color-brick: #b04a44;
+    --theme-color-darkTerracota: rgb(120, 74, 68);
+    --theme-color-brown: #301A1A;
     --theme-color-cocoa: #2b1b18;
     
+    --light: var(--theme-color-light);
+    --peach: var(--theme-color-peach);
+    --paleApricot: var(--theme-color-paleApricot);
+    
+    --brick: var(--theme-color-brick);
+    --terracota: var(--theme-color-terracota);
+    --darkTerracota: var(--theme-color-darkTerracota);
+    --brown: var(--theme-color-brown);
+    --cocoa: var(--theme-color-cocoa);
+    
+    /* || COLOR SCHEME */
+    --theme-color-text-shadow-ondark: white;
+    --theme-color-text-shadow-onlight: var(--cocoa);
+    
+    /* -- ? NEW COLOR SCHEMING -- */
+    --theme-color-border-dark: var(--brick);
+    --theme-color-border-hover-dark: var(--brown);
+    --theme-color-text-onlight: var(--cocoa);
+    --theme-color-text-ondark: var(--light);
+    --theme-color-text-ondark-shadow: var(--cocoa);
+    --theme-color-text-hover-ondark: var(--brown);
+    --theme-color-shadow-dark: var(--cocoa);
+    --theme-color-shadow-hover-dark: var(--cocoa);
+    --theme-color-background-light: var(--light);
+    --theme-color-background-dark: var(--brown);
+    --theme-color-background-hover-dark: var(--brown);
+    --theme-color-background-hover-light: var(--light);
+    
+    /* OLD COLOR SCHEME */
+    /* 
     --theme-color-accent: var(--theme-color-terracota);
     --theme-color-background: var(--theme-color-brown);
     --theme-color-foreground: var(--theme-color-paleApricot);
@@ -23,14 +56,63 @@
     --theme-color-text-onlight: var(--theme-color-brown);
     --theme-color-hover-onlight: var(--theme-color-darkTerracota);
     --theme-color-hover-ondark: var(--theme-color-light);
+    --theme-color-text-hover-onlight: var(--theme-color);*/
     
-    /*--color-navbar: */
-    /*--color-button-hover: ;*/
-    /**/
+    
+    
+    
+    /* PRODUCT PAGE CSS */
+    /*
+    --theme-color-border-dark
+    --theme-color-background-light
+    --theme-color-background-dark
+    --theme-color-text-onlight
+    --theme-color-text-ondark
+    --theme-color-text-ondark-shadow
+    */
+    
+    /* PRODUCTS CSS */
+    /*
+    --theme-color-text-onlight
+    --theme-color-text-ondark
+    --theme-color-border-dark
+    --theme-color-border-hover-dark
+    --theme-color-background-dark
+    --theme-color-background-light
+    --theme-color-background-hover-light
+    */
+    
+    /* FAQ CSS*/
+    /* 
+    --theme-color-text-ondark
+    --theme-color-background-light
+    --theme-color-background-dark 
+    --theme-color-background-hover-dark
+    */
+    
+    /* ABOUT US CSS */
+    /*
+    --theme-color-text-ondark
+    --theme-color-text-onlight
+    --theme-color-text-hover-ondark
+    --theme-color-border-dark
+    --theme-color-background-light
+    --theme-color-shadow-dark
+    --theme-color-shadow-hover-dark
+    */
+    
+    /* HOME CSS */
+    /* 
+    --theme-color-text-ondark
+    --theme-color-text-onlight
+    --theme-color-shadow-dark
+    --theme-color-border-dark
+    --theme-color-background-hover-light 
+    */
 }
 
 body {
-    background-color: var(--theme-color-background);
+    background-color: var(--theme-color-background-dark);
     /*color: var(--theme-color-text);*/
 }
 
