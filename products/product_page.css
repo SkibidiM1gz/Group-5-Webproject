@@ -1,3 +1,7 @@
+:root {
+    
+}
+
 a.back-link {
     /* Layout */
     display: block;
@@ -6,7 +10,6 @@ a.back-link {
     /* Visuals */
     color: var(--theme-color-text-onlight);
     text-decoration: none;
-    
 }
 
 button.back-button {
@@ -15,9 +18,9 @@ button.back-button {
     width: 20%;
     margin: auto;
     
-    /* Viusals */
-    background-color: var(--theme-color-foreground);
-    border: 3px solid var(--theme-color-brick);
+    /* Visuals */
+    background-color: var(--theme-color-background-light); /* foreground */
+    border: 3px solid var(--theme-color-border-dark); /* brick */
     border-radius: 6px;
     
     /* Typography */
@@ -36,8 +39,8 @@ button.back-button {
     padding: 1.5vmin;
     
     /* Visuals */
-    background-color: var(--theme-color-peach);
-    border: 3px solid var(--theme-color-brick);
+    background-color: var(--theme-color-background-light); /* peach */
+    border: 3px solid var(--theme-color-border-dark); /* brick */
     border-radius: 15px;
 }
 
@@ -62,7 +65,7 @@ button.back-button {
     display: block;
     
     /* Visuals */
-    background-color: var(--theme-color-brick);
+    background-color: var(--theme-color-background-dark); /* brick */
     color: var(--theme-color-text-ondark);
     border: none;
     border-radius: 13px;
@@ -79,7 +82,7 @@ button.back-button {
     
     /* Visuals */
     color: var(--theme-color-text-ondark);
-    text-shadow: 1px 1px var(--theme-color-cocoa);
+    text-shadow: 1px 1px var(--theme-color-text-ondark-shadow); /* cocoa */
     text-decoration: none;
 }
 
@@ -108,7 +111,9 @@ p {
 }
 
 /* -- Hover Effects */
-button.back-button:hover {}
+button.back-button:hover {
+    
+}
 
 /* -- Content Templates -- */
 p.description-label::before {
