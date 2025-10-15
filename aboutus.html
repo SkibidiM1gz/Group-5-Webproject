@@ -7,8 +7,8 @@
     <title>About Us | Golby's Pizzeria</title>
     <link rel="stylesheet" href="./theme.css" />
     <link rel="stylesheet" href="./layout.css" />
-    <link rel="stylesheet" href="./components.css" />
-    <style>
+    <!--<link rel="stylesheet" href="./components.css" />-->
+    <style type="text/css">
         /* body {
             border: 10px solid #b04a44;
             margin: 0;
@@ -18,100 +18,146 @@
         } */
         
         :root {
-            --theme-color-c1: #f4d4a0;
-            --theme-color-c2: #ffb19a;
-            --theme-color-c3: #b04a44;
-            --theme-color-c4: #ffe0d4;
-            --theme-color-c5: rgba(59, 28, 26, 0.3);
-            --theme-color-c6: #2b1b18;
-            --theme-color-c7: rgba(255, 140, 100, 0.6);
-            --theme-color-c8: #b04a44;
-            --theme-color-c9: rgba(176, 74, 68, 0.4);
-            --theme-color-c10: #ffe0d4;
-            --theme-color-c11: rgba(255, 140, 100, 0.6);
-            --theme-color-c12: #2b1b18;
+            --theme-color-light1: #f4d4a0;
+            --theme-color-light2: #ffb19a;
+            --theme-color-light3: #ffe0d4;
+            
+            --theme-color-dark1: #b04a44;
+            --theme-color-dark2: rgba(255, 140, 100, 0.6);
+            --theme-color-dark3: rgba(176, 74, 68, 0.4);
+            --theme-color-dark4: rgba(59, 28, 26, 0.3);
+            --theme-color-dark5: #2b1b18;
+            
+            --aboutus-contentbox-border: 15px solid var(--theme-color-brick);
+            --aboutus-contentbox-background: var(--theme-color-light);
+            --aboutus-heading-text: var(--theme-color-cocoa);
+            --aboutus-heading-title: var(--theme-color-light);
         }
         
-        h1,
+        
         h2,
         h3 {
-            color: var(--theme-color-c1);
+            color: var(--aboutus-heading-text);
             text-align: center;
+            /*color: var(--theme-color-text-ondark);*/
+            /* light1 */
         }
         
         h1 {
             font-size: 46px;
             font-weight: bold;
             letter-spacing: 3px;
-            margin-top: 60px;
-            margin-bottom: 10px;
-            transition: 0.3s;
+            margin-top: 4vh;
+            margin-bottom: 2vh;
+            color: var(--aboutus-heading-title);
+            text-align: center;
+            /*transition: 0.3s;*/
         }
         
-        h1:hover {
+        /* h1:hover {
             transform: scale(1.1);
-        }
+        } */
         
-        h3 {
+        /*h3 {
             transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
-        }
+        }*/
         
-        h3:hover {
-            color: var(--theme-color-c2);
+        /* h3:hover {
+            color: var(--theme-color-text-hover-ondark); light2
             cursor: default;
             transform: scale(1.1);
             letter-spacing: 2px;
-        }
+        } */
         
-        main th,
+        /*main th,
         main td,
         p {
             font-size: 1rem;
+        }*/
+        
+        .content-box {
+            width: 60vw;
+            margin: auto;
+            background-color: var(--aboutus-contentbox-background);
+            border-left: var(--aboutus-contentbox-border);
+            border-right: var(--aboutus-contentbox-border);
+            border-radius: 9px;
+            
+            padding: 3vh 4vw;
+            
+            /*padding-left: 4vw;
+            padding-right: 4vw;
+            padding-top: 3vh;
+            padding-bottom: 3vh;*/
+            margin-bottom: 3vh;
         }
         
-        main p {
+        .content-box p {
+            margin: auto;
+            text-align: justify;
+            word-spacing: 0.3rem;
+            line-height: 2.5rem;
+        }
+        
+        .content-box .center {
             text-align: center;
-            border: 2px solid var(--theme-color-c3);
+        }
+        
+        .content-box * {
+            margin-left: 4vw;
+            margin-right: 4vw;
+        }
+        
+        /* main p {
+            text-align: center;
+            border: 2px solid var(--theme-color-border-dark);
+            dark1
             padding: 10px;
             margin: 30px;
             border-radius: 10px;
-            background-color: var(--theme-color-c4);
-            box-shadow: 0 4px 8px var(--theme-color-c5);
-            color: var(--theme-color-c6);
+            background-color: var(--theme-color-background-light);
+            light3
+            box-shadow: 0 4px 8px var(--theme-color-shadow-dark);
+            dark4
+            color: var(--theme-color-text-onlight);
+            dark5
             transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
+        } */
         
-        main p:hover {
-            box-shadow: 0 0 20px 4px var(--theme-color-c7);
+        /* main p:hover {
+            box-shadow: 0 0 20px 4px var(--theme-color-shadow-hover-dark); dark2
             transform: scale(1.02);
-        }
+        } */
         
-        main .authors-box p:hover {
+        /* main .authors-box p:hover {
             box-shadow: none;
             transform: none;
-        }
+        } */
         
-        .authors-box {
-            border: 2px solid var(--theme-color-c8);
+        /* .authors-box {
+            border: 2px solid var(--theme-color-border-dark);
+            dark 1
             border-radius: 12px;
-            box-shadow: 0 4px 10px var(--theme-color-c9);
+            box-shadow: 0 4px 10px var(--theme-color-shadow-dark);
+            dark3
             width: 75vw;
-            background-color: var(--theme-color-c10);
+            background-color: var(--theme-color-background-light);
+            light3
             padding: 20px;
             margin: 20px auto;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
+        } */
         
-        .authors-box:hover {
-            box-shadow: 0 0 25px 6px var(--theme-color-c11);
+        /* .authors-box:hover {
+            box-shadow: 0 0 25px 6px var(--theme-color-shadow-dark);dark2
             transform: scale(1.02);
-        }
+        } */
         
-        .authors-box p {
+        /*.authors-box p {
             border: none;
             box-shadow: none;
             margin: 5px 0;
-        }
+        }*/
         
         /* .navbar {
             background-color: #b04a44;
@@ -146,30 +192,33 @@
         .authors-list {
             /*width: 60%;*/
             width: 100%;
-            margin: 10px auto;
+            margin: 2rem auto;
             border-collapse: collapse;
         }
         
+        .authors-list th,
         .authors-list td {
-            padding: 5px 10px;
-            color: var(--theme-color-c12);
+            padding: 0.5rem 0.7rem;
+            color: var(--theme-color-text-onlight);
+            /* dark5*/
+            font-size: 1.2rem;
         }
         
         img.content-logo {
             display: block;
             width: 20vmin;
             height: auto;
-            margin: auto;
+            margin: 5vh auto;
         }
         
-        section {
+        /*section {
             width: 75vw;
             margin: auto;
         }
         
         section.lore p {
             text-align: justify;
-        }
+        }*/
     </style>
 </head>
 
@@ -182,6 +231,7 @@
                 <li class="active-page"><a href="aboutus.html">About Us</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="cart.html">Cart</a></li>
+                <li><a href="products/products.html">Products</a></li>
                 <!--<li><a href="login.html">Login</a></li>-->
                 <!--<li><a href="user_account.html">Account</a></li>-->
             </ul>
@@ -193,27 +243,35 @@
             <tr>
                 <td align="center"> -->
         <img class="content-logo" src="./images/logo.png" />
-        <h1>Golby's Pizzeria</h1>
-        
-        <article>
-            <section class="lore">
-                <h2 align="center">About Us</h2>
-                <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
-                    Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p>
+        <!--<h1>Golby's Pizzeria</h1>-->
+        <article id="article-about">
+            <section id="section-lore">
+                <div class="content-box">
+                    <h2>About Us</h2>
+                    <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
+                        Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p>
+                </div>
             </section>
-            <section class="contacts">
-                <h3>Business Days</h3>
-                <p>We open only from Monday to Friday, 7am to 5pm.</p>
-                
-                <h3>Location</h3>
-                <p>You can find us near Misamis Street, Bago Bantay, Quezon City, Philippines.</p>
-                
-                <h3>Contact</h3>
-                <p>Email: <b>golbyspizzeria@gmail.com</b><br>Phone: <b>+63 961 825 0366</b></p>
+            <section id="section-details">
+                <div class="content-box">
+                    <h2>Details</h2>
+                    <!--<h3>Business Days</h3>-->
+                    <p>We open only from Monday to Friday, 7am to 5pm.</p>
+                    
+                    <!--<h3>Location</h3>-->
+                    <p>You can find us near Misamis Street, Bago Bantay, Quezon City, Philippines.</p>
+                    
+                    <!--<h3>Contact</h3>-->
+                    <p>For any inquiries contact us via
+                        E-mail: golbyspizzeria@gmail.com
+                        Phone: +63 961 825 0366
+                    </p>
+                </div>
             </section>
-            <section class="authors">
-                <h2 align="center">Authors</h2>
-                <div class="authors-box">
+            <section id="section-authors">
+                <div class="content-box">
+                    <h2>Authors</h2>
+                    <!--class="authors-box" -->
                     <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
                     <table class="authors-list">
                         <tr>
@@ -237,15 +295,20 @@
                 <!--</div>-->
             </section>
         </article>
-        <article class="resources">
-            <h2>Resources and References</h2>
-            <section>
-                <h3>Images</h3>
-                <p>All images taken from pinterest.com</p>
-            </section>
-            <section>
-                <h3>Font</h3>
-                <p>Montserrat : <a href="./fonts/montserrat/OFL.txt">license</a></p>
+        <article id="article-credits">
+            <section id="section-credits">
+                <div class="content-box">
+                    <h2>Credits</h2>
+                    <!--<h3>Images</h3>-->
+                    <p>Logo created by Franco Miguel Dorato's brother</p>
+                    <p>All product images taken from pinterest.com</p>
+                    <!--<h3>Font</h3>-->
+                    <p>Fonts used Montserrat |<a href="./fonts/montserrat/OFL.txt">license</a></p>
+                    <!--<section id="section-images">-->
+                    <!--</section>
+                <section id="section-fonts">-->
+                    <!--</section>-->
+                </div>
             </section>
         </article>
         
