@@ -9,8 +9,62 @@
     <link rel="stylesheet" href="./../layout.css">
     <!--<link rel="stylesheet" href="./product_list.css">-->
     <style type="text/css">
-        :root {
+        /*:root {
             --products-color-card: var(--theme-color-light);
+        }*/
+        
+        :root {
+            --products-price-background: var(--theme-color-brick);
+            --products-price-text: var(--theme-color-light);
+            --products-card-background: var(--theme-color-light);
+            --products-card-border: var(--theme-color-brick);
+            --products-card-border-hover: var(--theme-color-terracota);
+            --products-card-background-hover: var(--theme-color-peach);
+            --products-card-title-text: var(--theme-color-cocoa);
+            --products-heading-text: var(--theme-color-light);
+            --products-productnav-text: var(--theme-color-light);
+            --products-productnav-background: var(--theme-color-terracota);
+        }
+        
+        .productnav {
+            display: block;
+            text-align: center;
+            top: 0px;
+            position: sticky;
+            margin-bottom: var(--layout-navbar-margin-bottom);
+        }
+        
+        .productnav ul li:hover {
+            opacity: 1;
+        }
+        
+        .productnav ul {
+            display: inline-flex;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .productnav ul li {
+            display: inline-block;
+            opacity: 0.8;
+            transition: 0.1s ease-in;
+            background-color: var(--products-productnav-background);
+        }
+        
+        .productnav ul li:first-child {
+            border-bottom-left-radius: 15px;
+        }
+        
+        .productnav ul li:last-child {
+            border-bottom-right-radius: 15px;
+        }
+        
+        .productnav ul li a {
+            display: block;
+            text-decoration: none;
+            color: var(--products-productnav-text);
+            font-size: 2rem;
+            padding: 1.5rem;
         }
         
         .product-card-container {
@@ -35,9 +89,12 @@
             
             /* Typography */
             text-decoration: none;
-            
+        }
+        
+        .product-title {
             /* Visuals */
-            color: var(--theme-color-text-onlight);
+            color: var(--products-card-title-text);
+            /*var(--theme-color-text-onlight);*/
         }
         
         .product-card {
@@ -45,8 +102,10 @@
             height: 100%;
             
             /* Visuals */
-            background-color: var(--products-color-card);
-            border: 3px solid var(--theme-color-brick);
+            background-color: var(--products-card-background);
+            /* light */
+            border: 3px solid var(--products-card-border);
+            /* brick */
             border-radius: 15px;
             
             /* Effects */
@@ -64,8 +123,10 @@
         
         .product-card:hover {
             /* Visuals */
-            background-color: var(--theme-color-peach);
-            border-color: var(--theme-color-darkTerracota);
+            background-color: var(--products-card-background-hover);
+            /* peach */
+            border-color: var(--products-card-border-hover);
+            /* darkTerracotta*/
         }
         
         /* Resize container items */
@@ -74,11 +135,13 @@
         }
         
         .product-price {
-            background-color: var(--theme-color-brick);
-            color: var(--theme-color-light);
+            background-color: var(--products-price-background);
+            /*brick*/
+            color: var(--products-price-text);
+            /*: var(--theme-color-text-ondark);  light */
         }
         
-        /* -- Headings -- */
+        /* || Headings */
         h1,
         h2,
         .product-title,
@@ -89,7 +152,8 @@
         
         h1,
         h2 {
-            color: var(--theme-color-light);
+            color: var(--products-heading-text);
+            /*  color: var(--theme-color-text-ondark);  light*/
         }
         
         /* -- Content Templates -- */
@@ -104,7 +168,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="no-margin-bottom">
         <img class="logo" src="./../images/logo.png">
         <nav>
             <ul>
@@ -120,6 +184,13 @@
         </nav>
     </header>
     <main>
+        <div class="productnav">
+            <ul>
+                <li><a href="#section-pizzas">Pizzas</a></li>
+                <li><a href="#section-beverages">Beverages</a></li>
+                <li><a href="#section-desserts">Desserts</a></li>
+            </ul>
+        </div>
         <h1>Products</h1>
         <section id="section-pizzas">
             <h2>Pizzas</h2>
