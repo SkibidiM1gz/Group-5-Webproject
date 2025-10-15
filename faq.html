@@ -7,7 +7,14 @@
     <title>FAQ | Golby's Pizzeria</title>
     <link rel="stylesheet" href="./layout.css">
     <link rel="stylesheet" href="./theme.css">
-    <style>
+    <style type="text/css">
+        :root {
+            --faq-dropdown-background: var(--theme-color-light);
+            --faq-dropdownbutton-background: var(--theme-color-terracota);
+            --faq-dropdownbutton-background-hover: var(--theme-color-darkTerracota);
+            --faq-dropdownbutton-text: var(--theme-color-light);
+        }
+        
         .dropdown-content {
             display: none;
             margin: 0px;
@@ -29,7 +36,8 @@
         .dropdown {
             position: relative;
             list-style-type: none;
-            background-color: var(--theme-color-background-light); /* foreground */
+            background-color: var(--faq-dropdown-background);
+            /* foreground */
             padding: 0px;
             margin: 0px;
             border-bottom-left-radius: 15px;
@@ -37,7 +45,8 @@
         }
         
         .dropdown-button:hover {
-            background-color: var(--theme-color-background-hover-dark); /* hover-onlight */
+            background-color: var(--faq-dropdownbutton-background-hover);
+            /* hover-onlight */
         }
         
         .dropdown-button {
@@ -46,8 +55,9 @@
             font-size: 2rem;
             padding: 1.5rem;
             border: none;
-            color: var(--theme-color-text-ondark);
-            background-color: var(--theme-color-background-dark); /* accent */
+            color: var(--faq-dropdownbutton-text);
+            background-color: var(--faq-dropdownbutton-background);
+            /* accent */
         }
         
         .contentbox {
@@ -58,6 +68,7 @@
         .contentbox h1 {
             text-align: center;
             color: var(--theme-color-text-ondark);
+            margin: 5vh auto;
         }
     </style>
 </head>
@@ -71,6 +82,7 @@
                 <li><a href="aboutus.html">About Us</a></li>
                 <li class="active-page"><a href="faq.html">FAQ</a></li>
                 <li><a href="cart.html">Cart</a></li>
+                <li><a href="products/products.html">Products</a></li>
                 <!--<li><a href="login.html">Login</a></li>-->
                 <!--<li><a href="user_account.html">Account</a></li>-->
             </ul>
