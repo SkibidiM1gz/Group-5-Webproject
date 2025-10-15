@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="./layout.css" />
     <link rel="stylesheet" href="./components.css" />
     <style type="text/css">
+    
+        :root {
+            --home-menu-background: var(--theme-color-background-light);
+            --home-menu-border: var(--theme-color-)
+        }
+    
         .menu {
-            background-color: var(--theme-color-text-ondark);
+            /*background-color: var(--theme-color-text-ondark);*/
+            background-color: var(--home-menu-background);
             display: flex;
             align-content: space-around;
             justify-content: space-around;
@@ -19,12 +26,12 @@
             height: 40%;
             margin: auto;
             padding: 3%;
-            border: 9px solid var(--theme-color-accent);
+            border: 9px solid var(--theme-color-border-dark); /*accent*/
             border-radius: 5px;
         }
         
         .menu .menu-item {
-            box-shadow: 5px 5px 6px 5px var(--theme-color-text-onlight);
+            box-shadow: 5px 5px 6px 5px var(--theme-color-shadow-dark);/*text-onlight*/
             border-radius: 5px;
             transition: 0.5s;
         }
@@ -44,7 +51,7 @@
         
         .menu .menu-item:hover,
         .menu .menu-item .menu-item-link-content img:hover {
-            background-color: #FFE5D1;
+            background-color: var(--theme-color-background-hover-light); /*#FFE5D1*/
         }
         
         .menu .menu-item .menu-item-link-content:hover {
@@ -61,6 +68,7 @@
         
         .menu .menu-item .menu-item-link-content .menu-item-description {
             color: var(--theme-color-text-onlight);
+            
             text-shadow: -1px -1px white;
             text-align: center;
             margin-bottom: 0px;
