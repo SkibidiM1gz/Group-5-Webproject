@@ -169,6 +169,49 @@
             font-size: 2rem;
             padding: 1.5rem;
         }
+        
+        
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: stretch;
+            align-items: stretch;
+            width: 80vw;
+            margin: auto;
+            margin-bottom: 10vh;
+            gap: 20px;
+            background-color: var(--products-terracota);
+        }
+        
+        .menu a {
+            /* Layout */
+            flex-basis: 20vw;
+            flex-grow: 25vw;
+            flex-shrink: 10vw;
+            display: block;
+            
+            /* Typography */
+            text-decoration: none;
+            color: black;
+            background-color: red;
+        }
+        
+        .card img {
+            /* Layout */
+            width: 75%;
+            aspect-ratio: 1;
+            display: block;
+            margin: auto;
+        }
+        
+        .title {
+            display: block;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
     </style>
 </head>
 
@@ -189,15 +232,35 @@
         </nav>
     </header>
     <main>
-        <div class="productnav">
+        <!-- <div class="productnav">
             <ul>
                 <li><a href="#section-pizzas">Pizzas</a></li>
                 <li><a href="#section-beverages">Beverages</a></li>
                 <li><a href="#section-desserts">Desserts</a></li>
             </ul>
-        </div>
+        </div> -->
         <h1>Products</h1>
-        <section id="section-pizzas">
+        <div class="menu">
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <span class="title">Pizzas</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <font class="title">Pizzas</font>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <font class="title">Pizzas</font>
+                </div>
+            </a>
+        </div>
+        <!-- <section id="section-pizzas">
             <h2>Pizzas</h2>
             <div class="product-card-container">
                 <a href="./pizza/pizza1.html">
@@ -236,8 +299,8 @@
                     </div>
                 </a>
             </div>
-        </section>
-        <section id="section-beverages">
+        </section> -->
+        <!-- <section id="section-beverages">
             <h2>Beverages</h2>
             <div class="product-card-container">
                 <a href="./beverage/beverage1.html">
@@ -276,8 +339,8 @@
                     </div>
                 </a>
             </div>
-        </section>
-        <section id="section-desserts">
+        </section> -->
+        <!-- <section id="section-desserts">
             <h2>Desserts</h2>
             <div class="product-card-container">
                 <a href="./dessert/dessert1.html">
@@ -323,7 +386,7 @@
                     </div>
                 </a>
             </div>
-        </section>
+        </section> -->
     </main>
     <footer>
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
