@@ -146,25 +146,84 @@
             height: auto;
         }*/
         
+        :root {
+            font-size: 1.2rem;
+        }
+        
         table {
             background-color: var(--theme-color-background-light);
-            margin-left: 1rem;
-            margin-right: 1rem;
+            color: var(--theme-color-text-onlight);
+            width: 80%;
+            margin: auto;
+            /* margin-left: 1rem;
+            margin-right: 1rem; */
+            border-collapse: collapse;
         }
         
-        tr.item>td:nth-child(1) {
-            width: 33%;
-        }
-        
-        tr#total>td:nth-child(1) {
-            text-align: right;
+        /* Add small spacing */
+        thead tr th {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
         
         td>img {
             display: block;
-            width: 75%;
+            width: 50%;
             height: auto;
             margin: auto;
+        }
+        
+        /* To constraint image size */
+        tr.item>td:nth-child(1) {
+            width: 33%;
+        }
+        
+        tr.item {
+            border-top: 1px solid black;
+        }
+        
+        tr.item td:nth-child(3) {
+            text-align: center;
+            background-color: var(--peach);
+        }
+        
+        /* Align total label to the right */
+        tr#total>td:nth-child(1) {
+            text-align: right;
+        }
+        
+        tr#total {
+            border-top: 1px solid black;
+        }
+        
+        /* Add small spacing */
+        tr#total td {
+            padding-top: 0.5rem;
+        }
+        
+        tr#checkout button {
+            display: block;
+            width: 100%;
+            background-color: var(--brick);
+            color: var(--theme-color-text-ondark);
+            border: none;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        tr#checkout button:hover {
+            background-color: var(--darkTerracota);
+        }
+        
+        h1 {
+            color: var(--theme-color-text-ondark);
+            text-align: center;
+        }
+        
+        p {
+            color: var(--theme-color-text-ondark);
+            text-align: center;
+            text-justify: justify;
         }
     </style>
 </head>
@@ -190,7 +249,6 @@
         </h1>
         <p class="description">
             The cart is where your orders are collected.<br>
-            Item Cart System will be improved in the future.
         </p>
         <table>
             <thead>
@@ -220,9 +278,9 @@
                         25Php
                     </td>
                 </tr>
-                <tr id="">
-                    <td>
-                        <button id="checkout">Checkout</button>
+                <tr id="checkout">
+                    <td colspan="3">
+                        <button>Checkout</button>
                     </td>
                 </tr>
             </tbody>

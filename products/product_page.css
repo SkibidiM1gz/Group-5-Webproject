@@ -1,6 +1,4 @@
-:root {
-    
-}
+:root {}
 
 a.back-link {
     /* Layout */
@@ -8,7 +6,7 @@ a.back-link {
     padding: 2vh 1vw;
     
     /* Visuals */
-    color: var(--theme-color-text-onlight);
+    color: var(--theme-color-text-ondark);
     text-decoration: none;
 }
 
@@ -19,8 +17,12 @@ button.back-button {
     margin: auto;
     
     /* Visuals */
-    background-color: var(--theme-color-background-light); /* foreground */
-    border: 3px solid var(--theme-color-border-dark); /* brick */
+    background-color: var(--brick);
+    /* var(--theme-color-background-light); */
+    /* foreground */
+    border: none;
+    /* border: 3px solid var(--theme-color-border-dark); */
+    /* brick */
     border-radius: 6px;
     
     /* Typography */
@@ -39,8 +41,10 @@ button.back-button {
     padding: 1.5vmin;
     
     /* Visuals */
-    background-color: var(--theme-color-background-light); /* peach */
-    border: 3px solid var(--theme-color-border-dark); /* brick */
+    background-color: var(--theme-color-background-light);
+    /* peach */
+    border: 3px solid var(--theme-color-border-dark);
+    /* brick */
     border-radius: 15px;
 }
 
@@ -66,7 +70,9 @@ button.back-button {
     display: block;
     
     /* Visuals */
-    background-color: var(--theme-color-background-dark); /* brick */
+    background-color: var(--brick);
+    /* var(--theme-color-background-dark); */
+    /* brick */
     color: var(--theme-color-text-ondark);
     border: none;
     border-radius: 13px;
@@ -83,7 +89,8 @@ button.back-button {
     
     /* Visuals */
     color: var(--theme-color-text-ondark);
-    text-shadow: 1px 1px var(--theme-color-text-ondark-shadow); /* cocoa */
+    /* text-shadow: 1px 1px var(--theme-color-text-ondark-shadow); */
+    /* cocoa */
     text-decoration: none;
 }
 
@@ -112,8 +119,9 @@ p {
 }
 
 /* -- Hover Effects */
+.add-to-cart:hover,
 button.back-button:hover {
-    
+    background-color: var(--darkTerracota);
 }
 
 /* -- Content Templates -- */

@@ -10,6 +10,8 @@
     /*  --layout-footer-color: var(--theme-color-brown); var(--theme-color-accent);*/
     /*--layout-color-link-hover: var(--theme-color-text-onlight);
     --layout-navbar-size: 10vmax;*/
+    
+    /* font-size: clamp(1rem, calc(1rem + 1vw), 2rem); */
 }
 
 /* - Navigation - */
@@ -90,7 +92,15 @@
     --layout-footer-text-shadow: var(--cocoa);
     --layout-navbar-height: 12vmin;
     --layout-navbar-margin-botom: 30px;
+    
+    --layout-font-size-body: clamp(1rem, calc(1rem + 1vw), 2rem);
+    --layout-font-size-header: clamp(1rem, calc(1rem + 2vw), 2rem);
+    --layout-font-size-footer: clamp(1rem, calc(1rem + 2vw), 2rem);
 }
+
+/* p, button, a, td, th {
+    font-size: var(--layout-font-size-body);
+} */
 
 @media (prefers-reduced-motion: no-preference) {
     html {
@@ -149,7 +159,9 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    font-size: 2rem;
+    
+    font-size: var(--layout-font-size-header);
+    /* font-size: 2rem; */
     color: var(--layout-link-color);
     transition: 0.1s ease-in;
     text-shadow: 1px 1px var(--layout-link-shadow-color);
@@ -178,7 +190,8 @@ footer {
     /*min(5vmin, auto);*/
     max-height: 20vh;
     background-color: var(--layout-footer-background);
-    font-size: 2rem;
+    font-size: var(--layout-font-size-footer);
+    /* font-size: 2rem; */
 }
 
 .footer-content {
