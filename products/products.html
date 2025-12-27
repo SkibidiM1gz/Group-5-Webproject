@@ -169,6 +169,49 @@
             font-size: 2rem;
             padding: 1.5rem;
         }
+        
+        
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: stretch;
+            align-items: stretch;
+            width: 80vw;
+            margin: auto;
+            margin-bottom: 10vh;
+            gap: 20px;
+            background-color: var(--products-terracota);
+        }
+        
+        .menu a {
+            /* Layout */
+            flex-basis: 20vw;
+            flex-grow: 25vw;
+            flex-shrink: 10vw;
+            display: block;
+            
+            /* Typography */
+            text-decoration: none;
+            color: black;
+            background-color: red;
+        }
+        
+        .card img {
+            /* Layout */
+            width: 75%;
+            aspect-ratio: 1;
+            display: block;
+            margin: auto;
+        }
+        
+        .title {
+            display: block;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
     </style>
 </head>
 
@@ -197,6 +240,26 @@
             </ul>
         </div>
         <h1>Products</h1>
+        <!-- <div class="menu">
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <span class="title">Pizzas</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <font class="title">Pizzas</font>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <font class="title">Pizzas</font>
+                </div>
+            </a>
+        </div> -->
         <section id="section-pizzas">
             <h2>Pizzas</h2>
             <div class="product-card-container">

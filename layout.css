@@ -5,9 +5,9 @@
  */
 :root {
     /* OLD VARS */
-  /*  --layout-navbar-color: var(--theme-color-brown); var(--theme-color-accent);*/
-  /*  --layout-header-color: var(--theme-color-brown); var(--theme-color-accent);*/
-  /*  --layout-footer-color: var(--theme-color-brown); var(--theme-color-accent);*/
+    /*  --layout-navbar-color: var(--theme-color-brown); var(--theme-color-accent);*/
+    /*  --layout-header-color: var(--theme-color-brown); var(--theme-color-accent);*/
+    /*  --layout-footer-color: var(--theme-color-brown); var(--theme-color-accent);*/
     /*--layout-color-link-hover: var(--theme-color-text-onlight);
     --layout-navbar-size: 10vmax;*/
 }
@@ -36,19 +36,19 @@
     width: var(--layout-navbar-size);
     height: auto;
 } */
-    
+
 /* .navbar div.logo-container {
     display: flex;
     width: 30%;
     justify-content: center;
 } */
-    
+
 /* .navbar div.link-container {
     display: flex;
     width: 70%;
     justify-content: center;
 } */
-    
+
 /* .navbar a {
     color: var(--theme-color-text-ondark);
     font-size: 2em;
@@ -92,8 +92,10 @@
     --layout-navbar-margin-botom: 30px;
 }
 
-html {
-    scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -131,7 +133,7 @@ header>img {
     margin-left: 2rem;
 }
 
-header > img:hover {
+header>img:hover {
     transform: scale(1.05);
 }
 
@@ -172,7 +174,8 @@ main {
 
 footer {
     height: auto;
-    min-height: 150px; /*min(5vmin, auto);*/
+    min-height: 150px;
+    /*min(5vmin, auto);*/
     max-height: 20vh;
     background-color: var(--layout-footer-background);
     font-size: 2rem;

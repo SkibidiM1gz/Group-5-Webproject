@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./layout.css">
     <link rel="stylesheet" href="./components.css">
     <style type="text/css">
-        .a {
+        /* .a {
             background-color: var(--theme-color-text-ondark);
             width: 80vw;
             height: auto;
@@ -18,9 +18,9 @@
             padding-bottom: 5vh;
             user-select: none;
             box-shadow: 10px 10px 10px 10px #000000;
-        }
+        } */
         
-        .row1 {
+        /* .row1 {
             display: flex;
             background-color: var(--theme-color-text-ondark);
             width: auto;
@@ -28,18 +28,18 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-        }
+        } */
         
-        .row1 div {
+        /* .row1 div {
             background-color: var(--theme-color-text-ondark);
             width: 30vw;
             height: auto;
             border-style: solid;
             text-align: center;
             display: block;
-        }
+        } */
         
-        .row2 {
+        /* .row2 {
             display: flex;
             background-color: var(--theme-color-text-ondark);
             width: auto;
@@ -47,24 +47,24 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-        }
+        } */
         
-        .row2 div {
+        /* .row2 div {
             background-color: var(--theme-color-text-ondark);
             width: 30vw;
             height: 40vh;
             border-style: solid;
             text-align: center;
-        }
+        } */
         
-        .row2 div img {
+        /* .row2 div img {
             display: block;
             width: 70%;
             height: auto;
             margin: auto;
-        }
+        } */
         
-        .row3 {
+        /* .row3 {
             display: flex;
             background-color: var(--theme-color-text-ondark);
             width: auto;
@@ -72,14 +72,14 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-        }
+        } */
         
-        .row3 div {
+        /* .row3 div {
             background-color: var(--theme-color-text-ondark);
             border-style: dashed;
-        }
+        } */
         
-        .row4 {
+        /* .row4 {
             display: flex;
             background-color: var(--theme-color-text-ondark);
             width: auto;
@@ -87,64 +87,85 @@
             margin: 50px;
             margin-top: 0px;
             margin-bottom: 0px;
-        }
+        } */
         
-        .row4 div {
+        /* .row4 div {
             background-color: var(--theme-color-text-ondark);
             width: 100%;
-        }
+        } */
         
-        .total-label {
+        /* .total-label {
             width: 66%;
             text-align: right;
-        }
+        } */
         
-        .total-amount {
+        /* .total-amount {
             width: 33%;
-        }
+        } */
         
-        .title {
+        /* .title {
             color: var(--theme-color-text-ondark);
             text-align: center;
             font-size: 3em;
             text-shadow: 2px 2px black;
-        }
+        } */
         
-        .description {
+        /* .description {
             color: var(--theme-color-text-ondark);
             text-align: center;
             font-size: 1em;
             text-shadow: 2px 2px black;
-        }
+        } */
         
-        .checkout {
-            background-color: var(--theme-color-text-ondark);
-            /* margin: 50px;
+        /*.checkout {
+            background-color: var(--theme-color-text-ondark);*/
+        /*margin: 50px;
             margin-top: 0px;
-            margin-bottom: 0px; */
-            /* padding: 14px 40px; */
-        }
+            margin-bottom: 0px;
+            padding: 14px 40px;*/
+        /*}*/
         
-        .checkout-button {
+        /* .checkout-button {
             background-color: var(--theme-color-accent);
             width: 100%;
             height: 100%;
             padding: 10px;
             transition: 0.3s;
-        }
+        } */
         
-        .text-color {
+        /* .text-color {
             text-align: center;
-        }
+        } */
         
-        .checkout-button:hover {
+        /* .checkout-button:hover {
             background-color: var(--theme-color-text-ondark);
-        }
+        } */
         
         /*.products img {
             width: 100px;
             height: auto;
         }*/
+        
+        table {
+            background-color: var(--theme-color-background-light);
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        
+        tr.item>td:nth-child(1) {
+            width: 33%;
+        }
+        
+        tr#total>td:nth-child(1) {
+            text-align: right;
+        }
+        
+        td>img {
+            display: block;
+            width: 75%;
+            height: auto;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -171,7 +192,44 @@
             The cart is where your orders are collected.<br>
             Item Cart System will be improved in the future.
         </p>
-        <div class="a">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Details</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="item">
+                    <td>
+                        <img src="./images/beverage1_water.png" />
+                    </td>
+                    <td>
+                        Bottled Water 25Php x 1pc
+                    </td>
+                    <td>
+                        25Php
+                    </td>
+                </tr>
+                <tr id="total">
+                    <td colspan="2">
+                        Total:
+                    </td>
+                    <td id="total-amount">
+                        25Php
+                    </td>
+                </tr>
+                <tr id="">
+                    <td>
+                        <button id="checkout">Checkout</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        <!-- <div class="a">
             <div class="row1">
                 <div class="ab">
                     <h1>Product</h1>
@@ -211,7 +269,7 @@
                     <button class="checkout-button"><span class="text-color">Checkout</span></button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
     <footer>
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
