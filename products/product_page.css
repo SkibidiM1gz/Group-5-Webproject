@@ -57,6 +57,7 @@ button.back-button {
 
 .details {
     display: inline-block;
+    max-width: 50%;
 }
 
 .add-to-cart {
