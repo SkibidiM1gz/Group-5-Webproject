@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
+    <title>Checkout | Golby's Pizza</title>
+    <link rel="stylesheet" href="./theme.css">
+    <link rel="stylesheet" href="./layout.css">
+    <style>
+        #form-div {
+            margin: auto;
+            width: 50%;
+        }
+        
+        label {
+            color: var(--peach);
+        }
+        
+        input {
+            display: block;
+            width: 100%;
+            border: 3px solid var(--terracota);
+            background-color: var(--light);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            color: var(--theme-color-text-onlight);
+        }
+        
+        input:focus {
+            border-color: var(--darkTerracota);
+            outline: none;
+        }
+        
+        button {
+            display: inline-block;
+            float: right;
+            background-color: var(--terracota);
+            border: none;
+            border-radius: 3px;
+            color: var(--theme-color-text-ondark);
+            padding: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--paleApricot);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./images/logo.png">
+        <nav>
+            <ul>
+                <li class="active-page"><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="products/products.html">Products</a></li>
+                <!--<li><a href="login.html">Login</a></li>-->
+                <!--<li><a href="user_account.html">Account</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Edit Location Details</h1>
+        <div id="form-div">
+            <label for="checkout-user-name">Name *</label><br>
+            <input type="text" name="checkout-user-name" id="checkout-user-name" required><br>
+            <label for="checkout-user-address">Address *</label><br>
+            <input type="text" name="checkout-user-address" id="checkout-user-address" required><br>
+            <label for="checkout-user-address-description">Additional Address Description</label><br>
+            <input type="text" name="checkout-user-address-description" id="checkout-user-address-description" required><br>
+            <button id="checkout-save" onclick="saveUserLocationDetails()">Save</button>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
+        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+    </footer>
+</body>
+
+</html>

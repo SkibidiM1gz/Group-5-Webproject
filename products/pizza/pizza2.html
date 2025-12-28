@@ -27,7 +27,7 @@
         </nav>
     </header>
     <main>
-        <div id="alertbox" class="hidden">
+        <div id="toastbox" class="hidden">
             <p>Ham and Cheese Pizza was added to cart!</p>
         </div>
         <noscript>
@@ -42,7 +42,7 @@
                 <p class="description-label">Description:</p>
                 <p class="description">Tomato Sauce, Mozzarella Cheese, Ham</p>
                 <p class="price">Php 399.00</p>
-                <button class="add-to-cart" onclick="addCartItem('pizza-1'); showAddToCartNotif();">
+                <button class="add-to-cart" onclick="addCartItem('pizza-1'); showToastNotification();">
                     Add To Cart
                     <!-- <a href="./../../cart.html">Add To Cart</a> -->
                 </button>
@@ -57,7 +57,7 @@
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
     <script src="./../../scripts/cart.js"></script>
-    <script src="./../../scripts/product_page.js"></script>
+    <script src="./../../scripts/widget.js"></script>
 </body>
 
 </html>

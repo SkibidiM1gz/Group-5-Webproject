@@ -61,15 +61,9 @@ const products = {
     ]
 };
 
-let keys = Object.keys(products);
 
-// Initialize IDs
-for (let i = 0; i < keys.length; i++) {
-    let values = products[keys[i]];
-    for (let j = 0; j < values.length; j++) {
-        values[j].formatID(j);
-    }
-}
+
+
 
 function setSessionData(key, value) {
     sessionStorage.setItem(key, JSON.stringify(value));
@@ -79,11 +73,34 @@ function getSessionData(key) {
     return JSON.parse(sessionStorage.getItem(key));
 }
 
+/**
+ * Gets the product object via its ID
+ */
 function lookupProduct(productID) {
     let tokens = productID.split("-");
     let type = tokens[0];
     let index = parseInt(tokens[1]);
     return products[type][index];
+}
+
+function initializeProductData() {
+    let hasInit = getSessionData("productsInitialized");
+    
+    // If not yet
+    if (hasInit === null) {
+        // Set flag to true
+        setSessionData("productsInitialized", "true");
+        
+        let keys = Object.keys(products);
+        
+        // Initialize IDs for each product
+        for (let i = 0; i < keys.length; i++) {
+            let values = products[keys[i]];
+            for (let j = 0; j < values.length; j++) {
+                values[j].formatID(j);
+            }
+        }
+    }
 }
 
 function initializeCartData() {
@@ -101,16 +118,22 @@ function initializeCartData() {
     setSessionData("cart", cart);
 }
 
-function addCartItem(id) {
+/**
+ * Adds the product internally in session data via its ID
+ */
+function addCartItem(productID) {
     // Get cart data
     let cart = getSessionData("cart");
     // Add item
-    cart.items = cart.items.concat({ "productID": id, "sessionID": cart.serialCount });
+    cart.items = cart.items.concat({ "productID": productID, "sessionID": cart.serialCount });
     cart.serialCount++;
     // Update cart data
     setSessionData("cart", cart);
 }
 
+/**
+ * Removes the product internally from session data via its sessionID
+ */
 function removeCartItem(sessionID) {
     let cart = getSessionData("cart");
     
@@ -129,6 +152,7 @@ function loadCartItems() {
     // Get Table element
     let tbody = document.getElementById("cart-table-items");
     
+    // Abort If there is no table
     if (!tbody) {
         return;
     }
@@ -176,7 +200,7 @@ function loadCartItems() {
         };
         
         let td_amount = document.createElement("td");
-        td_amount.innerHTML = product.price + "Php";
+        td_amount.innerHTML = product.price + ".00 Php";
         td_amount.appendChild(button_remove);
         
         tr_item.classList.add("item");
@@ -194,11 +218,15 @@ function loadCartItems() {
     // Calculate total
     let td_total_amount = document.getElementById("total-amount");
     
-    td_total_amount.innerHTML = rawPriceSum + "Php";
+    td_total_amount.innerHTML = rawPriceSum + ".00 Php";
 }
 
 function checkoutCartItems() {
     
+}
+
+function gotoCheckoutPage() {
+    window.location.href = "./checkout.html";
 }
 
 initializeCartData();

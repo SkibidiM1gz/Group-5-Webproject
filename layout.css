@@ -98,9 +98,9 @@
     --layout-font-size-footer: clamp(1rem, calc(1rem + 2vw), 2rem);
 }
 
-/* p, button, a, td, th {
+p, button, a, td, th, label, input {
     font-size: var(--layout-font-size-body);
-} */
+}
 
 @media (prefers-reduced-motion: no-preference) {
     html {
