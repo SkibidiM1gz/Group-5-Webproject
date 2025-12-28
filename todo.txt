@@ -1,21 +1,3 @@
-[=] About us Credit beverages images
-[=] About us Credit pizzas images
-[=] About us Credit desserts images
-[=] About us Credit logo
-[/] Add back button each product page
-[/] Link navbar cart page
-[/] Link navbar account page
-[/] Remove add to cart button link product pages
-[/] finish account page
-[/] signup page signup btn to account page
-[/] login page login btn to account page
-[/] relocate old images
-[/] Fix image links
-[/] Add content cart
-[/] Replace Titles with Golby's Pizzeria
-[/] Replace text with Golby's Pizzeria
-[/] Replace contact with golbyspizzeria@gmail.com
-
 Navbar order:
 home
 about us
@@ -24,7 +6,6 @@ login
 cart
 account
 
-[] add Montserrat font
-[] update navbars
-[] update content code
-[] add active page link indicator
+AGENDA:
+[] Fluid font sizes
+[] Cart mechanic

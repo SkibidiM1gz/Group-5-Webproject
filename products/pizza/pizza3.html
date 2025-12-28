@@ -27,16 +27,25 @@
         </nav>
     </header>
     <main>
+        <div id="alertbox" class="hidden">
+            <p>Pepperoni Pizza was added to cart!</p>
+        </div>
+        <noscript>
+            <p>Please enable JavaScript to allow features to run on this website</p>
+        </noscript>
         <div class="product">
             <div class="image">
                 <img src="./../../images/pizza3_pepperoni.png">
             </div>
             <div class="details">
                 <h1 class="title">Pepperoni Pizza</h1>
-                <p class="description-label"></p>
+                <p class="description-label">Description:</p>
                 <p class="description">Tomato Sauce, Mozzarella Cheese, Pepperoni</p>
-                <p class="price">399</p>
-                <button class="add-to-cart"><a href="./../../cart.html">Add To Cart</a></button>
+                <p class="price">Php 399.00</p>
+                <button class="add-to-cart" onclick="addCartItem('pizza-2'); showAddToCartNotif();">
+                    Add To Cart
+                    <!-- <a href="./../../cart.html">Add To Cart</a> -->
+                </button>
             </div>
         </div>
         <button class="back-button">
@@ -47,6 +56,8 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
+    <script src="./../../scripts/cart.js"></script>
+    <script src="./../../scripts/product_page.js"></script>
 </body>
 
 </html>

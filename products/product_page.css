@@ -68,6 +68,7 @@ button.back-button {
     /* Layout */
     width: 100%;
     display: block;
+    padding: 2vh 1vw;
     
     /* Visuals */
     background-color: var(--brick);
@@ -124,15 +125,18 @@ button.back-button:hover {
     background-color: var(--darkTerracota);
 }
 
+
+
 /* -- Content Templates -- */
-p.description-label::before {
+
+/* p.description-label::before {
     content: "Description: ";
-}
+} */
 
-p.price::before {
+/* p.price::before {
     content: "Php ";
-}
+} */
 
-p.price::after {
+/* p.price::after {
     content: ".00";
-}
+} */

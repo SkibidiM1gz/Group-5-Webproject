@@ -244,43 +244,35 @@
         </nav>
     </header>
     <main>
+        <noscript>
+            Please enable JavaScript to allow features to run on this website
+        </noscript>
         <h1 class="title">
             YOUR CART
         </h1>
         <p class="description">
             The cart is where your orders are collected.<br>
         </p>
-        <table>
+        <table id="cart-table">
             <thead>
                 <tr>
                     <th>Product</th>
                     <th>Details</th>
-                    <th>Subtotal</th>
+                    <th>Amount</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="item">
-                    <td>
-                        <img src="./images/beverage1_water.png" />
-                    </td>
-                    <td>
-                        Bottled Water 25Php x 1pc
-                    </td>
-                    <td>
-                        25Php
-                    </td>
-                </tr>
+            <tbody id="cart-table-items">
                 <tr id="total">
                     <td colspan="2">
                         Total:
                     </td>
                     <td id="total-amount">
-                        25Php
+                        0 Php
                     </td>
                 </tr>
                 <tr id="checkout">
                     <td colspan="3">
-                        <button>Checkout</button>
+                        <button onclick="checkoutCartItems()">Checkout</button>
                     </td>
                 </tr>
             </tbody>
@@ -333,6 +325,7 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
+    <script src="./scripts/cart.js"></script>
     <!--<div class="navbar">
         <div class="logo-container">
             <img class="logo" src="./images/logo.png">
