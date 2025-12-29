@@ -27,16 +27,21 @@
         </nav>
     </header>
     <main>
+        <noscript>
+            <p>Please enable JavaScript to allow features to run on this website</p>
+        </noscript>
         <div class="product">
             <div class="image">
                 <img src="./../../images/dessert2_brownies.png">
             </div>
             <div class="details">
                 <h1 class="title">Brownies</h1>
-                <p class="description-label"></p>
+                <p class="description-label">Description:</p>
                 <p class="description">Fudgy chocolate brownie with a rich, chewy texture.</p>
-                <p class="price">80</p>
-                <button class="add-to-cart"><a href="./../../cart.html">Add To Cart</a></button>
+                <p class="price">Php 80.00</p>
+                <button class="add-to-cart" onclick="addCartItem('dessert-1')">
+                    Add To Cart
+                </button>
             </div>
         </div>
         <button class="back-button">
@@ -47,6 +52,8 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
+    <script src="./../../scripts/cart.js"></script>
+    <script src="./../../scripts/widget.js"></script>
 </body>
 
 </html>

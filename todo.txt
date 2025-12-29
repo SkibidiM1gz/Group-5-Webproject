@@ -12,3 +12,5 @@ AGENDA:
 [] Checkout mechanic
 [/] Best seller/Featured/On Sale products Home page
 [/] Create checkout Page
+[] Pizza sizes
+[] More Pizzas

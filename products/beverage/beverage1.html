@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>Beverages | Golby's Pizzeria</title>
     <link rel="stylesheet" href="./../../theme.css">
     <link rel="stylesheet" href="./../../layout.css">
@@ -27,16 +27,21 @@
         </nav>
     </header>
     <main>
+        <noscript>
+            <p>Please enable JavaScript to allow features to run on this website</p>
+        </noscript>
         <div class="product">
             <div class="image">
                 <img src="./../../images/beverage1_water.png">
             </div>
             <div class="details">
                 <h1 class="title">Evian Natural Spring Water</h1>
-                <p class="description-label"></p>
+                <p class="description-label">Description:</p>
                 <p class="description">Evian Natural Spring Water 500mL. Premium natural spring water sourced from the French Alps, known for its purity, balanced minerals, and smooth, crisp taste.</p>
-                <p class="price">25</p>
-                <button class="add-to-cart"><a href="./../../cart.html">Add To Cart</a></button>
+                <p class="price">Php 25.00</p>
+                <button class="add-to-cart" onclick="addCartItem('beverage-0')">
+                    Add To Cart
+                </button>
             </div>
         </div>
         <button class="back-button">
@@ -47,6 +52,8 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
+    <script src="./../../scripts/cart.js"></script>
+    <script src="./../../scripts/widget.js"></script>
 </body>
 
 </html>

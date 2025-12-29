@@ -27,16 +27,21 @@
         </nav>
     </header>
     <main>
+        <noscript>
+            <p>Please enable JavaScript to allow features to run on this website</p>
+        </noscript>
         <div class="product">
             <div class="image">
                 <img src="./../../images/beverage3_fanta.png">
             </div>
             <div class="details">
                 <h1 class="title">Fanta In a Can</h1>
-                <p class="description-label"></p>
+                <p class="description-label">Description:</p>
                 <p class="description">Fanta in a can 11.15 fl oz. A fruity and bubbly orange-flavored soda that delivers a sweet, refreshing taste in every sip.</p>
-                <p class="price">50</p>
-                <button class="add-to-cart"><a href="./../../cart.html">Add To Cart</a></button>
+                <p class="price">Php 50.00</p>
+                <button class="add-to-cart" onclick="addCartItem('beverage-2')">
+                    Add To Cart
+                </button>
             </div>
         </div>
         <button class="back-button">
@@ -47,6 +52,8 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
+    <script src="./../../scripts/cart.js"></script>
+    <script src="./../../scripts/widget.js"></script>
 </body>
 
 </html>

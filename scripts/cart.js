@@ -5,14 +5,14 @@ class Product {
     id;
     isFeatured;
     isBestseller;
-    description;
+    /*description;*/
     imagePath;
     
-    constructor(type, name, price, isBestseller, isFeatured, description, imagePath) {
+    constructor(type, name, price, isBestseller, isFeatured, /*description,*/ imagePath) {
         this.type = type;
         this.name = name;
         this.price = price;
-        this.description = description;
+        /*this.description = description;*/
         this.isBestseller = isBestseller;
         this.isFeatured = isFeatured;
         this.imagePath = imagePath;
@@ -33,37 +33,84 @@ const products = {
     "pizza": [
         new Product(ProductType.PIZZA,
             "Super Supreme Pizza", 299, false, true,
-            "Tomato Sauce, Mozzarella Cheese, Pepperoni, Ham, Onions, Bell Peppers, Mushrooms, and Olives.",
+            // "Tomato Sauce, Mozzarella Cheese, Pepperoni, Ham, Onions, Bell Peppers, Mushrooms, and Olives.",
             "./images/pizza1_supersupreme.png"),
         new Product(ProductType.PIZZA,
-            "Ham and Cheese Pizza", 399, false, true,
-            "Tomato Sauce, Mozzarella Cheese, Ham",
+            "Ham and Cheese Pizza", 399, false, false,
+            // "Tomato Sauce, Mozzarella Cheese, Ham",
             "./images/pizza2_ham_cheese.png"),
         new Product(ProductType.PIZZA,
             "Pepperoni Pizza", 399, false, true,
-            "Tomato Sauce, Mozzarella Cheese, Pepperoni",
+            // "Tomato Sauce, Mozzarella Cheese, Pepperoni",
             "./images/pizza3_pepperoni.png"),
         new Product(ProductType.PIZZA,
-            "Prosciutto Pizza", 599, false, true,
-            "Tomato Sauce, Mozzarella Cheese, Italian Prosciutto Ham",
+            "Prosciutto Pizza", 599, false, false,
+            // "Tomato Sauce, Mozzarella Cheese, Italian Prosciutto Ham",
             "./images/pizza4_prosciutto.png"),
         new Product(ProductType.PIZZA,
             "Mushroom Pizza", 199, false, true,
-            "Tomato Sauce, Mozzarella Cheese, Fresh Mushrooms",
+            // "Tomato Sauce, Mozzarella Cheese, Fresh Mushrooms",
             "./images/pizza5_mushroom.png"),
         
     ],
     "beverage": [
-        
+        new Product(ProductType.BEVERAGE,
+            "Evian Natural Spring Water",
+            25, false, false,
+            "./images/beverage1_water.png"),
+        new Product(ProductType.BEVERAGE,
+            "Coke In A Can",
+            50, false, false,
+            "./images/beverage2_coke.png"),
+        new Product(ProductType.BEVERAGE,
+            "Fanta In A Can",
+            50, false, false,
+            "./images/beverage3_fanta.png"),
+        new Product(ProductType.BEVERAGE,
+            "Mountain Dew In A Can",
+            40, false, false,
+            "./images/beverage4_mountain_dew.png"),
+        new Product(ProductType.BEVERAGE,
+            "Pepsi In A Can",
+            30, false, false,
+            "./images/beverage5_pepsi.png"),
     ],
     "dessert": [
-        
+        new Product(ProductType.DESSERT,
+            "Cheese Cake",
+            99, false, false,
+            "./images/dessert1_cheesecake.png"),
+        new Product(ProductType.DESSERT,
+            "Brownies",
+            80, false, false,
+            "./images/dessert2_brownies.png"),
+        new Product(ProductType.DESSERT,
+            "Tiramisu",
+            99, false, false,
+            "./images/dessert3_tiramisu.png"),
+        new Product(ProductType.DESSERT,
+            "Cupcake",
+            70, false, false,
+            "./images/dessert4_cupcake.png"),
+        new Product(ProductType.DESSERT,
+            "Chocolate Milkshake",
+            120, false, false,
+            "./images/dessert5_chocolate_milkshake.png"),
+        new Product(ProductType.DESSERT,
+            "Strawberry Milkshake",
+            120, false, false,
+            "./images/dessert6_strawberry_milkshake.png"),
     ]
 };
 
 
+class Cart {
+    static flagAddToCartThrottle = false;
+}
 
-
+class Widget {
+    static toastTime = 4000;
+}
 
 function setSessionData(key, value) {
     sessionStorage.setItem(key, JSON.stringify(value));
@@ -122,6 +169,17 @@ function initializeCartData() {
  * Adds the product internally in session data via its ID
  */
 function addCartItem(productID) {
+    // Don't let user spam the add-to-cart button
+    // One add-to-cart action at a time
+    if (Cart.flagAddToCartThrottle) {
+        return;
+    } else {
+        Cart.flagAddToCartThrottle = true;
+        setTimeout(() => {
+            Cart.flagAddToCartThrottle = false;
+        }, Widget.toastTime);
+    }
+    
     // Get cart data
     let cart = getSessionData("cart");
     // Add item
@@ -129,6 +187,8 @@ function addCartItem(productID) {
     cart.serialCount++;
     // Update cart data
     setSessionData("cart", cart);
+    // Set notification message
+    notify(lookupProduct(productID).name + " added to cart!");
 }
 
 /**

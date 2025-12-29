@@ -19,6 +19,8 @@
             width: 80%;
             margin: auto;
             border-collapse: collapse;
+            padding: 20vw;
+            /* clamp(1rem, 5vw, 2.5rem); */
         }
         
         /* Add small spacing */
@@ -45,12 +47,16 @@
         
         tr.item td:nth-child(3) {
             text-align: center;
-            background-color: var(--peach);
+            /*background-color: var(--peach);*/
         }
         
         /* Align total label to the right */
         tr#total>td:nth-child(1) {
             text-align: right;
+        }
+        
+        tr#total>td:nth-child(2) {
+            background-color: var(--peach);
         }
         
         tr#total {

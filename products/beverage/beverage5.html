@@ -27,16 +27,21 @@
         </nav>
     </header>
     <main>
+        <noscript>
+            <p>Please enable JavaScript to allow features to run on this website</p>
+        </noscript>
         <div class="product">
             <div class="image">
                 <img src="./../../images/beverage5_pepsi.png">
             </div>
             <div class="details">
                 <h1 class="title">Pepsi In a Can</h1>
-                <p class="description-label"></p>
+                <p class="description-label">Description:</p>
                 <p class="description">Pepsi in a can 11.15 fl oz. A smooth and crisp cola drink with a slightly sweet flavor, offering a refreshing taste that everyone enjoys.</p>
-                <p class="price">30</p>
-                <button class="add-to-cart"><a href="./../../cart.html">Add To Cart</a></button>
+                <p class="price">Php 30.00</p>
+                <button class="add-to-cart" onclick="addCartItem('beverage-4')">
+                    Add To Cart
+                </button>
             </div>
         </div>
         <button class="back-button">
@@ -47,6 +52,8 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
+    <script src="./../../scripts/cart.js"></script>
+    <script src="./../../scripts/widget.js"></script>
 </body>
 
 </html>
