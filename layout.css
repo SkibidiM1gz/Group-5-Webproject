@@ -93,14 +93,84 @@
     --layout-navbar-height: 12vmin;
     --layout-navbar-margin-botom: 30px;
     
-    --layout-font-size-body: clamp(1rem, calc(1rem + 1vw), 2rem);
-    --layout-font-size-header: clamp(1rem, calc(1rem + 2vw), 2rem);
-    --layout-font-size-footer: clamp(1rem, calc(1rem + 2vw), 2rem);
+    /* --layout-font-size-body: clamp(1rem, calc(1rem + 0.5vw), 1.5rem); */
+    --layout-font-size-body: clamp(0.95rem, 0.9rem + 0.3vw, 1.125rem);
+    /* --layout-font-size-header: clamp(1rem, calc(1rem + 2vw), 2rem); */
+    /* --layout-font-size-footer: clamp(1rem, calc(1rem + 2vw), 2rem); */
+    /* } */
+    
+    /*:root {*/
+    /* Base */
+    /* 15–18px */
+    --fs-body: clamp(0.95rem, 0.9rem + 0.3vw, 1.125rem);
+    
+    /* Headings */
+    /* 28–48px  */
+    --fs-h1: clamp(1.75rem, 1.4rem + 2.5vw, 3rem);
+    /* 22–36px */
+    --fs-h2: clamp(1.375rem, 1.2rem + 1.6vw, 2.25rem);
+    
+    /* 18–28px  */
+    --fs-h3: clamp(1.125rem, 1.05rem + 1vw, 1.75rem);
+    
+    /* 16–22px  */
+    --fs-h4: clamp(1rem, 0.95rem + 0.6vw, 1.375rem);
+    
+    /* 15–20px  */
+    --fs-h5: clamp(0.95rem, 0.9rem + 0.4vw, 1.25rem);
+    
+    /* 14–18px */
+    --fs-h6: clamp(0.875rem, 0.85rem + 0.3vw, 1.125rem);
+    
+    /* UI */
+    /* 14–18px */
+    --fs-ui: clamp(0.875rem, 0.85rem + 0.3vw, 1.125rem);
+    /* 12–14px */
+    --fs-small: clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem);
+
+    --layout-font-size-navbar-link: 2vw;
+    --layout-font-size-footer-text: 2.5vw;
+    --layout-font-size-body: 1.5vw;
 }
 
-p, button, a, td, th, label, input {
+p, font, th, td, label, input, a, button {
     font-size: var(--layout-font-size-body);
 }
+
+
+/* p,
+button,
+a,
+td,
+th,
+label,
+input {
+    font-size: var(--layout-font-size-body);
+} */
+
+/* h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+h4 {
+    font-size: var(--fs-h4);
+}
+
+h5 {
+    font-size: var(--fs-h5);
+}
+
+h6 {
+    font-size: var(--fs-h6);
+} */
 
 @media (prefers-reduced-motion: no-preference) {
     html {
@@ -160,8 +230,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     
-    font-size: var(--layout-font-size-header);
-    /* font-size: 2rem; */
+    font-size: var(--layout-font-size-navbar-link);
     color: var(--layout-link-color);
     transition: 0.1s ease-in;
     text-shadow: 1px 1px var(--layout-link-shadow-color);
@@ -175,7 +244,7 @@ nav ul li a:hover {
 nav ul li {
     list-style: none;
     display: inline-block;
-    margin-right: 3rem;
+    margin-right: var(--layout-font-size-navbar-link);
 }
 
 main {
@@ -190,8 +259,7 @@ footer {
     /*min(5vmin, auto);*/
     max-height: 20vh;
     background-color: var(--layout-footer-background);
-    font-size: var(--layout-font-size-footer);
-    /* font-size: 2rem; */
+    font-size: var(--layout-font-size-footer-text);
 }
 
 .footer-content {
@@ -211,7 +279,8 @@ footer {
 
 
 /* || MISCELANOUS */
-noscript, #alertbox {
+noscript,
+#toastbox {
     display: block;
     position: absolute;
     left: 50%;
@@ -224,7 +293,7 @@ noscript, #alertbox {
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
 }
 
-#alertbox {
+#toastbox {
     color: var(--theme-color-text-onlight);
     /* background-color: var(--light); */
     /*position: absolue;*/

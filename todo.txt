@@ -10,5 +10,5 @@ AGENDA:
 [] Scalable font sizes
 [/] Add-to-cart mechanic
 [] Checkout mechanic
-[] Best seller/Featured products Home page
-[] Checkout Page
+[/] Best seller/Featured/On Sale products Home page
+[/] Create checkout Page

@@ -1,0 +1,37 @@
+#dev-tools {
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    background-color: rgba(100, 100, 255, 0.4);
+    border-radius: 2px;
+    border: 2px solid darkslateblue;
+    font-size: 1.5rem;
+}
+
+#dev-info-viewport {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: inherit;
+}
+
+#dev-input-additive {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: inherit;
+}
+
+#dev-add-viewport,
+#dev-sub-viewport {
+    font-size: inherit;
+    display: block;
+    position: relative;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 18px;
+    width: 100%;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}

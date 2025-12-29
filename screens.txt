@@ -5,4 +5,4 @@ Testing:
 1920x1200 PC
 1600x1200 Comlab PC
 1600x1000 Laptop
-1366x768 PC
+1366x768 PC/Laptop
