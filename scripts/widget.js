@@ -1,20 +1,10 @@
-// function showToastNotification() {
-//     let notif = document.getElementById("toastbox");
+/*
+ * widget.js includes widgets and UI-related features in website
+ */
 
-//     /*notif.classList.remove("hidden");*/
-
-//     setTimeout(() => {
-//         /*hideToastNotification();*/
-//         notif.remove();
-//     }, Widget.toastTime);
-// }
-
-// function hideToastNotification() {
-//     let notif = document.getElementById("toastbox");
-
-//     notif.classList.add("hidden");
-// }
-
+/**
+ * Creates an element for a toast message
+ */
 function createToast() {
     let div = document.createElement("div");
     div.id = "toastbox";
@@ -27,10 +17,13 @@ function createToast() {
     main.prepend(div);
     // let noscript = document.getElementsByTagName("noscript")[0];
     // main.insertBefore(div, noscript);
-    
-    
 }
 
+/**
+ * Creates a toast message with the specified {@code msg}
+ * 
+ * Duration is set to {@code Widget.toastTime} 
+ */
 function notify(msg) {
     let toastbox_message = document.getElementById("toastbox-message");
     

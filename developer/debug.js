@@ -1,3 +1,7 @@
+/**
+ * debug.js contains methods for debugging
+ */
+
 function increaseViewportWidth(v) {
     if (v === null || v === undefined || isNaN(v)) {
         let input = document.getElementById("dev-input-additive");
@@ -39,4 +43,22 @@ function decreaseViewportWidth(v) {
 function setInfoViewport(vw, vh) {
     let info = document.getElementById("dev-info-viewport");
     info.innerHTML = `width=${vw}, height=${vh}`;
+}
+
+function setSelectorUnit() {
+    let selector = document.getElementById("dev-input-selector").value;
+    // let unit = document.getElementById("dev-input-selector-unit").value;
+    // let additive = document.getElementById("dev-input-selector-additive").value;
+    let value = document.getElementById("dev-input-selector-value").value;
+    let property = document.getElementById("dev-input-selector-property").value;
+    
+    if (!value || !property || !selector) {
+        return;
+    }
+    
+    let elements = document.querySelectorAll(selector);
+    
+    for (const e of elements) {
+        e.style.setProperty(property, value);
+    }
 }

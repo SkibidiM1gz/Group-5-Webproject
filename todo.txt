@@ -12,5 +12,6 @@ AGENDA:
 [] Checkout mechanic
 [/] Best seller/Featured/On Sale products Home page
 [/] Create checkout Page
-[] Pizza sizes
+[X] Pizza sizes
 [] More Pizzas
+[] Product Added-to-cart indicator in product page

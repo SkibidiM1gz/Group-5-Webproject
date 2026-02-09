@@ -1,3 +1,7 @@
+/*
+ * cart.js contains features related to the cart system of the website
+ */
+
 class Product {
     type;
     name;
@@ -109,6 +113,9 @@ class Cart {
 }
 
 class Widget {
+    /**
+     * Duration of toast message in milliseconds
+     */
     static toastTime = 4000;
 }
 
@@ -166,7 +173,7 @@ function initializeCartData() {
 }
 
 /**
- * Adds the product internally in session data via its ID
+ * Adds the product internally in session data via its product ID
  */
 function addCartItem(productID) {
     // Don't let user spam the add-to-cart button
@@ -273,7 +280,7 @@ function loadCartItems() {
         rawPriceSum += product.price;
     }
     
-    // Calculate subtotal
+    // TODO Implement subtotal calculation
     
     // Calculate total
     let td_total_amount = document.getElementById("total-amount");
@@ -281,6 +288,8 @@ function loadCartItems() {
     td_total_amount.innerHTML = rawPriceSum + ".00 Php";
 }
 
+
+// TODO Implement functionality
 function checkoutCartItems() {
     
 }

@@ -1,4 +1,4 @@
-:root {}
+/* :root {} */
 
 a.back-link {
     /* Layout */
@@ -26,7 +26,7 @@ button.back-button {
     border-radius: 6px;
     
     /* Typography */
-    font-size: 2rem;
+    font-size: 2vw;
 }
 
 .product {
@@ -83,25 +83,25 @@ button.back-button {
     letter-spacing: 0.3rem;
 }
 
-.add-to-cart a {
-    /* Layout */
+/* .add-to-cart a {
+    Layout
     display: block;
     padding: 2vh 1vw;
     
-    /* Visuals */
+    Visuals
     color: var(--theme-color-text-ondark);
-    /* text-shadow: 1px 1px var(--theme-color-text-ondark-shadow); */
-    /* cocoa */
+    text-shadow: 1px 1px var(--theme-color-text-ondark-shadow);
+    cocoa
     text-decoration: none;
-}
+} */
 
 .title {
     margin-bottom: 3.5rem;
 }
 
-p {
+/* p {
     font-size: 2rem;
-}
+} */
 
 .price {
     display: block;
