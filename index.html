@@ -179,7 +179,7 @@
             display: flex;
             background-color: var(--light);
             justify-content: space-around;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             /*column-gap: 2vw;
             row-gap: 2vw;*/
         }
@@ -194,7 +194,7 @@
         }
         
         .flex .card {
-            width: clamp(300px, 250px + 10vw, 720px);
+            /*width: clamp(300px, 250px, 30vw);*/
             /* background-color: var(--brick); */
         }
         
@@ -212,6 +212,10 @@
             display: block;
             text-align: center;
             padding-bottom: 1rem;
+        }
+
+        #featured-product-container {
+            width: 100vw;
         }
     </style>
 </head>
@@ -267,7 +271,7 @@
             </div>
         </div>
         <h2 class="home-title">Featuring Delicious Pizza</h2>
-        <div class="flex">
+        <div id="featured-product-container" class="flex">
             <a href="./products/pizza/pizza1.html">
                 <div class="card">
                     <img src="./images/pizza1_supersupreme.png">
@@ -330,6 +334,9 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
+    <script>
+        console.log(window.location);
+    </script>
     <!--<script src="./developer/debug.js"></script>
     <script src="./developer/toolgen.js"></script>-->
 </body>

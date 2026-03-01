@@ -128,9 +128,9 @@
     /* 12–14px */
     --fs-small: clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem);
 
-    --layout-font-size-navbar-link: 2vw;
-    --layout-font-size-footer-text: 2.5vw;
-    --layout-font-size-body: 2.2vw;
+    --layout-font-size-navbar-link: clamp(1rem, 2vw, 1.5rem);
+    --layout-font-size-footer-text: clamp(1rem, 2vw, 1.5rem);
+    --layout-font-size-body: clamp(1rem, 2.2vw, 1.5rem);
 }
 
 p, font, th, td, label, input, a, button {

@@ -19,7 +19,7 @@
             display: none;
             margin: 0px;
             padding: 1rem;
-            font-size: 2rem;
+            font-size: clamp(1rem, 1vw, 1.2rem);
         }
         
         .dropdown:hover .dropdown-content {
@@ -43,16 +43,23 @@
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
         }
+
+/* TODO: Implement better design for this */
+
+        /*.dropdown:nth-child(even) .dropdown-button {
+            background-color: hsl(from var(--faq-dropdownbutton-background-hover) calc(h - 30) s l);
+        }*/
         
         .dropdown-button:hover {
             background-color: var(--faq-dropdownbutton-background-hover);
             /* hover-onlight */
         }
+
         
         .dropdown-button {
             width: 100%;
             text-align: left;
-            font-size: 2rem;
+            font-size: clamp(1rem, 1vw, 1.3rem);
             padding: 1.5rem;
             border: none;
             color: var(--faq-dropdownbutton-text);
