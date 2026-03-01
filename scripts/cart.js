@@ -116,7 +116,7 @@ class Widget {
     /**
      * Duration of toast message in milliseconds
      */
-    static toastTime = 4000;
+    static toastTime = 2000;
 }
 
 function setSessionData(key, value) {

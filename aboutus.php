@@ -1,3 +1,6 @@
+<?php
+    require "./project.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -226,7 +229,10 @@
 
 <body>
     <header>
-        <img class="logo" src="./images/logo.png">
+        <?php
+            require "./navbar.php";
+        ?>
+        <!-- <img class="logo" src="./images/logo.png">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -234,22 +240,24 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="products/products.html">Products</a></li>
-                <!--<li><a href="login.html">Login</a></li>-->
-                <!--<li><a href="user_account.html">Account</a></li>-->
+                <li><a href="login.html">Login</a></li>
+                <li><a href="user_account.html">Account</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <main>
         <!-- header -->
         <!-- <table width="100%">
             <tr>
                 <td align="center"> -->
-        <img class="content-logo" src="./images/logo.png" />
         <!--<h1>Golby's Pizzeria</h1>-->
+        
+        <h1 class="page-title">About Us</h1>
+        <img class="content-logo" src="./images/logo.png" />
         <article id="article-about">
             <section id="section-lore">
                 <div class="content-box">
-                    <h2>About Us</h2>
+                    <h2>Background</h2>
                     <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
                         Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p>
                 </div>
@@ -257,13 +265,10 @@
             <section id="section-details">
                 <div class="content-box">
                     <h2>Details</h2>
-                    <!--<h3>Business Days</h3>-->
                     <p>We open only from Monday to Friday, 7am to 5pm.</p>
                     
-                    <!--<h3>Location</h3>-->
                     <p>You can find us near Misamis Street, Bago Bantay, Quezon City, Philippines.</p>
                     
-                    <!--<h3>Contact</h3>-->
                     <p>For any inquiries contact us via:<br>
                         E-mail: golbyspizzeria@gmail.com<br>
                         Phone: +63 961 825 0366

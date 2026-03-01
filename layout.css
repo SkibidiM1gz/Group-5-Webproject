@@ -3,83 +3,6 @@
  * bar, and necessary spacing values, including media queries 
  * for screen sizes. All things layout.
  */
-:root {
-    /* OLD VARS */
-    /*  --layout-navbar-color: var(--theme-color-brown); var(--theme-color-accent);*/
-    /*  --layout-header-color: var(--theme-color-brown); var(--theme-color-accent);*/
-    /*  --layout-footer-color: var(--theme-color-brown); var(--theme-color-accent);*/
-    /*--layout-color-link-hover: var(--theme-color-text-onlight);
-    --layout-navbar-size: 10vmax;*/
-    
-    /* font-size: clamp(1rem, calc(1rem + 1vw), 2rem); */
-}
-
-/* - Navigation - */
-/* OLD CODE DO NOT UNCOMMENT */
-/* .navbar {
-    background-color: var(--layout-navbar-color); var(--color-navbar);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: auto;
-    min-height: var(--layout-navbar-size);
-    max-height: var(--layout-navbar-size);
-    user-select: none;
-    -webkit-user-select: none; Safari, Chrome
-    -ms-user-select: none;    Internet Explorer/Edge/
-} */
-
-/* .navbar img.logo {
-    display: block;
-    width: var(--layout-navbar-size);
-    height: auto;
-} */
-
-/* .navbar div.logo-container {
-    display: flex;
-    width: 30%;
-    justify-content: center;
-} */
-
-/* .navbar div.link-container {
-    display: flex;
-    width: 70%;
-    justify-content: center;
-} */
-
-/* .navbar a {
-    color: var(--theme-color-text-ondark);
-    font-size: 2em;
-    text-decoration: none;
-    text-shadow: 1px 1px black;
-    margin-right: 2em;
-} */
-
-/* - Main Content - */
-/* div.main-content {
-    padding: 2vmin;
-    margin-top: var(--layout-navbar-size); Position it at bottom of navbar
-} */
-
-/* div.logo-container {
-    width: 30%;
-    display: flex;
-    align-content: center;
-} */
-
-/* .grid-layout {
-    display: grid;
-    grid-template-rows: 10vmin 80vmin 10vmin;
-    grid-template-columns: auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-} */
 
 :root {
     --layout-header-background: var(--terracota);
@@ -137,48 +60,23 @@ p, font, th, td, label, input, a, button {
     font-size: var(--layout-font-size-body);
 }
 
-h2 {
-    font-size: 2.4vw;
+h1.page-title {
+    color: var(--theme-color-text-ondark);
+    text-align: center;
+    /*font-size: from ;*/
+    text-shadow: 2px 2px black;
 }
 
+h2.page-subtitle {
+    color: var(--theme-color-text-ondark);
+    text-align: center;
 
-/* p,
-button,
-a,
-td,
-th,
-label,
-input {
-    font-size: var(--layout-font-size-body);
-} */
-
-/* h1 {
-    font-size: var(--fs-h1);
+    text-shadow: 2px 2px black;
 }
-
-h2 {
-    font-size: var(--fs-h2);
-}
-
-h3 {
-    font-size: var(--fs-h3);
-}
-
-h4 {
-    font-size: var(--fs-h4);
-}
-
-h5 {
-    font-size: var(--fs-h5);
-}
-
-h6 {
-    font-size: var(--fs-h6);
-} */
 
 @media (prefers-reduced-motion: no-preference) {
     html {
-        scroll-behavior: smooth;
+        scroll-behavior:  smooth;
     }
 }
 
@@ -275,6 +173,8 @@ footer {
 .active-page {
     display: none;
 }
+
+
 
 /* || UTILITIES */
 .no-margin-bottom {

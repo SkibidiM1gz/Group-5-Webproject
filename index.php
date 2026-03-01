@@ -1,3 +1,7 @@
+<?php
+    require "./project.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +19,7 @@
             /* --home-menu-background: var(--theme-color-background-light); */
             /* --home-menu-border: var(--theme-color-black); */
         }
-        
+
         /* .menu {
             background-color: var(--theme-color-text-ondark);
             background-color: var(--home-menu-background);
@@ -111,14 +115,7 @@
                 transform: scale(2.5) rotateZ(360deg);
             }
         }
-        
-        .home-title {
-            color: var(--theme-color-text-ondark);
-            text-align: center;
-            /* font-size: 2.2vw; */
-            text-shadow: 2px 2px black;
-        }
-        
+
         .slideshow {
             width: 100%;
             height: inherit;
@@ -222,7 +219,10 @@
 
 <body>
     <header>
-        <img class="logo" src="./images/logo.png">
+        <?php 
+            require "./navbar.php";
+        ?>
+        <!-- <img class="logo" src="./images/logo.png">
         <nav>
             <ul>
                 <li class="active-page"><a href="index.html">Home</a></li>
@@ -230,14 +230,14 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="products/products.html">Products</a></li>
-                <!--<li><a href="login.html">Login</a></li>-->
-                <!--<li><a href="user_account.html">Account</a></li>-->
+                <li><a href="login.html">Login</a></li>
+                <li><a href="user_account.html">Account</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <main>
-        <h1 class="home-title">HOME</h1>
-        <h2 class="home-title">Welcome to Golby's Pizzeria!</h2>
+        <h1 class="page-title">HOME</h1>
+        <h2 class="page-subtitle">Welcome to Golby's Pizzeria!</h2>
         <div class="slideshow-container">
             <div class="slideshow">
                 <div class="slideflex slide">
@@ -260,17 +260,12 @@
                     <!-- <p class="quote">Taste The Goodness</p> -->
                     <font class="quote">Taste The Goodness</font>
                 </div>
-                <!--<div class="slide1">
-                <img class="slide1" src="./images/pizza3_pepperoni.png" />
-                <p class="quote">Quote 1</p>
-            </div>
-            <div class="slide2">
-                <img src="./images/pizza1_supersupreme.png" />
-                <p class="quote">Quote 2</p>
-            </div>-->
             </div>
         </div>
-        <h2 class="home-title">Featuring Delicious Pizza</h2>
+        <h2 class="page-subtitle">Featuring Delicious Pizza</h2>
+
+        <!-- TODO Fix Product links -->
+
         <div id="featured-product-container" class="flex">
             <a href="./products/pizza/pizza1.html">
                 <div class="card">
@@ -334,11 +329,6 @@
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
-    <script>
-        console.log(window.location);
-    </script>
-    <!--<script src="./developer/debug.js"></script>
-    <script src="./developer/toolgen.js"></script>-->
 </body>
 
 </html>

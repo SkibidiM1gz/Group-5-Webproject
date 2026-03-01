@@ -1,3 +1,6 @@
+<?php
+    require "./project.php";
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +16,14 @@
             /*font-size: 1.2rem;*/
         }
         
-        table {
+        div.table-container {
+            display: inline-block;
+            height: 50vh;
+            max-height: 60%;
+            overflow-y: auto;
+        }
+
+        table#cart-items {
             background-color: var(--theme-color-background-light);
             color: var(--theme-color-text-onlight);
             width: 80%;
@@ -21,6 +31,11 @@
             border-collapse: collapse;
             padding: 20vw;
             /* clamp(1rem, 5vw, 2.5rem); */
+        }
+
+        table#cart-items caption {
+            color: var(--theme-color-text-ondark);
+            margin-bottom: 2rem;
         }
         
         /* Add small spacing */
@@ -82,10 +97,10 @@
             background-color: var(--darkTerracota);
         }
         
-        h1 {
+        /*h1 {
             color: var(--theme-color-text-ondark);
             text-align: center;
-        }
+        }*/
         
         p {
             color: var(--theme-color-text-ondark);
@@ -97,59 +112,53 @@
 
 <body>
     <header>
-        <img class="logo" src="./images/logo.png">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li class="active-page"><a href="cart.html">Cart</a></li>
-                <li><a href="products/products.html">Products</a></li>
-                <!--<li><a href="login.html">Login</a></li>-->
-                <!--<li><a href="user_account.html">Account</a></li>-->
-            </ul>
-        </nav>
+        <?php
+            require "./navbar.php";
+        ?>
     </header>
     <main>
         <noscript>
             Please enable JavaScript to allow features to run on this website
         </noscript>
-        <h1 class="title">
-            YOUR CART
-        </h1>
+        <h1 class="page-title">Your Cart</h1>
         <p class="description">
-            The cart is where your orders are collected.<br>
+            
         </p>
-        <table id="cart-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Details</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody id="cart-table-items">
-                <tr id="total">
-                    <td colspan="2">
-                        Total:
-                    </td>
-                    <td id="total-amount">
-                        0 Php
-                    </td>
-                </tr>
-                <tr id="checkout">
-                    <td colspan="3">
-                        <button onclick="checkoutCartItems(); gotoCheckoutPage()">Checkout</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table id="cart-items">
+                <caption>The cart is where your orders are collected</caption>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Details</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-table-items">
+                    <!-- <tr id="total">
+                        <td colspan="2">Total:</td>
+                        <td id="total-amount">0 Php</td>
+                    </tr> -->
+                    <!-- <tr id="checkout">
+                        <td colspan="3">
+                            <button onclick="checkoutCartItems(); gotoCheckoutPage()">Checkout</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <!-- TODO FINISH Implementation -->
+        <div class="cart-interface">
+            <p>Total:</p>
+            <button id="checkout-button" onclick="checkoutCartItems(); gotoCheckoutPage()">Checkout</button>
+        </div>
     </main>
     <footer>
         <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
         <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
     </footer>
     <script src="./scripts/cart.js"></script>
+    <script>addCartItem('pizza-0');</script>
 </body>
 
 </html>

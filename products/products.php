@@ -1,0 +1,405 @@
+<?php 
+    require "./../connections/db_connection.php";
+    require "./../connections/db.php";
+    require "./../project.php";
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
+    <title>Products | Golby's Pizzeria</title>
+    <link rel="stylesheet" href="./../theme.css">
+    <link rel="stylesheet" href="./../layout.css">
+    <!--<link rel="stylesheet" href="./product_list.css">-->
+    <style type="text/css">
+        /*:root {
+            --products-color-card: var(--theme-color-light);
+        }*/
+        
+        :root {
+            --products-price-background: var(--theme-color-brick);
+            --products-price-text: var(--theme-color-light);
+            --products-card-background: var(--theme-color-light);
+            --products-card-border: var(--theme-color-brick);
+            --products-card-border-hover: var(--theme-color-terracota);
+            --products-card-background-hover: var(--theme-color-peach);
+            --products-card-title-text: var(--theme-color-cocoa);
+            --products-heading-text: var(--theme-color-light);
+            --products-productnav-text: var(--theme-color-light);
+            --products-productnav-background: var(--theme-color-terracota);
+        }
+        
+        .product-card-container {
+            /* Layout */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: stretch;
+            align-items: stretch;
+            width: 80vw;
+            margin: auto;
+            margin-bottom: 10vh;
+            gap: 20px;
+        }
+        
+        .product-card-container a {
+            /* Layout */
+            flex-basis: 20vw;
+            flex-grow: 25vw;
+            flex-shrink: 10vw;
+            display: block;
+            
+            /* Typography */
+            text-decoration: none;
+        }
+        
+        .product-title {
+            /* Visuals */
+            color: var(--products-card-title-text);
+            /*var(--theme-color-text-onlight);*/
+        }
+        
+        .product-card {
+            /* Layout */
+            height: 100%;
+            
+            /* Visuals */
+            background-color: var(--products-card-background);
+            /* light */
+            border: 3px solid var(--products-card-border);
+            /* brick */
+            border-radius: 15px;
+            
+            /* Effects */
+            transition: 0.1s linear;
+        }
+        
+        .product-card img {
+            /* Layout */
+            width: 75%;
+            height: auto;
+            aspect-ratio: 1;
+            display: block;
+            margin: auto;
+        }
+        
+        .product-card:hover {
+            /* Visuals */
+            background-color: var(--products-card-background-hover);
+            /* peach */
+            border-color: var(--products-card-border-hover);
+            /* darkTerracotta*/
+        }
+        
+        /* Resize container items */
+        .product-card:hover img {
+            transform: scale(0.97);
+        }
+        
+        .product-price {
+            background-color: var(--products-price-background);
+            /*brick*/
+            color: var(--products-price-text);
+            /*: var(--theme-color-text-ondark);  light */
+        }
+        
+        /* || Headings */
+        h1,
+        h2,
+        .product-title,
+        .product-price {
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h1,
+        h2 {
+            color: var(--products-heading-text);
+            /*  color: var(--theme-color-text-ondark);  light*/
+        }
+        
+        /* || CONTENT TEMPLATES */
+        p.product-price::before {
+            content: "Php ";
+        }
+        
+        p.product-price::after {
+            content: ".00";
+        }
+        
+        /* || NAVIGATION */
+        .productnav {
+            display: block;
+            text-align: center;
+            top: 0px;
+            position: sticky;
+            margin-bottom: var(--layout-navbar-margin-bottom);
+        }
+        
+        .productnav ul li:hover {
+            opacity: 1;
+        }
+        
+        .productnav ul {
+            display: inline-flex;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .productnav ul li {
+            display: inline-block;
+            opacity: 0.8;
+            transition: 0.1s ease-in;
+            background-color: var(--products-productnav-background);
+        }
+        
+        .productnav ul li:first-child {
+            border-bottom-left-radius: 15px;
+        }
+        
+        .productnav ul li:last-child {
+            border-bottom-right-radius: 15px;
+        }
+        
+        .productnav ul li a {
+            display: block;
+            text-decoration: none;
+            color: var(--products-productnav-text);
+            font-size: 2rem;
+            padding: 1.5rem;
+        }
+        
+        
+        /* .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: stretch;
+            align-items: stretch;
+            width: 80vw;
+            margin: auto;
+            margin-bottom: 10vh;
+            gap: 20px;
+            background-color: var(--products-terracota);
+        } */
+        
+        /* .menu a {
+            Layout
+            flex-basis: 20vw;
+            flex-grow: 25vw;
+            flex-shrink: 10vw;
+            display: block;
+            
+            Typography
+            text-decoration: none;
+            color: black;
+            background-color: red;
+        } */
+        
+        .card img {
+            /* Layout */
+            width: 75%;
+            aspect-ratio: 1;
+            display: block;
+            margin: auto;
+        }
+        
+        .title {
+            display: block;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="no-margin-bottom">
+        <?php 
+            require "./../navbar.php";
+         ?>
+        <!-- <img class="logo" src="./../images/logo.png">
+        <nav>
+            <ul>
+                <li><a href="./../index.html">Home</a></li>
+                <li><a href="./../aboutus.html">About Us</a></li>
+                <li><a href="./../faq.html">FAQ</a></li>
+                <li><a href="./../cart.html">Cart</a></li>
+                <li class="active-page"><a href="products.html">Products</a></li>
+                
+                <li><a href="login.html">Login</a></li>
+                <li><a href="user_account.html">Account</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <main>
+        <div class="productnav">
+            <ul>
+                <li><a href="#section-pizzas">Pizzas</a></li>
+                <li><a href="#section-beverages">Beverages</a></li>
+                <li><a href="#section-desserts">Desserts</a></li>
+            </ul>
+        </div>
+        <h1>Products</h1>
+        <!-- <div class="menu">
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <span class="title">Pizzas</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <font class="title">Pizzas</font>
+                </div>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <img src="./../images/pizza1_supersupreme.png">
+                    <font class="title">Pizzas</font>
+                </div>
+            </a>
+        </div> -->
+        <section id="section-pizzas">
+            <h2>Pizzas</h2>
+            <div class="product-card-container">
+                <a href="./pizza/pizza1.html">
+                    <div id="pizza-super-supreme" class="product-card">
+                        <img src="./../images/pizza1_supersupreme.png">
+                        <p class="product-price">299</p>
+                        <h3 class="product-title">Super Supreme Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza2.html">
+                    <div id="pizza-ham-cheese" class="product-card">
+                        <img src="./../images/pizza2_ham_cheese.png">
+                        <p class="product-price">399</p>
+                        <h3 class="product-title">Ham and Cheese Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza3.html">
+                    <div id="pizza-pepperoni" class="product-card">
+                        <img src="../images/pizza3_pepperoni.png">
+                        <p class="product-price">399</p>
+                        <h3 class="product-title">Pepperoni Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza4.html">
+                    <div id="pizza-prosciutto" class="product-card">
+                        <img src="../images/pizza4_prosciutto.png">
+                        <p class="product-price">599</p>
+                        <h3 class="product-title">Prosicutto Pizza</h3>
+                    </div>
+                </a>
+                <a href="./pizza/pizza5.html">
+                    <div id="pizza-mushroom" class="product-card">
+                        <img src="../images/pizza5_mushroom.png">
+                        <p class="product-price">199</p>
+                        <h3 class="product-title">Mushroom Pizza</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="section-beverages">
+            <h2>Beverages</h2>
+            <div class="product-card-container">
+                <a href="./beverage/beverage1.html">
+                    <div id="beverage-evian-water" class="product-card">
+                        <img src="./../images/beverage1_water.png">
+                        <p class="product-price">20</p>
+                        <h3 class="product-title">Evian Natural Spring Water</h3>
+                    </div>
+                </a>
+                <a href="./beverage/beverage2.html">
+                    <div id="beverage-coke" class="product-card">
+                        <img src="./../images/beverage2_coke.png">
+                        <p class="product-price">50</p>
+                        <h3 class="product-title">Coke in Can</h3>
+                    </div>
+                </a>
+                <a href="./beverage/beverage3.html">
+                    <div id="beverage-fanta" class="product-card">
+                        <img src="./../images/beverage3_fanta.png">
+                        <p class="product-price">50</p>
+                        <h3 class="product-title">Fanta in Can</h3>
+                    </div>
+                </a>
+                <a href="./beverage/beverage4.html">
+                    <div id="beverage-mountain-dew" class="product-card">
+                        <img src="./../images/beverage4_mountain_dew.png">
+                        <p class="product-price">40</p>
+                        <h3 class="product-title">Mountain Dew in Can</h3>
+                    </div>
+                </a>
+                <a href="./beverage/beverage5.html">
+                    <div class="product-card">
+                        <img src="./../images/beverage5_pepsi.png">
+                        <p class="product-price">30</p>
+                        <h3 class="product-title">Pepsi in Can</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="section-desserts">
+            <h2>Desserts</h2>
+            <div class="product-card-container">
+                <a href="./dessert/dessert1.html">
+                    <div id="dessert-cheesecake" class="product-card">
+                        <img src="../images/dessert1_cheesecake.png">
+                        <p class="product-price">99</p>
+                        <h3 class="product-title">Cheese Cake</h3>
+                    </div>
+                </a>
+                <a href="./dessert/dessert2.html">
+                    <div id="dessert-brownies" class="product-card">
+                        <img src="../images/dessert2_brownies.png">
+                        <p class="product-price">80</p>
+                        <h3 class="product-title">Brownies</h3>
+                    </div>
+                </a>
+                <a href="./dessert/dessert3.html">
+                    <div id="dessert-tiramisu" class="product-card">
+                        <img src="../images/dessert3_tiramisu.png">
+                        <p class="product-price">99</p>
+                        <h3 class="product-title">Tiramisu</h3>
+                    </div>
+                </a>
+                <a href="./dessert/dessert4.html">
+                    <div id="dessert-cupcake" class="product-card">
+                        <img src="../images/dessert4_cupcake.png">
+                        <p class="product-price">70</p>
+                        <h3 class="product-title">Cupcake</h3>
+                    </div>
+                </a>
+                <a href="./dessert/dessert5.html">
+                    <div id="dessert-chocolate-milkshake" class="product-card">
+                        <img src="../images/dessert5_chocolate_milkshake.png">
+                        <p class="product-price">120</p>
+                        <h3 class="product-title">Chocolate Milkshake</h3>
+                    </div>
+                </a>
+                <a href="./dessert/dessert6.html">
+                    <div id="dessert-strawberry-milkshake" class="product-card">
+                        <img src="../images/dessert6_strawberry_milkshake.png">
+                        <p class="product-price">120</p>
+                        <h3 class="product-title">Strawberry Milkshake</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
+        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+    </footer>
+</body>
+
+</html>

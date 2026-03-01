@@ -1,3 +1,7 @@
+<?php
+    require "./project.php";
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -82,7 +86,10 @@
 
 <body>
     <header>
-        <img class="logo" src="./images/logo.png">
+        <?php 
+            require "./navbar.php"; 
+        ?>
+        <!-- <img class="logo" src="./images/logo.png">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -90,10 +97,10 @@
                 <li class="active-page"><a href="faq.html">FAQ</a></li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="products/products.html">Products</a></li>
-                <!--<li><a href="login.html">Login</a></li>-->
-                <!--<li><a href="user_account.html">Account</a></li>-->
+                <li><a href="login.html">Login</a></li>
+                <li><a href="user_account.html">Account</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <main>
         <div class="contentbox">

@@ -3,9 +3,9 @@
 	$username = "root";
 	$password = "";
 	$database = "golby_pizzeria";
-	$connection = new mysqli($hostname, $username, $password, $database);
+	$db_connection = new mysqli($hostname, $username, $password, $database);
 
-	if ($connection->connect_error) {
-		echo $connection->connect_error();
+	if ($db_connection->connect_error) {
+		echo $db_connection->connect_error();
 	}
 ?>
