@@ -1,0 +1,32 @@
+Navbar order:
+home
+about us
+faq
+login
+cart
+account
+
+
+AGENDA:
+- admin.php must contain product inventory and UIs for updating the product stock
+
+- php core and connection files must be included in this order:
+
+	db_connection.php
+	db.php
+	project.php
+	navigation.php
+	page.php
+
+TODO:
+[] Create an account system
+[] Create account login/signup
+[] Create special login things for "admin" to access the admin.php page
+[] Create product database for product inventory
+[] Create user account database for user login/signup account system
+[] Create admin view page containing interface for editting product inventory
+[] Redesign cart page layout
+[] Create checkout system
+[] Implement product list at products.php
+[] Implement product viewing in product_view.php
+[] Relocate CSS code of each page into a separate CSS file with the same filename as the page 

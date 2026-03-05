@@ -1,0 +1,68 @@
+<?php
+	require "./connections/db_connection.php";
+	require "./connections/db.php";
+	require "./core/project.php";
+    require "./core/navigation.php";
+    require "./core/page.php"
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Product View</title>
+    <link rel="stylesheet" type="text/css" href="./styles/theme.css">
+    <link rel="stylesheet" type="text/css" href="./styles/layout.css">
+</head>
+<body>
+	<header>
+		<?php
+			generateNavigationBar();
+		?>
+        <!-- <img class="logo" src="./../../images/logo.png">
+        <nav>
+            <ul>
+                <li><a href="./../../index.html">Home</a></li>
+                <li><a href="./../../aboutus.html">About Us</a></li>
+                <li><a href="./../../faq.html">FAQ</a></li>
+                <li><a href="./../../cart.html">Cart</a></li>
+                <li class="active-page"><a href="products.html">Products</a></li>
+                
+                <li><a href="login.html">Login</a></li>
+                <li><a href="user_account.html">Account</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <main>
+        <noscript>
+            <p>Please enable JavaScript to allow features to run on this website</p>
+        </noscript>
+        <div class="product">
+            <div class="image">
+                <img src="./../../images/pizza1_supersupreme.png">
+            </div>
+            <div class="details">
+                <h1 class="title">Super Supreme Pizza</h1>
+                <p class="description-label">Description:</p>
+                <p class="description">Tomato Sauce, Mozzarella Cheese, Pepperoni, Ham, Onions, Bell Peppers, Mushrooms, and Olives.</p>
+                <p class="price">Php 299.00</p>
+                <button class="add-to-cart" onclick="addCartItem('pizza-0')">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        <button class="back-button">
+            <a class="back-link" href="./../products.html#pizza-super-supreme">Back</a>
+        </button>
+    </main>
+    <footer>
+        <?php generateFooterInfo(); ?>
+        <!-- <p class="footer-content">&copy;Golby's Pizzeria 2025</p> -->
+        <!-- <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p> -->
+    </footer>
+    <script src="./../../scripts/cart.js"></script>
+    <script src="./../../scripts/widget.js"></script>
+    <!--<script src="./../../developer/debug.js"></script>
+    <script src="./../../developer/toolgen.js"></script>-->
+</body>
+</html>

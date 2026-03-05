@@ -1,0 +1,92 @@
+div.table-container {
+    display: inline-block;
+    height: 50vh;
+    max-height: 60%;
+    overflow-y: auto;
+    margin: auto;
+}
+
+table#cart-items {
+    background-color: var(--theme-color-background-light);
+    color: var(--theme-color-text-onlight);
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    padding: 20vw;
+    /* clamp(1rem, 5vw, 2.5rem); */
+}
+
+table#cart-items caption {
+    color: var(--theme-color-text-ondark);
+    margin-bottom: 2rem;
+}
+
+/* Add small spacing */
+thead tr th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+td>img {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+/* To constraint image size */
+tr.item>td:nth-child(1) {
+    width: 33%;
+}
+
+tr.item {
+    border-top: 1px solid black;
+}
+
+tr.item td:nth-child(3) {
+    text-align: center;
+    /*background-color: var(--peach);*/
+}
+
+/* Align total label to the right */
+tr#total>td:nth-child(1) {
+    text-align: right;
+}
+
+tr#total>td:nth-child(2) {
+    background-color: var(--peach);
+}
+
+tr#total {
+    border-top: 1px solid black;
+}
+
+/* Add small spacing */
+tr#total td {
+    padding-top: 0.5rem;
+}
+
+tr#checkout button {
+    display: block;
+    width: 100%;
+    background-color: var(--brick);
+    color: var(--theme-color-text-ondark);
+    border: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+tr#checkout button:hover {
+    background-color: var(--darkTerracota);
+}
+
+/*h1 {
+    color: var(--theme-color-text-ondark);
+    text-align: center;
+}*/
+
+p {
+    color: var(--theme-color-text-ondark);
+    text-align: center;
+    text-justify: justify;
+}

@@ -1,0 +1,28 @@
+div.content-box {
+    background-color: var(--theme-color-paleApricot);
+    color: var(--theme-color-text-onlight);
+    min-width: 50%;
+    min-height: auto;
+    padding: 3%;
+    margin: auto;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    /*border-radius: 1vw;*/
+    border: solid 5px var(--theme-color-accent);
+}
+
+div.content-box p {
+    text-indent: 2em;
+}
+
+/*div.content-flexbox {
+    background-color: var(--theme-color-terracota);
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    padding: 3%;
+}*/

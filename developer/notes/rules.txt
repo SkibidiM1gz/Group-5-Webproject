@@ -1,0 +1,47 @@
+CSS variable naming convention:
+
+--<css_filename>-<varname>
+
+ex. In layout.css file would look like this:
+
+--layout-navbar-size
+--layout-margin-wide
+--layout-padding
+
+ex. In product_list.css file would look like this:
+
+--product_list-list-size
+--product_list-list-items-margin
+
+
+Things to keep in mind:
+
+* Do not make nested CSS selection blocks because lengthy 
+  code becomes hard to read.
+
+ex.
+div.container {
+    width: 20%;
+    height: 20%;
+    margin: auto;
+
+    div.item {
+        p.item-description {
+            color: blue;
+            text-align: center;
+        }
+    }
+}
+
+Instead do,
+
+div.container {
+    width: 20%;
+    height: 20%;
+    margin: auto;
+}
+
+div.container div.item p.item-description {
+    color: blue;
+    text-align: center;
+}

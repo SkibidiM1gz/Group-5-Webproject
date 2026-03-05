@@ -1,0 +1,204 @@
+
+/*:root {
+    --products-color-card: var(--theme-color-light);
+}*/
+
+:root {
+    --products-price-background: var(--theme-color-brick);
+    --products-price-text: var(--theme-color-light);
+    --products-card-background: var(--theme-color-light);
+    --products-card-border: var(--theme-color-brick);
+    --products-card-border-hover: var(--theme-color-terracota);
+    --products-card-background-hover: var(--theme-color-peach);
+    --products-card-title-text: var(--theme-color-cocoa);
+    --products-heading-text: var(--theme-color-light);
+    --products-productnav-text: var(--theme-color-light);
+    --products-productnav-background: var(--theme-color-terracota);
+}
+
+.product-card-container {
+    /* Layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: stretch;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 10vh;
+    gap: 20px;
+}
+
+.product-card-container a {
+    /* Layout */
+    flex-basis: 20vw;
+    flex-grow: 25vw;
+    flex-shrink: 10vw;
+    display: block;
+    
+    /* Typography */
+    text-decoration: none;
+}
+
+.product-title {
+    /* Visuals */
+    color: var(--products-card-title-text);
+    /*var(--theme-color-text-onlight);*/
+}
+
+.product-card {
+    /* Layout */
+    height: 100%;
+    
+    /* Visuals */
+    background-color: var(--products-card-background);
+    /* light */
+    border: 3px solid var(--products-card-border);
+    /* brick */
+    border-radius: 15px;
+    
+    /* Effects */
+    transition: 0.1s linear;
+}
+
+.product-card img {
+    /* Layout */
+    width: 75%;
+    height: auto;
+    aspect-ratio: 1;
+    display: block;
+    margin: auto;
+}
+
+.product-card:hover {
+    /* Visuals */
+    background-color: var(--products-card-background-hover);
+    /* peach */
+    border-color: var(--products-card-border-hover);
+    /* darkTerracotta*/
+}
+
+/* Resize container items */
+.product-card:hover img {
+    transform: scale(0.97);
+}
+
+.product-price {
+    background-color: var(--products-price-background);
+    /*brick*/
+    color: var(--products-price-text);
+    /*: var(--theme-color-text-ondark);  light */
+}
+
+/* || Headings */
+h1,
+h2,
+.product-title,
+.product-price {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h1,
+h2 {
+    color: var(--products-heading-text);
+    /*  color: var(--theme-color-text-ondark);  light*/
+}
+
+/* || CONTENT TEMPLATES */
+p.product-price::before {
+    content: "Php ";
+}
+
+p.product-price::after {
+    content: ".00";
+}
+
+/* || NAVIGATION */
+.productnav {
+    display: block;
+    text-align: center;
+    top: 0px;
+    position: sticky;
+    margin-bottom: var(--layout-navbar-margin-bottom);
+}
+
+.productnav ul li:hover {
+    opacity: 1;
+}
+
+.productnav ul {
+    display: inline-flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+.productnav ul li {
+    display: inline-block;
+    opacity: 0.8;
+    transition: 0.1s ease-in;
+    background-color: var(--products-productnav-background);
+}
+
+.productnav ul li:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+.productnav ul li:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+.productnav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--products-productnav-text);
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+
+/* .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: stretch;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 10vh;
+    gap: 20px;
+    background-color: var(--products-terracota);
+} */
+
+/* .menu a {
+    Layout
+    flex-basis: 20vw;
+    flex-grow: 25vw;
+    flex-shrink: 10vw;
+    display: block;
+    
+    Typography
+    text-decoration: none;
+    color: black;
+    background-color: red;
+} */
+
+.card img {
+    /* Layout */
+    width: 75%;
+    aspect-ratio: 1;
+    display: block;
+    margin: auto;
+}
+
+.title {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
