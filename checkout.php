@@ -1,5 +1,6 @@
 <?php
-    require "./project.php";
+    require "./core/project.php";
+    require "./core/navigation.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,8 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>Checkout | Golby's Pizza</title>
-    <link rel="stylesheet" href="./theme.css">
-    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link rel="stylesheet" href="./styles/layout.css">
     <style>
         #form-div {
             margin: auto;
@@ -57,7 +58,7 @@
 <body>
     <header>
         <?php
-            require "./navbar.php";
+            require "./core/navbar.php";
         ?>
         <!-- <img class="logo" src="./images/logo.png">
         <nav>
@@ -89,8 +90,9 @@
         </div>
     </main>
     <footer>
-        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
-        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+        <?php generateFooterInfo(); ?>
+        <!-- <p class="footer-content">&copy;Golby's Pizzeria 2025</p> -->
+        <!-- <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p> -->
     </footer>
 </body>
 

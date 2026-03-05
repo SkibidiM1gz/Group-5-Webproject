@@ -1,5 +1,7 @@
 <?php
-    require "./project.php";
+    require "./core/project.php";
+    require "./core/navigation.php";
+    require "./core/page.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,9 +10,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>About Us | Golby's Pizzeria</title>
-    <link rel="stylesheet" href="./theme.css" />
-    <link rel="stylesheet" href="./layout.css" />
-    <!--<link rel="stylesheet" href="./components.css" />-->
+    <link rel="stylesheet" href="./styles/theme.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    
     <style type="text/css">
         /* body {
             border: 10px solid #b04a44;
@@ -230,7 +232,7 @@
 <body>
     <header>
         <?php
-            require "./navbar.php";
+            generateNavigationBar();
         ?>
         <!-- <img class="logo" src="./images/logo.png">
         <nav>
@@ -335,76 +337,10 @@
         
     </main>
     <footer>
-        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
+        <?php generateFooterInfo(""); ?>
+        <!-- <p class="footer-content">&copy;Golby's Pizzeria 2025</p> -->
         <!-- <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p> -->
     </footer>
-    
-    
-    <!-- Navbar -->
-    <!-- <div class="navbar">
-        <div class="logo-container">
-            <img src="./images/logo.png">
-        </div>
-        <div class="link-container">
-            <a href="aboutus.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="cart.html">Cart</a>
-            <a href="login.html">Login</a>
-            <a href="user_account.html">Account</a>
-        </div>
-    </div> -->
-    
-    <!-- header -->
-    <!-- <table width="100%">
-        <tr>
-            <td align="center">
-                <img src="images/logo.png" width="100" height="100" />
-                <h1>Golby's Pizzeria</h1>
-            </td>
-        </tr>
-    </table> -->
-    
-    <!-- about us -->
-    <!-- <h2 align="center">About Us</h2>
-    <p>At Golby's Pizzeria, we take pride in serving exceptional pizza crafted with love, tradition, and freshly harvested ingredients. Our commitment to quality begins with our handmade dough prepared fresh daily, followed by carefully selected toppings and home-made sauces.
-        Whether you're ordering for a family gathering, a business lunch, or a relaxing evening at home, Golby's Pizzeria offers a smooth online ordering experience and reliable delivery.</p> -->
-    
-    <!-- contact Info -->
-    <!-- <div class="contact-section">
-        <h3>Business Days</h3>
-        <p>We open only from Monday to Friday, 7am to 5pm.</p>
-        
-        <h3>Location</h3>
-        <p>You can find us near Misamis Street, Bago Bantay, Quezon City, Philippines.</p>
-        
-        <h3>Contact</h3>
-        <p>Email: <b>golbyspizzeria@gmail.com</b><br>Phone: <b>+63 961 825 0366</b></p>
-    </div> -->
-    
-    <!-- authors -->
-    <!--     <h2 align="center">Authors</h2>
-<div class="authors-box">
-    <p>An E-Commerce pizza shop website made by Group 5 with the contributions of:</p>
-    
-    <table class="authors-list">
-        <tr>
-            <td><b>Shiela Mae M. Alcantara</b></td>
-            <td>- Asset Research/Content</td>
-        </tr>
-        <tr>
-            <td><b>Daniel Derrick M. Calisura</b></td>
-            <td>- Programming/Content</td>
-        </tr>
-        <tr>
-            <td><b>Franco Miguel Dorato</b></td>
-            <td>- Programming</td>
-        </tr>
-        <tr>
-            <td><b>John Gabriel Geraldizo</b></td>
-            <td>- Asset Research/Content</td>
-        </tr>
-    </table>
-</div> -->
 </body>
 
 </html>

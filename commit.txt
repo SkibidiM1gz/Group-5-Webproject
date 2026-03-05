@@ -1,3 +1,0 @@
-- implemented navigation bar generator
-- adjusted font sizes
-- removed unnecessary files

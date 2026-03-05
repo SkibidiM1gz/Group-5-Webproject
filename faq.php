@@ -1,5 +1,7 @@
 <?php
-    require "./project.php";
+    require "./core/project.php";
+    require "./core/navigation.php";
+    require "./core/page.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +11,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>FAQ | Golby's Pizzeria</title>
-    <link rel="stylesheet" href="./layout.css">
-    <link rel="stylesheet" href="./theme.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/theme.css">
     <style type="text/css">
         :root {
             --faq-dropdown-background: var(--theme-color-light);
@@ -87,7 +89,7 @@
 <body>
     <header>
         <?php 
-            require "./navbar.php"; 
+            generateNavigationBar();
         ?>
         <!-- <img class="logo" src="./images/logo.png">
         <nav>
@@ -134,8 +136,9 @@
         </div>
     </main>
     <footer>
-        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
-        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+        <?php generateFooterInfo(); ?>
+        <!-- <p class="footer-content">&copy;Golby's Pizzeria 2025</p> -->
+        <!-- <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p> -->
     </footer>
     
     <!--<table width="100%" height="100%">

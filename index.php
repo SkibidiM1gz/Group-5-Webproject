@@ -1,5 +1,7 @@
 <?php
-    require "./project.php";
+    require "./core/project.php";
+    require "./core/navigation.php";
+    require "./core/page.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,9 +11,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1600, height=1200, initial-scale=1">
     <title>Home | Golby's Pizzeria</title>
-    <link rel="stylesheet" href="./theme.css" />
-    <link rel="stylesheet" href="./layout.css" />
-    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./styles/theme.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
     <!--<link rel="stylesheet" href="./developer/dev.css">-->
     
     <style type="text/css">
@@ -220,7 +222,7 @@
 <body>
     <header>
         <?php 
-            require "./navbar.php";
+            generateNavigationBar();
         ?>
         <!-- <img class="logo" src="./images/logo.png">
         <nav>
@@ -267,19 +269,19 @@
         <!-- TODO Fix Product links -->
 
         <div id="featured-product-container" class="flex">
-            <a href="./products/pizza/pizza1.html">
+            <a href="./products/product_view.php?product=pizza1">
                 <div class="card">
                     <img src="./images/pizza1_supersupreme.png">
                     <font class="card-title">Super Supreme Pizza</font>
                 </div>
             </a>
-            <a href="./products/pizza/pizza3.html">
+            <a href="./products/product_view.php?product=pizza3">
                 <div class="card">
                     <img src="./images/pizza3_pepperoni.png">
                     <font class="card-title">Pepperoni Pizza</font>
                 </div>
             </a>
-            <a href="./products/pizza/pizza5.html">
+            <a href="./products/product_view.php?product=pizza5">
                 <div class="card">
                     <img src="./images/pizza5_mushroom.png">
                     <font class="card-title">Mushroom Pizza</font>
@@ -326,8 +328,9 @@
         </div> -->
     </main>
     <footer>
-        <p class="footer-content">&copy;Golby's Pizzeria 2025</p>
-        <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p>
+        <?php generateFooterInfo(); ?>
+        <!-- <p class="footer-content">&copy;Golby's Pizzeria 2025</p> -->
+        <!-- <p class="footer-content">Contact us: golbyspizzeria@gmail.com | +639618250366</p> -->
     </footer>
 </body>
 

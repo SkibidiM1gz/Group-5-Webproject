@@ -119,10 +119,16 @@ class Widget {
     static toastTime = 2000;
 }
 
+/**
+ * Convenience method for setting browser session data
+ */
 function setSessionData(key, value) {
     sessionStorage.setItem(key, JSON.stringify(value));
 }
 
+/**
+ * Convenience method for getting browser session data
+ */
 function getSessionData(key) {
     return JSON.parse(sessionStorage.getItem(key));
 }
@@ -189,11 +195,16 @@ function addCartItem(productID) {
     
     // Get cart data
     let cart = getSessionData("cart");
+
     // Add item
     cart.items = cart.items.concat({ "productID": productID, "sessionID": cart.serialCount });
+
+    // Increment serial count for tracking
     cart.serialCount++;
+
     // Update cart data
     setSessionData("cart", cart);
+
     // Set notification message
     notify(lookupProduct(productID).name + " added to cart!");
 }
@@ -287,7 +298,6 @@ function loadCartItems() {
     
     td_total_amount.innerHTML = rawPriceSum + ".00 Php";
 }
-
 
 // TODO Implement functionality
 function checkoutCartItems() {
